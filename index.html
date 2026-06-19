@@ -9,628 +9,127 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23FFFF00' stroke='%231400FF' strokeWidth='2'/%3E%3C/svg%3E") 30 30, crosshair;}
-
 div, p { font-family: Pretendard; font-weight: 400; }
-
-@font-face {
-    font-family: 'BookkMyungjo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-display: swap;
-}
-
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-}
-
-
+@font-face { font-family: 'BookkMyungjo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2'); font-weight: 100; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2'); font-weight: 200; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
 div{font-family: pret}
-body {
-  font-family: 'Pretendard Variable', sans-serif;
-  font-weight: 400; /* Regular */
-}
-
-h1 {
-  font-weight: 700; /* Bold */
-}
-
-.thin {
-  font-weight: 100; /* Thin */
-}
-
+body { font-family: 'Pretendard Variable', sans-serif; font-weight: 400; }
+h1 { font-weight: 700; }
+.thin { font-weight: 100; }
 .preten { font-family: Pretendard; font-weight:100 }
-
-/* ── HOME PAGE ── */
-#home-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.home-top {
-  display: flex;
-  flex: 1;
-  min-height: 80vh;
-  overflow: hidden;
-}
-
-.home-hero {
-  background: #FFFF00;
-  padding: 52px 56px;
-  flex: 0 0 72%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
-}
-
-.home-hero h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: clamp(110px, 15vw, 200px);
-  font-weight: 400;
-  font-style: italic;
-  color: #1400FF;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-}
-
-/* ── SIDEBAR TABS ── */
-.home-sidebar {
-  display: flex;
-  overflow: hidden;
-  flex: 1;
-}
-
-.tab-panel {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.tab-item {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 25px 25px;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  transition: color 0.25s ease;
-  flex: 0 0 97px;
-  width: 97px;
-  min-width: 0;
-  overflow: hidden;
-  font-size: 10vh;
-}
-
+#home-page { display: flex; flex-direction: column; min-height: 100vh; }
+.home-top { display: flex; flex: 1; min-height: 80vh; overflow: hidden; }
+.home-hero { background: #FFFF00; padding: 52px 56px; flex: 0 0 72%; display: flex; flex-direction: column; justify-content: flex-start; position: relative; }
+.home-hero h1 { font-family: 'Roboto', sans-serif; font-size: clamp(110px, 15vw, 200px); font-weight: 400; font-style: italic; color: #1400FF; line-height: 1.1; letter-spacing: -0.02em; text-transform: uppercase; }
+.home-sidebar { display: flex; overflow: hidden; flex: 1; }
+.tab-panel { width: 100%; display: flex; flex-direction: row; }
+.tab-item { writing-mode: vertical-rl; text-orientation: mixed; display: flex; align-items: flex-start; justify-content: flex-start; padding: 25px 25px; cursor: pointer; font-family: 'Roboto', sans-serif; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.25s ease; flex: 0 0 97px; width: 97px; min-width: 0; overflow: hidden; font-size: 10vh; }
 .tab-item[data-section="movie"] { background: #d4d4d4; color: #6a6a6a; }
-.tab-item[data-section="music"] {
-  background: linear-gradient(to right, #9A9A9A 5%, #C1C1C1 15%, #d4d4d4 40%);
-  color: #6a6a6a;
-}
-.tab-item[data-section="book"] {
-  background: linear-gradient(to right, #9A9A9A 5%, #C1C1C1 15%, #d4d4d4 40%);
-  color: #6a6a6a;
-}
-.tab-item[data-section="talk"] {
-  background: linear-gradient(to right, #9A9A9A 5%, #C1C1C1 15%, #d4d4d4 40%);
-  color: #6a6a6a;
-}
-.tab-item[data-section="etc"] {
-  background: linear-gradient(to right, #4A4A4A 5%, #626161 15%, #717171 40%);
-  color: #cccccc;
-}
-
+.tab-item[data-section="music"] { background: linear-gradient(to right, #9A9A9A 5%, #C1C1C1 15%, #d4d4d4 40%); color: #6a6a6a; }
+.tab-item[data-section="book"] { background: linear-gradient(to right, #9A9A9A 5%, #C1C1C1 15%, #d4d4d4 40%); color: #6a6a6a; }
+.tab-item[data-section="talk"] { background: linear-gradient(to right, #9A9A9A 5%, #C1C1C1 15%, #d4d4d4 40%); color: #6a6a6a; }
+.tab-item[data-section="etc"] { background: linear-gradient(to right, #4A4A4A 5%, #626161 15%, #717171 40%); color: #cccccc; }
 .tab-item:hover { color: #1400FF; }
 .tab-item.active { color: #1400FF; }
-
-.home-desc {
-  background: #1400FF;
-  padding: 30px 56px;
-  color: white;
-  font-size: 17px;
-  line-height: 1.8;
-}
+.home-desc { background: #1400FF; padding: 30px 56px; color: white; font-size: 17px; line-height: 1.8; }
 .home-desc strong { font-weight: 700; }
-
-/* ── DETAIL PAGE ── */
-#detail-page {
-  display: none;
-  min-height: 100vh;
-}
-
-.detail-layout {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* 왼쪽 사이드바 */
-.detail-sidebar {
-  background: #1400FF;
-  width: 300px;
-  min-width: 200px;
-  display: flex;
-  flex-direction: column;
-   position: sticky;  
-  top: 0;             
-  height: 100vh;      
-}
-
-.sidebar-header {
-  background: #FFFF00;
-  color: #1400FF;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 14px 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.sidebar-list {
-  list-style: none;
-  padding: 14px 0;
-  flex: 1;
-  overflow-y: auto;
-}
-
-.sidebar-list li {
-  padding: 30px 10px;
-  color: rgba(255,255,255,0.4);
-  font-family: Pretendard;
-  font-size: 25px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border-left: 3px solid transparent;
-  text-align: center;
-}
-
-.sidebar-list li:hover {
-  color: #FFFF00;
-  background: rgba(255,255,0,0.08);
-  border-left-color: #FFFF00;
-}
-
-.sidebar-list li.active {
-  color: #FFFF00;
-  font-weight: 700;
-  background: rgba(255,255,0,0.12);
-  border-left-color: #FFFF00;
-}
-
-/* 오른쪽 콘텐츠 */
-.detail-content {
-  flex: 1;
-  background: #FFFF00;
-  padding: 30px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 150px;
-}
-
-.detail-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-label {
-  background: #1400FF;
-  color: #FFFF00;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 8px 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-}
+#detail-page { display: none; min-height: 100vh; }
+.detail-layout { display: flex; min-height: 100vh; }
+.detail-sidebar { background: #1400FF; width: 300px; min-width: 200px; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; }
+.sidebar-header { background: #FFFF00; color: #1400FF; font-size: 18px; font-weight: 700; padding: 14px 20px; text-transform: uppercase; letter-spacing: 0.06em; }
+.sidebar-list { list-style: none; padding: 14px 0; flex: 1; overflow-y: auto; }
+.sidebar-list li { padding: 30px 10px; color: rgba(255,255,255,0.4); font-family: Pretendard; font-size: 25px; font-weight: 400; cursor: pointer; transition: all 0.2s ease; border-left: 3px solid transparent; text-align: center; }
+.sidebar-list li:hover { color: #FFFF00; background: rgba(255,255,0,0.08); border-left-color: #FFFF00; }
+.sidebar-list li.active { color: #FFFF00; font-weight: 700; background: rgba(255,255,0,0.12); border-left-color: #FFFF00; }
+.sidebar-list li.locked { cursor: not-allowed; opacity: 0.4; }
+.sidebar-list li.locked:hover { color: rgba(255,255,255,0.4); background: transparent; border-left-color: transparent; }
+.detail-content { flex: 1; background: #FFFF00; padding: 30px 30px; display: flex; flex-direction: column; gap: 150px; }
+.detail-nav { display: flex; justify-content: space-between; align-items: center; }
+.nav-label { background: #1400FF; color: #FFFF00; font-size: 14px; font-weight: 700; padding: 8px 16px; text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; }
 .nav-label:hover { background: #0a00cc; }
-
-/* 상단: 사진 + 기본정보 */
-
-.detail-grid-top {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.detail-photo {
-  background: #888;
-  width: 50%;
-  aspect-ratio: 16/9;
-  margin-left: auto;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.detail-photo img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.detail-photo-accent {
-  position: absolute;
-  top: 0; right: 0;
-  width: 50px;
-  height: 500px;
-  background: #1400FF;
-  z-index: 2;
-}
-
-.detail-photo-placeholder {
-  color: #bbb;
-  font-size: 18px;
-  z-index: 1;
-}
-
-.detail-info-box {
-  padding: 15px 0;
-  display: flex;
-  margin-left: auto;
-  align-items: flex-start;
-  justify-content: flex-start;
-  min-height: 160px;
-  width: 50%;
-  text-align: left;
-  font-family: Pretendard;
-  font-size: 50px;
-  padding-bottom: 200px;
-}
-
-
-/* 설명 박스 */
-.detail-desc-box {
-  background: #1400FF;
-  padding: 22px 20px;
-  min-height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFF00;
-  font-size: 12px;
-  text-align: left;
-  max-width: 1080px;
-  margin-left: auto;
-}
-
-
-/* 영상 링크 섹션 */
-.detail-link-box{
-    width:80%;
-    margin-left:auto;
-    aspect-ratio:16/8;
-    overflow:hidden;
-}
-
-.detail-link-box a{
-    display:block;
-    height:100%;
-    position:relative;
-}
-
-.detail-link-box img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    position: relative;
-}
-
-.play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  background: rgba(20, 0, 255, 0.85);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.play-icon::after {
-  content: '';
-  border-left: 22px solid #FFFF00;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  margin-left: 6px;
-}
-
-.detail-link-box a:hover .play-icon {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: rgba(20, 0, 255, 1);
-  position: relative;
-  cursor: pointer;
-}
-.detail-phrase-box {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  padding: 90px 40px;
-}
-
-.video-label {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  background: #1400FF;
-  color: #FFFF00;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 8px 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.detail-link-box a {
-  cursor: pointer;
-  position: relative;
-}
-
-.detail-link-box a:hover img {
-  filter: brightness(0.7);
-}
-
-
-.phrase-label {
-  margin-left: auto;
-  background: #1400FF;
-  color: #FFFF00;
-  font-size: 25px;
-  font-weight: 400;
-  padding: 8px 26px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-style: italic;
-}
-
-.phrase-item {
-  color: #1400FF;
-  font-size: 35px;
-  font-weight: 700;
-  text-align: left;
-  line-height: 1.5;
-  font-family: BookkMyungjo;
-  margin-left: auto;
-
-}
-
-.quote-label {
-  font-size: 11px;
-  font-weight: 700;
-  color: #888;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-/* 영화 이미지 그리드 */
-.detail-film-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  width: 95%;
-  padding-bottom: 300px;
-  margin: auto;
-}
-
-.film-card {
-  background: #d0d0d0;
-  aspect-ratio: 16/5;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  display: flex;
-  align-items: flex-end;
-}
-
-.film-card img {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-}
-
-.film-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: #1400FF;
-  color: #FFFF00;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  z-index: 3;
-}
-
+.detail-grid-top { display: flex; flex-direction: column; gap: 20px; }
+.detail-photo { background: #888; width: 50%; aspect-ratio: 16/9; margin-left: auto; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+.detail-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.detail-photo-accent { position: absolute; top: 0; right: 0; width: 50px; height: 500px; background: #1400FF; z-index: 2; }
+.detail-photo-placeholder { color: #bbb; font-size: 18px; z-index: 1; }
+.detail-info-box { padding: 15px 0; display: flex; margin-left: auto; align-items: flex-start; justify-content: flex-start; min-height: 160px; width: 50%; text-align: left; font-family: Pretendard; font-size: 50px; padding-bottom: 200px; }
+.detail-desc-box { background: #1400FF; padding: 22px 20px; min-height: auto; display: flex; align-items: center; justify-content: center; color: #FFFF00; font-size: 12px; text-align: left; max-width: 1080px; margin-left: auto; }
+.detail-link-box { width:80%; margin-left:auto; aspect-ratio:16/8; overflow:hidden; }
+.detail-link-box a { display:block; height:100%; position:relative; }
+.detail-link-box img { width:100%; height:100%; object-fit:cover; display:block; position: relative; }
+.play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: rgba(20, 0, 255, 0.85); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, background 0.2s ease; }
+.play-icon::after { content: ''; border-left: 22px solid #FFFF00; border-top: 14px solid transparent; border-bottom: 14px solid transparent; margin-left: 6px; }
+.detail-link-box a:hover .play-icon { transform: translate(-50%, -50%) scale(1.1); background: rgba(20, 0, 255, 1); position: relative; cursor: pointer; }
+.detail-phrase-box { position: relative; display: flex; flex-direction: column; align-items: center; gap: 60px; padding: 90px 40px; }
+.detail-link-box a { cursor: pointer; position: relative; }
+.detail-link-box a:hover img { filter: brightness(0.7); }
+.phrase-label { margin-left: auto; background: #1400FF; color: #FFFF00; font-size: 25px; font-weight: 400; padding: 8px 26px; text-transform: uppercase; letter-spacing: 0.06em; font-style: italic; }
+.phrase-item { color: #1400FF; font-size: 35px; font-weight: 700; text-align: left; line-height: 1.5; font-family: BookkMyungjo; margin-left: auto; }
+.film-card.book-card { aspect-ratio: 2/3; width: 70%; grid-template-columns: repeat(4, 1fr); margin: auto; }
+.detail-film-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; width: 95%; padding-bottom: 300px; margin: auto; }
+.film-card { background: #d0d0d0; aspect-ratio: 16/5; position: relative; overflow: hidden; cursor: pointer; display: flex; align-items: flex-end; }
+.film-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.film-card-overlay { position: absolute; inset: 0; background: #1400FF; color: #FFFF00; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12px; text-align: center; opacity: 0; transition: opacity 0.2s ease; z-index: 3; }
 .film-card:hover .film-card-overlay { opacity: 1; }
-
-.film-title {
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 4px;
-  font-family: Pretendard;
-}
-
-.film-year {
-  font-size: 55px;
-  opacity: 0.8;
-  font-family: Pretendard;
-}
-
-
-.info-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  width: 100%;
-}
-
-.info-item {
-  display: grid;
-  grid-template-columns: 5fr 11fr;
-  align-items: center;
-  padding: 18px 5px;
-  border-bottom: 3.5px solid #1400FF;
-  gap: 0;
-}
-
-.info-label {
-  font-size: 25px;
-  font-weight: 700;
-  color: #1400FF;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-.info-value {
-  font-size: 25px;
-  font-weight: 700;
-  color: #1400FF;
-}
-
-
-@media (max-width: 860px) {
-  .detail-grid-top { grid-template-columns: 1fr; }
-  .detail-sidebar { width: 160px; min-width: 160px; }
-  .detail-film-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* ── 검색 ── */
-.home-search {
-  position: absolute;
-  bottom: 40px;
-  right: 56px;
-  display: flex;
-  align-items: center;
-  gap: 0;
-  z-index: 10;
-}
-
-.search-input {
-  background: transparent;
-  border: none;
-  border-bottom: 3px solid #1400FF;
-  color: #1400FF;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-style: italic;
-  padding: 8px 4px;
-  width: 300px;
-  outline: none;
-}
-
-.search-input::placeholder {
-  color: rgba(20, 0, 255, 0.35);
-}
-
-.search-btn {
-  background: #1400FF;
-  color: #FFFF00;
-  border: none;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  padding: 11px 18px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
+.film-title { font-size: 60px; font-weight: 700; line-height: 1.4; margin-bottom: 4px; font-family: Pretendard; }
+.film-year { font-size: 55px; opacity: 0.8; font-family: Pretendard; }
+.info-grid { display: flex; flex-direction: column; gap: 0; width: 100%; }
+.info-item { display: grid; grid-template-columns: 5fr 11fr; align-items: center; padding: 18px 5px; border-bottom: 3.5px solid #1400FF; gap: 0; }
+.info-label { font-size: 25px; font-weight: 700; color: #1400FF; text-transform: none; letter-spacing: 0; font-family: Pretendard; }
+.info-value { font-size: 25px; font-weight: 700; color: #1400FF; font-family: Pretendard; }
+@media (max-width: 860px) { .detail-grid-top { grid-template-columns: 1fr; } .detail-sidebar { width: 160px; min-width: 160px; } .detail-film-grid { grid-template-columns: repeat(2, 1fr); } }
+.home-search { position: absolute; bottom: 40px; right: 56px; display: flex; align-items: center; gap: 0; z-index: 10; }
+.search-input { background: transparent; border: none; border-bottom: 3px solid #1400FF; color: #1400FF; font-family: 'Roboto', sans-serif; font-size: 20px; font-style: italic; padding: 8px 4px; width: 300px; outline: none; }
+.search-input::placeholder { color: rgba(20, 0, 255, 0.35); }
+.search-btn { background: #1400FF; color: #FFFF00; border: none; font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; padding: 11px 18px; cursor: pointer; text-transform: uppercase; }
 .search-btn:hover { background: #0a00cc; }
-
-.search-result-list {
-  position: absolute;
-  bottom: 60px;
-  left: 0;
+.search-result-list { position: absolute; bottom: 60px; left: 0; background: #1400FF; width: 100%; display: none; }
+.search-result-item { padding: 12px 16px; color: rgba(255,255,255,0.6); font-size: 16px; cursor: pointer; border-bottom: 1px solid rgba(255,255,0,0.15); font-family: Pretendard; }
+.search-result-item:hover { background: rgba(255,255,0,0.1); color: #FFFF00; }
+.search-no-result { padding: 12px 16px; color: rgba(255,255,255,0.4); font-size: 14px; font-family: Pretendard; }
+ 
+/* ── 준비중 토스트 ── */
+.locked-toast {
+  position: fixed;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
   background: #1400FF;
-  width: 100%;
-  display: none;
-}
-
-.search-result-item {
-  padding: 12px 16px;
-  color: rgba(255,255,255,0.6);
-  font-size: 16px;
-  cursor: pointer;
-  border-bottom: 1px solid rgba(255,255,0,0.15);
-  font-family: Pretendard;
-}
-
-.search-result-item:hover {
-  background: rgba(255,255,0,0.1);
   color: #FFFF00;
-}
-
-.search-no-result {
-  padding: 12px 16px;
-  color: rgba(255,255,255,0.4);
-  font-size: 14px;
   font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 28px;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 999;
+  white-space: nowrap;
 }
-
-
-
+.locked-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 </style>
 </head>
 <body>
-
-<!-- HOME PAGE -->
+ 
 <div id="home-page">
   <div class="home-top">
     <div class="home-hero">
       <div class="home-search">
-  <div style="position:relative;">
-    <div class="search-result-list" id="search-result-list"></div>
-    <input class="search-input" id="search-input" type="text" placeholder="SEARCH..." autocomplete="off"
-      oninput="handleSearch(this.value)"
-      onkeydown="if(event.key==='Enter') submitSearch()">
-  </div>
-  <button class="search-btn" onclick="submitSearch()">→</button>
-</div>
+        <div style="position:relative;">
+          <div class="search-result-list" id="search-result-list"></div>
+          <input class="search-input" id="search-input" type="text" placeholder="SEARCH..." autocomplete="off"
+            oninput="handleSearch(this.value)"
+            onkeydown="if(event.key==='Enter') submitSearch()">
+        </div>
+        <button class="search-btn" onclick="submitSearch()">→</button>
+      </div>
       <h1>KKUDEURUK<br>GUIDE<br>BOOK</h1>
     </div>
     <div class="home-sidebar">
@@ -653,8 +152,7 @@ h1 {
     제작되었습니다. <b>당당하게 꺼드럭거리는 그날을 위해 남들이 대충 알 것 같은 적당한 꺼드럭을 찾아드립니다.</b>
   </div>
 </div>
-
-<!-- DETAIL PAGE -->
+ 
 <div id="detail-page">
   <div class="detail-layout">
     <div class="detail-sidebar">
@@ -674,1261 +172,125 @@ h1 {
       </div>
       <div class="detail-desc-box" id="detail-desc-box">설명</div>
       <div class="detail-link-box" id="detail-link-box"></div>
+      <div class="detail-etc-box" id="detail-etc-box" style="display:none; background:#1400FF; color:#FFFF00; font-family:BookkMyungjo; font-size:22px; line-height:2; padding:60px 80px; max-width:1080px; margin-left:auto; width:80%;"></div>
       <div class="detail-phrase-box" id="detail-phrase-box"></div>
       <div class="detail-film-grid" id="detail-film-grid"></div>
     </div>
   </div>
 </div>
-
+ 
+<!-- 준비중 토스트 -->
+<div class="locked-toast" id="locked-toast">준비 중입니다</div>
+ 
 <script>
+const UNLOCK_LIMIT = 5;
+ 
 const sections = {
   movie: {
     label: 'Movie',
     items: [
-      {
-        name: '봉준호',
-        image: 'images/bong.jpg', 
-        videoLink: 'https://youtu.be/ekMl5VHBH4I?si=wKiFjbQ5-UddVvsL',
-        videoThumb: 'images/bongim.png',
-        info: { 국적: '한국', 활동: '1993–현재', 대표작: '기생충, 설국열차', 장르: '스릴러, 드라마' },
-        desc: '봉준호는 대중성과 예술성이라는 양극단의 가치를 기묘하리만치 완벽하게 결합해 내는 독보적인 거장이다. 스릴러, SF, 블랙 코미디 등 기존 장르의 문법을 정교하게 비틀어 자신만의 독창적인 장르를 창조하는 데 탁월하다. 관객에게 대중적인 재미를 주면서도, 그 속에는 늘 날카로운 사회 비판 메시지를 담아낸다. 치밀한 디테일로 자본주의의 계급적 모순과 사회적 폐부를 서늘하게 해부한다. 겉보기에는 한 치 앞을 예측할 수 없는 완벽한 엔터테인먼트의 형태를 띠지만, 그 이면에는 인간에 대한 깊은 연민과 날카로운 사회학적 통찰이 공존한다. 결국 그는 가장 지역적이고 한국적인 배경에서 출발한 이야기로 전 세계가 동시에 앓고 있는 보편적인 시대적 불안과 공감을 이끌어내는 창작자다.',
-        phrases: [
-          '"데뷔작 플란다스의 개를 보면 이미 답이 나와 있어. 아파트라는 일상적인 공간을 그렇게 기괴하고 서늘한 서사의 무대로 변주하는 감각은 타고난 것 같아"',
-          '"김기영 감독의 <하녀>가 가진 그로테스크한 에너지를 현대 미술에 가깝게 가장 세련되게 계승한 연출가가 봉준호 아닐까?"',
-          '"사람들은 <설국열차>나 <옥자>를 단순 할리우드 진출작으로 보던데, 본질은 자본의 압박 속에서도 기어코 자기만의 계급론을 이식해 내는 작가주의적 고집이고, 그게 대단한 것 같아"',
-          '"다들 살인의 추억을 연기나 살인 추적으로만 보는데, 진짜는 범인을 못 잡는 스릴러라는 장르적 배반을 통해 80년대라는 시대의 공기를 스크린에 그대로 포획해 냈다는 점이라고 생각해. 특히 그 딥 포커스로 담아낸 논두렁의 아이러니는 진짜 변태적이라고 느꼈어"'
-        ],
-        films: [
-          { title: '기생충', year: '2019', image: 'images/bong1.png' },
-          { title: '설국열차', year: '2013', image: 'images/bong2.png' },
-          { title: '마더', year: '2009', image: 'images/bong3.png' },
-          { title: '살인의 추억', year: '2003', image: 'images/bong4.png' },
-          { title: '괴물', year: '2006', image: 'images/bong5.png' },
-          { title: '플란다스의 개', year: '2000', image: 'images/bong6.png' },
-          { title: '옥자', year: '2017', image: 'images/bong7.png' },
-          { title: '지리멸렬', year: '1994', image: 'images/bong8.png' }
-        ]
-      },
-      {
-        name: '박찬욱',
-        image: 'images/park.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '한국', 활동: '1992–현재', 대표작: '올드보이, 헤어질 결심', 장르: '스릴러, 멜로' },
-        desc: '박찬욱은 미학적 완성도와 극단적 감정을 동시에 추구하는 작가주의 감독이다. 복수 3부작으로 국제적 명성을 얻었으며, 영상의 구성 하나하나에서 치밀한 미술적 감각이 드러난다. 그의 화면은 언제나 지나치게 아름답고, 그 아름다움이 오히려 폭력과 욕망을 더 서늘하게 만든다. 색채, 구도, 음악까지 모든 요소가 감독의 손 안에서 정밀하게 통제되며, 그 결과물은 영화라기보다 하나의 미술 작품에 가깝다.',
-        phrases: [
-          '"올드보이의 복도 원테이크 액션씬은 사실 기술적 과시가 아니라, 한 인간이 짐승처럼 살아남는다는 것의 처절함을 몸으로 보여주는 연출이야"',
-          '"박찬욱 영화에서 복수는 절대 통쾌하지 않아. 복수를 완성하는 순간 오히려 주인공이 가장 망가지는 구조거든. 그게 핵심이야"',
-          '"헤어질 결심은 누아르처럼 보이지만 사실 가장 순수한 멜로야. 사랑을 고백하지 못하는 두 사람이 서로를 파괴하는 이야기니까"',
-          '"아가씨는 시각적으로 너무 화려해서 놓치기 쉬운데, 본질은 계급과 젠더 권력을 동시에 뒤집는 이중 반전 구조야"'
-        ],
-        films: [
-          { title: '올드보이', year: '2003', image: 'images/oldboy.png' },
-          { title: '헤어질 결심', year: '2022', image: 'images/decision.png' },
-          { title: '아가씨', year: '2016', image: 'images/handmaiden.png' },
-          { title: '친절한 금자씨', year: '2005', image: 'images/sympathy.png' },
-          { title: '박쥐', year: '2009', image: 'images/thirst.png' },
-          { title: '공동경비구역 JSA', year: '2000', image: 'images/jsa.png' },
-          { title: '복수는 나의 것', year: '2002', image: 'images/vengeance.png' },
-          { title: '스토커', year: '2013', image: 'images/stoker.png' }
-        ]
-      },
-      {
-        name: '이창동',
-        image: 'images/lee.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '한국', 활동: '1997–현재', 대표작: '버닝, 시', 장르: '드라마, 문학적' },
-        desc: '이창동은 소설가 출신으로, 영화에서도 문학적 밀도를 잃지 않는 감독이다. 일상의 균열 속에서 실존적 질문을 꺼내는 방식이 독보적이다. 그의 카메라는 결코 서두르지 않으며, 인물이 무너지는 순간을 아주 가까이에서 오래 바라본다. 버닝의 그 불확실성, 시의 그 무력함은 단순한 서사가 아니라 우리가 외면해온 삶의 질감 그 자체다.',
-        phrases: [
-          '"버닝은 결말이 없는 게 아니야. 해석을 관객에게 전부 넘겨버리는 거지. 그 불편함이 무라카미 원작보다 훨씬 더 날카로워"',
-          '"이창동 영화에서 주인공은 항상 뭔가를 잃어가는 사람이야. 그 상실을 설명하지 않고 그냥 옆에서 같이 앉아있는 것처럼 찍어"',
-          '"시에서 시 한 편을 완성하는 여정이 사실은 한 인간이 존엄을 지키는 마지막 방식이라는 게, 다 보고 나서야 느껴지더라"',
-          '"밀양은 신과 용서에 대한 영화인데, 결국 신이 아무것도 안 해준다는 걸 가장 조용하게 보여주는 영화야"'
-        ],
-        films: [
-          { title: '버닝', year: '2018', image: 'images/burning.png' },
-          { title: '시', year: '2010', image: 'images/poetry.png' },
-          { title: '밀양', year: '2007', image: 'images/milyang.png' },
-          { title: '오아시스', year: '2002', image: 'images/oasis.png' },
-          { title: '박하사탕', year: '1999', image: 'images/peppermint.png' },
-          { title: '초록물고기', year: '1997', image: 'images/greenfish.png' }
-        ]
-      },
-      {
-        name: '홍상수',
-        image: 'images/hong.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '한국', 활동: '1996–현재', 대표작: '지금은맞고그때는틀리다', 장르: '독립, 반복 구조' },
-        desc: '홍상수는 즉흥성과 반복 구조를 통해 관계의 미묘한 결을 해부하는 감독이다. 저예산 독립 영화 방식으로 매년 작품을 발표하며 칸·베를린 등에서 꾸준히 수상한다. 술자리, 산책, 대화. 그것뿐인 것 같은데 볼 때마다 뭔가 찔린다. 같은 장면이 반복되는데 다르게 느껴지는 그 순간, 홍상수가 말하려는 게 뭔지 슬쩍 보인다.',
-        phrases: [
-          '"홍상수 영화는 같은 장면을 두 번 보여주는데 두 번이 다 달라. 기억이 얼마나 자기 편의대로 작동하는지를 그 구조 자체로 증명하는 거야"',
-          '"대화가 전부인 것 같아도 그 대화 속에서 권력관계, 욕망, 자기합리화가 전부 드러나. 그냥 밥 먹는 장면인데 불편한 이유가 그거야"',
-          '"칸에서 계속 상 받는 게 이상한 게 아니야. 이렇게 적은 걸로 이렇게 많은 걸 말하는 감독이 세계적으로 드물거든"',
-          '"지금은맞고그때는틀리다에서 같은 하루를 두 번 보여주는데, 두 번째가 더 좋은 사람인지 아닌지도 사실 모호해. 그게 포인트야"'
-        ],
-        films: [
-          { title: '지금은맞고그때는틀리다', year: '2015', image: 'images/rightnowright.png' },
-          { title: '강변호텔', year: '2018', image: 'images/hotel.png' },
-          { title: '북촌방향', year: '2011', image: 'images/bukchon.png' },
-          { title: '도망친 여자', year: '2020', image: 'images/woman.png' }
-        ]
-      },
-      {
-        name: '알프레도 히치콕',
-        image: 'images/hitch.jpg',
-        videoLink: 'https://youtu.be/0WtDmbr9xyY?si=KSyqJEZ6sr93g15D',
-        videoThumb: 'images/hitchim.png',
-        info: { 국적: '영국/미국', 활동: '1919–1976', 대표작: '사이코, 현기증, 새', 장르: '스릴러, 서스펜스' },
-        desc: '"서스펜스의 마스터"로 불리는 히치콕은 관객의 심리를 완벽하게 장악하는 연출 기법을 구축한 감독이다. 현대 스릴러의 문법을 만들어낸 인물이며, 그가 개발한 맥거핀, POV 숏, 서스펜스와 서프라이즈의 구분은 지금도 영화 이론의 기초로 가르쳐진다. 무섭게 만드는 게 아니라 무서워질 것 같은 느낌을 지속시키는 것, 그게 히치콕의 진짜 기술이다.',
-        phrases: [
-          '"히치콕이 서스펜스와 서프라이즈를 구분한 거 알아? 폭탄이 터지면 서프라이즈, 폭탄이 있다는 걸 관객만 알면 서스펜스. 그 차이가 그의 영화 전부야"',
-          '"사이코에서 샤워 씬은 피를 거의 안 보여줘. 그런데 가장 폭력적으로 느껴지지. 편집과 사운드만으로 공포를 만든다는 게 그게 가능하다는 걸 처음 증명한 장면이야"',
-          '"현기증은 단순한 미스터리가 아니야. 남자가 여자를 자기가 원하는 이미지로 만들려는 욕망에 대한 영화고, 그게 지금 봐도 불편할 만큼 날카로워"',
-          '"히치콕은 항상 카메오로 등장하는데, 그게 단순한 유희가 아니라 영화 안에 감독이 존재한다는 걸 의식하게 만드는 장치야"'
-        ],
-        films: [
-          { title: '사이코', year: '1960', image: 'images/hitch1.png' },
-          { title: '현기증', year: '1958', image: 'images/hitch7.png' },
-          { title: '새', year: '1963', image: 'images/hitch3.png' },
-          { title: '이창', year: '1954', image: 'images/hitch8.png' },
-          { title: '북북서로 진로를 돌려라', year: '1959', image: 'images/hitch4.png' },
-          { title: '레베카', year: '1940', image: 'images/hitch6.png' },
-          { title: '오명', year: '1946', image: 'images/hitch2.png' },
-          { title: '다이얼 M을 돌려라', year: '1954', image: 'images/hitch5.png' }
-        ]
-      },
-      {
-        name: '스탠리 큐브릭',
-        image: 'images/kubrick.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '미국/영국', 활동: '1953–1999', 대표작: '2001: 스페이스 오디세이, 샤이닝', 장르: 'SF, 공포' },
-        desc: '큐브릭은 모든 작품을 완벽주의적 집착으로 완성한 감독이다. 촬영, 음악, 편집 전 부문에서 극단적 통제력을 발휘하며 영화를 예술로 끌어올렸다. 수백 번의 테이크, 직접 설계한 렌즈, 배우를 한계까지 밀어붙이는 연출 방식. 그 집착이 낳은 결과물이 바로 인류 역사상 가장 완성도 높은 영화들이다.',
-        phrases: [
-          '"2001 스페이스 오디세이는 SF가 아니야. 인류의 탄생부터 소멸까지를 18분짜리 오프닝 하나로 압축해버리는 철학 영화야"',
-          '"큐브릭이 원 포인트 퍼스펙티브를 그렇게 자주 쓰는 건 단순한 스타일이 아니야. 인물이 운명이나 시스템 앞에서 얼마나 무력한지를 구도 자체로 말하는 거야"',
-          '"샤이닝에서 잭 니콜슨이 무서운 게 아니라, 그 호텔 공간 자체가 무서운 거야. 공간이 인물을 잠식하는 걸 건축적으로 연출한 거거든"',
-          '"풀 메탈 재킷이 전쟁을 미화하지 않는 이유는 적을 한 명도 제대로 안 보여주기 때문이야. 전쟁의 공포는 적이 아니라 시스템 안에 있다는 거지"'
-        ],
-        films: [
-          { title: '2001: 스페이스 오디세이', year: '1968', image: 'images/2001.png' },
-          { title: '샤이닝', year: '1980', image: 'images/shining.png' },
-          { title: '풀 메탈 재킷', year: '1987', image: 'images/fmj.png' },
-          { title: '시계태엽 오렌지', year: '1971', image: 'images/clockwork.png' },
-          { title: '배리 린든', year: '1975', image: 'images/barry.png' },
-          { title: '닥터 스트레인지러브', year: '1964', image: 'images/strangelove.png' },
-          { title: '스파르타쿠스', year: '1960', image: 'images/spartacus.png' },
-          { title: '아이즈 와이드 셧', year: '1999', image: 'images/eyes.png' }
-        ]
-      },
-      {
-        name: '마틴 스콜세지',
-        image: 'images/scorsese.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '미국', 활동: '1963–현재', 대표작: '택시 드라이버, 굿펠라스', 장르: '범죄, 드라마' },
-        desc: '스콜세지는 미국 뉴 할리우드를 대표하는 감독으로, 범죄와 폭력을 통해 인간의 죄의식과 구원을 탐구한다. 이탈리아계 가톨릭 배경에서 비롯된 죄와 벌의 감각이 그의 영화 전반을 관통한다. 카메라가 춤추듯 움직이고, 록 음악이 폭력 위에 깔리는 그 순간이 스콜세지만의 언어다.',
-        phrases: [
-          '"굿펠라스에서 레스토랑 입장 원테이크 씬은 단순한 기술 과시가 아니야. 그 세계에 처음 진입하는 설렘과 위험을 관객이 몸으로 느끼게 하는 거야"',
-          '"택시 드라이버의 트래비스는 영웅이 아니야. 사회에서 밀려난 인간이 폭력으로 의미를 만들려는 시도인데, 미국이 그걸 영웅 서사로 읽어버리는 게 오히려 더 무서운 거지"',
-          '"스콜세지 영화에서 음악은 배경이 아니야. 비프 케이디의 점프컷에 점프컷이 겹쳐지면서 롤링 스톤스가 나오는 그 순간, 음악이 편집이 되는 거야"',
-          '"아이리시맨을 OTT로 봤다면 다시 봐. 3시간 반짜리 영화인데 그 호흡이 사실은 노년과 죽음에 대한 명상이야. 넷플릭스 창으로 보면 못 느껴"'
-        ],
-        films: [
-          { title: '택시 드라이버', year: '1976', image: 'images/taxi.png' },
-          { title: '굿펠라스', year: '1990', image: 'images/goodfellas.png' },
-          { title: '카지노', year: '1995', image: 'images/casino.png' },
-          { title: '디파티드', year: '2006', image: 'images/departed.png' },
-          { title: '분노의 주먹', year: '1980', image: 'images/raging.png' },
-          { title: '아이리시맨', year: '2019', image: 'images/irishman.png' },
-          { title: '갱스 오브 뉴욕', year: '2002', image: 'images/gangs.png' },
-          { title: '쉬터 아일랜드', year: '2010', image: 'images/shutter.png' }
-        ]
-      },
-      {
-        name: '쿠엔틴 타란티노',
-        image: 'images/tarantino.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '미국', 활동: '1987–현재', 대표작: '펄프 픽션, 킬 빌', 장르: '범죄, 액션' },
-        desc: '타란티노는 장르 영화에 대한 박학다식한 지식과 팝적 감각을 버무려 독자적인 세계를 구축한 감독이다. 비선형 구조와 정제된 폭력 미학이 시그니처이며, 그의 영화 속 대사는 단순한 말이 아니라 리듬이다. 비디오 가게 직원 출신이라는 이력이 말해주듯, 그의 영화는 장르에 대한 순수한 사랑에서 출발한다.',
-        phrases: [
-          '"펄프 픽션이 혁명적인 건 시간 순서를 뒤섞었기 때문이 아니야. 죽은 인물이 다음 챕터에서 살아있어도 전혀 이상하지 않은 독자적인 세계관을 만들어냈기 때문이야"',
-          '"타란티노 영화에서 대사가 긴 건 이유가 있어. 대화가 길어질수록 누가 권력을 쥐고 있는지가 드러나거든. 그 긴장감이 총보다 무서울 때가 있어"',
-          '"킬 빌은 복수극이 아니라 장르 영화에 대한 러브레터야. 홍콩 무협, 일본 애니, 스파게티 웨스턴을 한 편에 다 때려넣고도 자기 영화가 되는 건 그냥 되는 게 아니야"',
-          '"저수지의 개들에서 귀 자르는 장면은 실제로 안 보여줘. 카메라가 옆으로 패닝하거든. 그 안 보여주는 순간이 가장 잔인하게 느껴지는 이유를 생각해봐"'
-        ],
-        films: [
-          { title: '펄프 픽션', year: '1994', image: 'images/pulp.png' },
-          { title: '킬 빌 Vol.1', year: '2003', image: 'images/kill1.png' },
-          { title: '킬 빌 Vol.2', year: '2004', image: 'images/kill2.png' },
-          { title: '저수지의 개들', year: '1992', image: 'images/reservoir.png' },
-          { title: '바스터즈: 거친 녀석들', year: '2009', image: 'images/basterds.png' },
-          { title: '장고: 분노의 추적자', year: '2012', image: 'images/django.png' },
-          { title: '헤이트풀 8', year: '2015', image: 'images/hateful.png' },
-          { title: '원스 어폰 어 타임 인 할리우드', year: '2019', image: 'images/once.png' }
-        ]
-      },
-      {
-        name: '폴 토마스 앤더슨',
-        image: 'images/pta.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '미국', 활동: '1988–현재', 대표작: '데어 윌 비 블러드, 매그놀리아', 장르: '드라마, 심리' },
-        desc: 'PTA는 복잡한 인물의 심리와 미국의 어두운 이면을 풍성한 영상 언어로 풀어내는 감독이다. 매 작품마다 장르와 스타일을 완전히 바꾸면서도 인간의 욕망과 집착이라는 주제를 놓지 않는다. 다니엘 데이 루이스, 호아킨 피닉스, 애덤 샌들러까지, 그의 손을 거치면 배우가 달라진다.',
-        phrases: [
-          '"데어 윌 비 블러드의 마지막 장면은 미국 자본주의의 탄생과 종교의 야합이 결국 어떻게 끝나는지를 볼링핀 하나로 보여줘. 그 씬 하나가 영화 전체야"',
-          '"PTA가 대단한 건 매 작품이 완전히 달라 보이는데 다 그의 영화라는 게 느껴진다는 거야. 스타일을 바꾸면서도 목소리를 잃지 않는 감독이 얼마나 드문지 알아?"',
-          '"매그놀리아에서 갑자기 개구리가 쏟아지는 장면 있잖아. 말도 안 되는 것 같은데 그 순간 모든 등장인물의 이야기가 하나로 묶이는 감각이 오거든"',
-          '"리코리쉬 피자는 PTA 필모에서 가장 가볍게 보이는데, 사실 가장 로맨틱한 영화야. 70년대 밸리의 공기 자체가 스크린에서 풍겨나와"'
-        ],
-        films: [
-          { title: '데어 윌 비 블러드', year: '2007', image: 'images/blood.png' },
-          { title: '매그놀리아', year: '1999', image: 'images/magnolia.png' },
-          { title: '부기 나이츠', year: '1997', image: 'images/boogie.png' },
-          { title: '팬텀 스레드', year: '2017', image: 'images/phantom.png' },
-          { title: '마스터', year: '2012', image: 'images/master.png' },
-          { title: '펀치-드렁크 러브', year: '2002', image: 'images/punch.png' },
-          { title: '리코리쉬 피자', year: '2021', image: 'images/licorice.png' }
-        ]
-      },
-      {
-        name: '데이비드 핀처',
-        image: 'images/fincher.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '미국', 활동: '1984–현재', 대표작: '세븐, 소셜 네트워크, 파이트 클럽', 장르: '스릴러, 드라마' },
-        desc: '핀처는 기술적 정밀함과 어두운 심리 묘사를 결합하여 현대 스릴러의 기준을 높인 감독이다. 뮤직비디오 출신답게 모든 프레임이 계산되어 있고, 수백 번의 테이크로 완성된 장면들은 배우의 즉흥이 아닌 감독의 설계로 움직인다. 그의 영화는 어둡고, 차갑고, 정확하다.',
-        phrases: [
-          '"파이트 클럽은 처음엔 그냥 쿨한 영화처럼 보이는데, 다시 보면 남성성의 위기와 소비사회에 대한 비판을 가장 팝하게 포장한 영화야"',
-          '"핀처가 테이크를 100번씩 찍는 건 완벽주의가 아니야. 배우가 생각을 멈추고 몸이 반응하는 순간을 기다리는 거야. 그 순간이 필름에 잡히면 그게 그의 장면이 돼"',
-          '"소셜 네트워크에서 가장 무서운 건 저커버그가 악당이 아니라는 거야. 그냥 공감 능력이 없는 사람이 세상을 바꾼다는 이야기가 지금 보면 더 소름이야"',
-          '"세븐의 엔딩은 박스 안에 뭐가 있는지를 안 보여줘. 그게 핀처야. 보여주지 않는 것으로 가장 강렬한 이미지를 만드는 감독"'
-        ],
-        films: [
-          { title: '세븐', year: '1995', image: 'images/seven.png' },
-          { title: '파이트 클럽', year: '1999', image: 'images/fight.png' },
-          { title: '소셜 네트워크', year: '2010', image: 'images/social.png' },
-          { title: '조디악', year: '2007', image: 'images/zodiac.png' },
-          { title: '벤자민 버튼의 시간은 거꾸로 간다', year: '2008', image: 'images/benjamin.png' },
-          { title: '나를 찾아줘', year: '2014', image: 'images/gone.png' },
-          { title: '드래곤 타투를 한 소녀', year: '2011', image: 'images/dragon.png' },
-          { title: '맹크', year: '2020', image: 'images/mank.png' }
-        ]
-      },
-      {
-        name: '안드레이 타르코프스키',
-        image: 'images/tarkovsky.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '소련', 활동: '1961–1986', 대표작: '솔라리스, 스토커, 희생', 장르: 'SF, 철학' },
-        desc: '타르코프스키는 영화를 시간 예술로 정의한 철학적 감독이다. 느린 롱테이크와 물·불·자연의 이미지로 존재의 의미를 탐구한다. 그의 영화는 빠르게 보면 아무것도 일어나지 않는 것 같다. 하지만 그 침묵 속에 인간이 감당할 수 있는 가장 무거운 질문들이 담겨 있다.',
-        phrases: [
-          '"스토커의 Zone은 SF 공간이 아니야. 자기 자신의 가장 깊은 욕망과 마주하게 되는 심리적 공간이야. 거기 들어가면 원하는 걸 얻는다는데 아무도 안 들어가려 하거든"',
-          '"타르코프스키 영화에서 물은 항상 나와. 그게 우연이 아니야. 물은 시간의 흐름이자 기억이자 무의식이야. 그의 영화에서 이미지는 다 상징이 아니라 감각이야"',
-          '"롱테이크를 그냥 오래 찍는 거라고 생각하면 안 돼. 그 안에서 빛이 바뀌고 바람이 불고 배우가 움직이는 게 다 살아있는 시간이야. 편집은 그 시간을 죽이는 거라고 그는 생각했어"',
-          '"희생은 그의 마지막 작품인데, 한 남자가 세계가 멸망하지 않게 해달라고 신에게 모든 걸 바치는 이야기야. 그 약속을 지키는 방식이 영화 역사상 가장 충격적인 엔딩 중 하나야"'
-        ],
-        films: [
-          { title: '솔라리스', year: '1972', image: 'images/solaris.png' },
-          { title: '스토커', year: '1979', image: 'images/stalker.png' },
-          { title: '희생', year: '1986', image: 'images/sacrifice.png' },
-          { title: '안드레이 루블료프', year: '1966', image: 'images/andrei.png' },
-          { title: '거울', year: '1975', image: 'images/mirror.png' },
-          { title: '이반의 어린시절', year: '1962', image: 'images/ivan.png' },
-          { title: '노스탤지어', year: '1983', image: 'images/nostalgia.png' }
-        ]
-      },
-      {
-        name: '루이스 부뉴엘',
-        image: 'images/bunuel.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '스페인/멕시코', 활동: '1929–1977', 대표작: '비리디아나, 부르주아의 은밀한 매력', 장르: '초현실주의' },
-        desc: '부뉴엘은 살바도르 달리와 함께 초현실주의 영화의 문을 연 감독이다. 종교와 부르주아 위선을 신랄하게 비꼬는 유머가 트레이드마크이며, 꿈과 현실의 경계를 허물면서도 결코 난해하지 않다. 불편하게 웃기는 감독, 그게 부뉴엘이다.',
-        phrases: [
-          '"안달루시아의 개에서 눈알 자르는 장면은 17분짜리 단편의 오프닝이야. 그 장면 하나로 영화가 이성으로 설명되지 않아도 된다는 선언을 해버린 거야"',
-          '"부르주아의 은밀한 매력은 부자들이 밥을 먹으러 가는데 계속 뭔가가 방해해. 단순한 설정인데 보다 보면 그게 사회 시스템 전체에 대한 풍자가 돼"',
-          '"비리디아나에서 최후의 만찬 패러디 장면은 스페인 검열을 통과하고 나서 칸에서 황금종려상 받았어. 그 아이러니가 부뉴엘 자체야"',
-          '"부뉴엘은 꿈 시퀀스를 다른 영화들처럼 흐릿하게 찍지 않아. 현실이랑 똑같이 선명하게 찍어. 그래서 어디까지가 현실인지 모르게 되는 거야"'
-        ],
-        films: [
-          { title: '부르주아의 은밀한 매력', year: '1972', image: 'images/discreet.png' },
-          { title: '비리디아나', year: '1961', image: 'images/viridiana.png' },
-          { title: '욕망의 모호한 대상', year: '1977', image: 'images/obscure.png' },
-          { title: '안달루시아의 개', year: '1929', image: 'images/andalusian.png' },
-          { title: '황금시대', year: '1930', image: 'images/golden.png' },
-          { title: '세브린느', year: '1967', image: 'images/belle.png' }
-        ]
-      },
-      {
-        name: '장 뤽 고다르',
-        image: 'images/jang.jpg',
-        videoLink: 'https://youtu.be/IxZrExbgZL0?si=PRzn65ZlWw_TOU8S',
-        videoThumb: 'images/jangim.png',
-        info: { 국적: '프랑스/스위스', 활동: '1954–2022', 대표작: '네 멋대로 해라, 비브르 사 비', 장르: '누벨바그' },
-        desc: '고다르는 누벨바그를 대표하는 영화 혁명가다. 점프컷, 파편화된 서사 등 기존 문법을 해체하며 시네마의 가능성을 재정의했다. 영화를 이론으로, 이론을 영화로 만든 감독이며, 그가 1960년에 한 실험들을 지금도 따라가지 못하는 감독들이 있다.',
-        phrases: [
-          '"네 멋대로 해라의 점프컷은 편집 실수가 아니야. 의도적으로 연속성을 끊어서 관객이 이게 영화라는 걸 의식하게 만드는 거야. 영화가 투명한 창이 아니라는 선언이지"',
-          '"고다르는 영화 안에서 카메라를 향해 말하게 하고, 자막으로 철학 텍스트를 깔아. 영화를 보는 게 아니라 영화와 논쟁하게 만드는 감독이야"',
-          '"비브르 사 비는 한 여자가 매춘부가 되는 이야기인데, 각 챕터마다 형식이 달라. 다큐처럼 찍다가 갑자기 철학 대화가 나와. 그 파편이 사실 그 여자의 삶의 형식이야"',
-          '"고다르가 2022년에 안락사로 생을 마감한 것도 어떻게 보면 그다운 마지막이야. 자기 죽음마저 자기 방식으로 편집한 거잖아"'
-        ],
-        films: [
-          { title: '네 멋대로 해라', year: '1960', image: 'images/jang1.png' },
-          { title: '비브르 사 비', year: '1962', image: 'images/jang2.png' },
-          { title: '경멸', year: '1963', image: 'images/jang3.png' },
-          { title: '알파빌', year: '1965', image: 'images/jang4.png' },
-          { title: '미치광이 피에로', year: '1965', image: 'images/jang5.png' },
-          { title: '중국 여인', year: '1967', image: 'images/jang6.png' },
-          { title: '위크엔드', year: '1967', image: 'images/jang7.png' },
-          { title: '필름 소셜리즘', year: '2010', image: 'images/jang8.png' }
-        ]
-      },
-      {
-        name: '앙리 조르주 클루조',
-        image: 'images/clouzot.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '프랑스', 활동: '1931–1968', 대표작: '악마의 씨, 공포의 보수', 장르: '서스펜스, 범죄' },
-        desc: '"프랑스의 히치콕"으로 불리는 클루조는 극도의 긴장감과 비관적 세계관으로 인간의 탐욕을 해부한 감독이다. 히치콕보다 더 잔인하고, 더 염세적이며, 더 직접적이다. 공포의 보수는 지금 봐도 손에 땀이 난다.',
-        phrases: [
-          '"공포의 보수는 니트로글리세린을 트럭으로 운반하는 이야기야. 폭발이 일어날 것 같은 긴장감을 155분 동안 유지하는데, 그게 가능한 감독이 클루조 말고 몇이나 돼?"',
-          '"악마의 씨는 히치콕이 사이코를 만들기 전에 먼저 샀다가 놓친 작품이야. 그 이야기 자체가 클루조가 얼마나 날카로운 감독인지를 증명해"',
-          '"클루조 영화에서 착한 사람은 없어. 모두가 탐욕스럽거나 비겁하거나 둘 다야. 그 비관론이 프랑스 누아르의 가장 어두운 면이야"',
-          '"까마귀는 2차대전 나치 점령기에 만들어진 영화인데, 익명의 고발 편지로 마을 전체가 무너지는 이야기야. 그 시대에 그 이야기를 한다는 게 지금 봐도 충격이야"'
-        ],
-        films: [
-          { title: '공포의 보수', year: '1953', image: 'images/wages.png' },
-          { title: '악마의 씨', year: '1955', image: 'images/diabolique.png' },
-          { title: '까마귀', year: '1943', image: 'images/crow.png' },
-          { title: '망설임', year: '1960', image: 'images/truth.png' },
-          { title: '살인범은 누구인가', year: '1942', image: 'images/murderer.png' }
-          ]
-      },  
-    ]    
-  },    
+      { name: '봉준호', image: 'images/bong.jpg', videoLink: 'https://youtu.be/ekMl5VHBH4I?si=wKiFjbQ5-UddVvsL', videoThumb: 'images/bongim.png', info: { 국적: '한국', 활동: '1993–현재', 대표작: '기생충, 설국열차', 장르: '스릴러, 드라마' }, desc: '봉준호는 대중성과 예술성이라는 양극단의 가치를 기묘하리만치 완벽하게 결합해 내는 독보적인 거장이다. 스릴러, SF, 블랙 코미디 등 기존 장르의 문법을 정교하게 비틀어 자신만의 독창적인 장르를 창조하는 데 탁월하다. 관객에게 대중적인 재미를 주면서도, 그 속에는 늘 날카로운 사회 비판 메시지를 담아낸다. 치밀한 디테일로 자본주의의 계급적 모순과 사회적 폐부를 서늘하게 해부한다. 겉보기에는 한 치 앞을 예측할 수 없는 완벽한 엔터테인먼트의 형태를 띠지만, 그 이면에는 인간에 대한 깊은 연민과 날카로운 사회학적 통찰이 공존한다. 결국 그는 가장 지역적이고 한국적인 배경에서 출발한 이야기로 전 세계가 동시에 앓고 있는 보편적인 시대적 불안과 공감을 이끌어내는 창작자다.', phrases: ['"데뷔작 플란다스의 개를 보면 이미 답이 나와 있어. 아파트라는 일상적인 공간을 그렇게 기괴하고 서늘한 서사의 무대로 변주하는 감각은 타고난 것 같아"','"김기영 감독의 <하녀>가 가진 그로테스크한 에너지를 현대 미술에 가깝게 가장 세련되게 계승한 연출가가 봉준호 아닐까?"','"사람들은 <설국열차>나 <옥자>를 단순 할리우드 진출작으로 보던데, 본질은 자본의 압박 속에서도 기어코 자기만의 계급론을 이식해 내는 작가주의적 고집이고, 그게 대단한 것 같아"','"다들 살인의 추억을 연기나 살인 추적으로만 보는데, 진짜는 범인을 못 잡는 스릴러라는 장르적 배반을 통해 80년대라는 시대의 공기를 스크린에 그대로 포획해 냈다는 점이라고 생각해. 특히 그 딥 포커스로 담아낸 논두렁의 아이러니는 진짜 변태적이라고 느꼈어"'], films: [{ title: '기생충', year: '2019', image: 'images/bong1.png' },{ title: '설국열차', year: '2013', image: 'images/bong2.png' },{ title: '마더', year: '2009', image: 'images/bong3.png' },{ title: '살인의 추억', year: '2003', image: 'images/bong4.png' },{ title: '괴물', year: '2006', image: 'images/bong5.png' },{ title: '플란다스의 개', year: '2000', image: 'images/bong6.png' },{ title: '옥자', year: '2017', image: 'images/bong7.png' },{ title: '지리멸렬', year: '1994', image: 'images/bong8.png' }] },
+
+      { name: '장 뤽 고다르', image: 'images/jang.jpg', videoLink: 'https://youtu.be/IxZrExbgZL0?si=PRzn65ZlWw_TOU8S', videoThumb: 'images/jangim.png', info: { 국적: '프랑스/스위스', 활동: '1954–2022', 대표작: '네 멋대로 해라, 비브르 사 비', 장르: '누벨바그' }, desc: '장 뤽 고다르는 영화라는 매체의 관습적 문법을 가장 도발적이고 파괴적인 방식으로 해체해 버린 누벨바그의 영원한 혁명가다. 점프 컷, 소외 효과, 스크린과 관객 사이의 벽을 무너뜨리는 기법 등을 통해 영화가 단순한 환영이나 현실의 복제가 아닌 하나의 치열한 사유의 장임을 끊임없이 증명해 낸다. 관객을 안락한 감상에 머물게 두지 않고 영상과 텍스트의 낯선 충돌을 통해 기어코 지적이고 정치적인 각성을 유도한다. 미장센의 완결성에 집착하기보다 편집의 불연속성이 만드는 균열을 즐기며, 영화라는 예술이 도달할 수 있는 형식적 한계를 지독하게 밀어붙인다. 결국 그는 기성의 서사 구조를 전복하는 파격적인 실험을 통해 영화란 무엇인가라는 본질적인 질문을 역사상 가장 감각적이고 급진적인 언어로 던진 선구자다.', phrases: ['"네 멋대로 해라의 점프컷은 편집 실수가 아니야. 의도적으로 연속성을 끊어서 관객이 이게 영화라는 걸 의식하게 만드는 거야. 영화가 투명한 창이 아니라는 선언이지"','"고다르는 영화 안에서 카메라를 향해 말하게 하고, 자막으로 철학 텍스트를 깔아. 영화를 보는 게 아니라 영화와 논쟁하게 만드는 감독이야"','"비브르 사 비는 한 여자가 매춘부가 되는 이야기인데, 각 챕터마다 형식이 달라. 다큐처럼 찍다가 갑자기 철학 대화가 나와. 그 파편이 사실 그 여자의 삶의 형식이야"','"고다르가 2022년에 안락사로 생을 마감한 것도 어떻게 보면 그다운 마지막이야. 자기 죽음마저 자기 방식으로 편집한 거잖아"'], films: [{ title: '네 멋대로 해라', year: '1960', image: 'images/jang1.png' },{ title: '비브르 사 비', year: '1962', image: 'images/jang2.png' },{ title: '경멸', year: '1963', image: 'images/jang3.png' },{ title: '알파빌', year: '1965', image: 'images/jang4.png' },{ title: '미치광이 피에로', year: '1965', image: 'images/jang5.png' },{ title: '중국 여인', year: '1967', image: 'images/jang6.png' },{ title: '위크엔드', year: '1967', image: 'images/jang7.png' },{ title: '필름 소셜리즘', year: '2010', image: 'images/jang8.png' }] },
+
+      { name: '루이스 부뉴엘', image: 'images/ru.png', videoLink: 'https://youtu.be/j7BOr8X-gNI?si=xPtwL6wbp5zAUbv6', videoThumb: 'images/ruim.png', info: { 국적: '스페인/멕시코', 활동: '1929–1977', 대표작: '비리디아나, 부르주아의 은밀한 매력', 장르: '초현실주의' }, desc: '루이스 부뉴엘은 부르주아 계급의 위선과 종교적 도그마를 초현실주의적인 광기와 날카로운 풍자로 사정없이 난도질하는 시네아스트다. 이성적이고 합리적인 세계의 외피를 한 꺼풀 벗겨내어 그 밑에 도사린 인간의 가식과 억압된 성적 욕망, 그리고 기괴한 무의식을 스크린 위에 노골적으로 폭로한다. 얼핏 기괴하고 황당해 보이는 서사 구조를 취하는 듯하지만, 그 속에는 현실 세계의 계급적 질서와 권위주의에 대한 지독할 정도의 냉소와 블랙 코미디가 정교하게 설계되어 있다. 이성과 야만, 성스러움과 속됨의 경계를 무너뜨리는 전복적인 연출을 통해 관객의 안일한 도덕관을 서늘하게 뒤흔든다. 결국 그는 가장 몽환적이고 자유분방한 상상력의 문법을 빌려 현대 문명이 애써 감추고 싶어 하는 가장 원초적인 추악함과 사회적 모순을 유쾌하고도 치명적으로 해부하는 거장이다.', phrases: ['"안달루시아의 개에서 눈알 자르는 장면은 17분짜리 단편의 오프닝이야. 그 장면 하나로 영화가 이성으로 설명되지 않아도 된다는 선언을 해버린 거야"','"부르주아의 은밀한 매력은 부자들이 밥을 먹으러 가는데 계속 뭔가가 방해해. 단순한 설정인데 보다 보면 그게 사회 시스템 전체에 대한 풍자가 돼"','"비리디아나에서 최후의 만찬 패러디 장면은 스페인 검열을 통과하고 나서 칸에서 황금종려상 받았어. 그 아이러니가 부뉴엘 자체야"','"부뉴엘은 꿈 시퀀스를 다른 영화들처럼 흐릿하게 찍지 않아. 현실이랑 똑같이 선명하게 찍어. 그래서 어디까지가 현실인지 모르게 되는 거야"'], films: [{ title: '부르주아의 은밀한 매력', year: '1972', image: 'images/ru1.png' },{ title: '비리디아나', year: '1961', image: 'images/ru2.png' },{ title: '욕망의 모호한 대상', year: '1977', image: 'images/ru3.png' },{ title: '안달루시아의 개', year: '1929', image: 'images/ru4.png' },{ title: '황금시대', year: '1930', image: 'images/ru5.png' },{ title: '세브린느', year: '1967', image: 'images/ru6.png' },{ title: '잊혀진 사람들', year: '1950', image: 'images/ru7.png' },{ title: '절멸의 천사', year: '1962', image: 'images/ru8.png' }] },
+
+      { name: '안드레이 타르코프스키', image: 'images/an.png', videoLink: 'https://youtu.be/_Vvdtaaprzw?si=O7ry9x8OKuMEAh-F', videoThumb: 'images/anim.png', info: { 국적: '소련', 활동: '1961–1986', 대표작: '솔라리스, 스토커, 희생', 장르: 'SF, 철학' }, desc: '안드레이 타르코프스키는 물질문명에 매몰된 인간의 영혼과 구원의 문제를 시간의 물질성을 통해 스크린에 아로새기는 영화계의 고독한 시인이다. 롱 테이크와 지극히 느린 카메라 워킹을 통해 영화를 서사의 도구가 아닌 흐르는 시간을 그대로 포획하는 영성적인 매체로 격상시킨다. 물, 불, 흙, 바람 같은 자연의 원초적인 이미지들을 미학적으로 배치하여, 인간 내면의 깊은 소외감과 영적 고독, 그리고 상실된 고향에 대한 시원적 향수를 시각적인 명상록으로 완성해 낸다. 단순한 오락이나 인과적 플롯을 완전히 배제한 채 극도로 정제된 미장센과 시적 상징만으로 관객을 깊은 존재론적 성찰의 영역으로 인도한다. 결국 그는 영화라는 장르를 종교적 체험에 가까운 숭고함의 경지로 끌어올려, 상처 입은 현대인의 정신적 구원과 근원적인 존재의 신비를 가장 엄숙하고 아름답게 탐구한 독보적인 예술가다.', phrases: ['"스토커의 Zone은 SF 공간이 아니야. 자기 자신의 가장 깊은 욕망과 마주하게 되는 심리적 공간이야. 거기 들어가면 원하는 걸 얻는다는데 아무도 안 들어가려 하거든"','"타르코프스키 영화에서 물은 항상 나와. 그게 우연이 아니야. 물은 시간의 흐름이자 기억이자 무의식이야. 그의 영화에서 이미지는 다 상징이 아니라 감각이야"','"롱테이크를 그냥 오래 찍는 거라고 생각하면 안 돼. 그 안에서 빛이 바뀌고 바람이 불고 배우가 움직이는 게 다 살아있는 시간이야. 편집은 그 시간을 죽이는 거라고 그는 생각했어"','"희생은 그의 마지막 작품인데, 한 남자가 세계가 멸망하지 않게 해달라고 신에게 모든 걸 바치는 이야기야. 그 약속을 지키는 방식이 영화 역사상 가장 충격적인 엔딩 중 하나야"'], films: [{ title: '솔라리스', year: '1972', image: 'images/an1.png' },{ title: '스토커', year: '1979', image: 'images/an2.png' },{ title: '희생', year: '1986', image: 'images/an3.png' },{ title: '안드레이 루블료프', year: '1966', image: 'images/an4.png' },{ title: '거울', year: '1975', image: 'images/an5.png' },{ title: '이반의 어린시절', year: '1962', image: 'images/an6.png' },{ title: '노스탤지어', year: '1983', image: 'images/an7.png' },{ title: '증기기관차와 바이올린', year: '1961', image: 'images/an8.png' }] },
+
+      { name: '알프레도 히치콕', image: 'images/hitch.jpg', videoLink: 'https://youtu.be/0WtDmbr9xyY?si=KSyqJEZ6sr93g15D', videoThumb: 'images/hitchim.png', info: { 국적: '영국/미국', 활동: '1919–1976', 대표작: '사이코, 현기증, 새', 장르: '스릴러, 서스펜스' }, desc: '알프레드 히치콕은 관객의 심리와 시선을 완벽하게 장악하여 서스펜스라는 감정을 하나의 순수 미술이자 장르적 교향곡으로 완성해 낸 master다. 맥거핀 기법과 정교한 카메라 시점 숏을 통해 영화 속 캐릭터가 느끼는 공포와 불안, 그리고 엿보기 구도의 관음증적 쾌감을 스크린 너머의 관객에게 고스란히 이식하는 심리 통제의 대가다. 지극히 대중적이고 매끄러운 스릴러의 외형을 띠고 있으면서도, 그 이면에는 인간의 어두운 강박증과 죄의식, 그리고 통제할 수 없는 기괴한 심리적 심연을 지독하리만치 정교하게 프로그래밍해 둔다. 상업적 영화 메커니즘의 정점에서 가장 완벽한 엔터테인먼트를 제공하는 동시에 순수 영상 언어의 편집 기술이 도달할 수 있는 시각적 쾌감의 극치를 보여준다. 결국 그는 가장 보편적이고 오락적인 스릴러의 문법 속에서 인간 내면의 불안과 공포라는 본질을 현미경처럼 해부하여 장르 영화를 예술의 반열에 올려놓은 위대한 연출가다.', phrases: ['"히치콕이 서스펜스와 서프라이즈를 구분한 거 알아? 폭탄이 터지면 서프라이즈, 폭탄이 있다는 걸 관객만 알면 서스펜스. 그 차이가 그의 영화 전부야"','"사이코에서 샤워 씬은 피를 거의 안 보여줘. 그런데 가장 폭력적으로 느껴지지. 편집과 사운드만으로 공포를 만든다는 게 그게 가능하다는 걸 처음 증명한 장면이야"','"현기증은 단순한 미스터리가 아니야. 남자가 여자를 자기가 원하는 이미지로 만들려는 욕망에 대한 영화고, 그게 지금 봐도 불편할 만큼 날카로워"','"히치콕은 항상 카메오로 등장하는데, 그게 단순한 유희가 아니라 영화 안에 감독이 존재한다는 걸 의식하게 만드는 장치야"'], films: [{ title: '사이코', year: '1960', image: 'images/hitch1.png' },{ title: '현기증', year: '1958', image: 'images/hitch7.png' },{ title: '새', year: '1963', image: 'images/hitch3.png' },{ title: '이창', year: '1954', image: 'images/hitch8.png' },{ title: '북북서로 진로를 돌려라', year: '1959', image: 'images/hitch4.png' },{ title: '레베카', year: '1940', image: 'images/hitch6.png' },{ title: '오명', year: '1946', image: 'images/hitch2.png' },{ title: '다이얼 M을 돌려라', year: '1954', image: 'images/hitch5.png' }] },
+      { name: '스탠리 큐브릭' },
+      { name: '마틴 스콜세지' },
+      { name: '폴 토마스 앤더슨' },
+      { name: '데이비드 핀처' },
+      { name: '앙리 조르주 클루조' }
+    ]
+  },
   music: {
     label: 'Music',
     items: [
-      {
-        name: '댄스',
-        image: 'images/dance.png',
-        videoLink: 'https://youtu.be/VOj_xsc-EBM?si=KEWyUCfWV2jO64gm',
-        videoThumb: 'images/danceim.png',
-        info: { 장르: 'Dance', 기원: '1970년대', 키워드: '비트, 그루브, 클럽', 대표: 'Daft Punk, Michael Jackson' },
-        desc: '댄스 음악은 1970년대 디스코와 1980년대 시카고 하우스 음악 같은 클럽 문화의 강렬한 전자 비트에 뿌리를 두고 있다. 드럼 머신과 신디사이저를 활용한 규칙적인 리듬으로 사람들을 춤추게 만드는 것이 이 장르의 본질적인 시작이다. 이후 1980년대 후반 마이클 잭슨과 마돈나를 거치며, 이 강렬한 비트는 주류 팝 시장의 시각적 퍼포먼스(안무)와 결합했다. 결국 댄스 장르는 클럽의 심장을 뛰게 하던 일렉트로닉 비트의 역사와 대중의 눈을 사로잡는 화려한 무대 예술이 결합해 완성된 장르다.',
-        phrases: [
-          '"댄스 음악을 그냥 클럽 음악으로 보면 안 돼. 디스코에서 하우스, 테크노로 이어지는 계보가 있고 그게 지금 팝 프로덕션의 기초야"',
-          '"마이클 잭슨의 Billie Jean 베이스라인이 왜 완벽한지 알아? 4마디 루프인데 긴장을 풀지 않아. 댄스 음악에서 그루브가 뭔지를 가장 잘 보여주는 예야"',
-          '"Daft Punk의 Random Access Memories는 댄스 음악이 얼마나 정교한 레이어로 만들어지는지를 보여줘. 디지털 시대에 일부러 아날로그로 만든 그 선택이 핵심이야"',
-          '"댄스팝의 진짜 미학은 보컬의 가창력이 아니라 탑라인(멜로디)의 중독성에 있지. 가사를 뭉개면서까지 사운드의 질감이랑 리듬감만 남겨두는 그 과감함이 진짜 팝 트렌드거든"'
-        ],
-        films: [
-          { title: 'Thriller', year: '1982', image: 'images/thriller.png' },
-          { title: 'Random Access Memories', year: '2013', image: 'images/ram.png' },
-          { title: 'Discovery', year: '2001', image: 'images/discovery.png' },
-          { title: 'Off the Wall', year: '1979', image: 'images/offthewall.png' }
-        ]
-      },
-      {
-        name: '일렉트로닉',
-        image: 'images/electronic.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Electronic', 기원: '1960년대', 키워드: '신디사이저, 테크노, 앰비언트', 대표: 'Kraftwerk, Aphex Twin' },
-        desc: '일렉트로닉 음악은 기계를 악기로 만든 순간부터 시작됐다. 크라프트베르크가 인간이 기계가 되는 것을 음악으로 표현했고, 그 이후 테크노, 앰비언트, IDM으로 가지를 뻗었다. 소리 자체를 재료로 다루는 가장 현대적인 음악 형식이다.',
-        phrases: [
-          '"크라프트베르크의 Autobahn은 고속도로 드라이브를 신디사이저로 만든 곡이야. 1974년에 이미 일렉트로닉 음악이 풍경과 감각을 재현할 수 있다는 걸 보여줬어"',
-          '"Aphex Twin의 Selected Ambient Works II는 들으면 꿈인지 현실인지 모르게 돼. 일렉트로닉이 감정이 아니라 의식 상태를 바꾸는 음악이 될 수 있다는 걸 증명했어"',
-          '"테크노가 디트로이트에서 나온 게 우연이 아니야. 자동화로 공장이 무너진 도시에서 기계 소리로 음악을 만든 거야. 산업의 몰락이 장르를 만든 거지"',
-          '"신디사이저가 나왔을 때 기존 음악가들이 진짜 악기가 아니라고 했어. 근데 그게 지금 모든 팝 프로덕션의 기초야. 저항받은 것들이 결국 표준이 되더라"'
-        ],
-        films: [
-          { title: 'Autobahn', year: '1974', image: 'images/autobahn.png' },
-          { title: 'Selected Ambient Works II', year: '1994', image: 'images/aphex.png' },
-          { title: 'Trans-Europe Express', year: '1977', image: 'images/transeurope.png' },
-          { title: 'Music Has the Right to Children', year: '1998', image: 'images/boards.png' }
-        ]
-      },
-      {
-        name: '포크',
-        image: 'images/folk.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Folk', 기원: '1940년대', 키워드: '어쿠스틱, 내러티브, 사회참여', 대표: 'Bob Dylan, Joni Mitchell' },
-        desc: '포크는 가장 적은 것으로 가장 많은 것을 말하는 음악이다. 기타 하나, 목소리 하나로 시대를 기록하고 사회를 비판한다. 밥 딜런이 노벨문학상을 받은 건 노래가 문학이 될 수 있다는 걸 공식화한 것이다.',
-        phrases: [
-          '"밥 딜런이 일렉트릭 기타 들었을 때 포크 팬들이 배신자라고 했어. 근데 그게 록의 역사를 만든 순간이야. 장르의 경계를 넘는 것에 항상 저항이 먼저 와"',
-          '"조니 미첼의 Blue는 자기 고백이 얼마나 보편적인 예술이 될 수 있는지를 보여줘. 개인적일수록 더 많은 사람한테 닿는다는 걸 증명한 앨범이야"',
-          '"포크의 핵심은 이야기야. 3분 안에 한 사람의 인생이나 한 시대의 공기를 담아내는 거. 그 서사 밀도는 다른 장르가 따라오기 어려워"',
-          '"닉 드레이크는 살아있을 때 앨범이 거의 안 팔렸어. 죽고 나서 재발견됐지. Pink Moon 같은 앨범이 왜 지금도 유효한지는 들으면 알아"'
-        ],
-        films: [
-          { title: 'Blue', year: '1971', image: 'images/blue.png' },
-          { title: 'The Freewheelin Bob Dylan', year: '1963', image: 'images/freewheelin.png' },
-          { title: 'Pink Moon', year: '1972', image: 'images/pinkmoon.png' },
-          { title: 'For Emma Forever Ago', year: '2008', image: 'images/boniver.png' }
-        ]
-      },
-      {
-        name: '힙합',
-        image: 'images/hiphop.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Hip-Hop', 기원: '1970년대 브롱크스', 키워드: '샘플링, 플로우, 라임', 대표: 'Kendrick Lamar, Nas' },
-        desc: '힙합은 아무것도 없는 곳에서 만들어진 음악이다. 악기 없이 턴테이블로, 돈 없이 샘플링으로. 브롱크스의 블록 파티에서 시작한 것이 지금 세계에서 가장 영향력 있는 장르가 됐다. 가사가 시이고, 플로우가 악기다.',
-        phrases: [
-          '"Kendrick Lamar의 To Pimp a Butterfly는 힙합 앨범이 어떻게 재즈, 펑크, 시, 정치를 하나로 묶을 수 있는지를 보여줘. 그냥 랩 앨범이 아니야"',
-          '"샘플링이 단순히 남의 음악 가져오는 게 아니야. 기존 것을 재맥락화해서 새로운 의미를 만드는 거야. 그게 힙합이 가장 포스트모던한 음악인 이유야"',
-          '"Nas의 Illmatic은 22살이 만든 앨범이야. 뉴욕 퀸스브리지의 삶을 그렇게 정밀하게 담은 건 경험 없인 불가능해. 힙합이 저널리즘이 될 수 있다는 걸 보여준 앨범이야"',
-          '"플로우를 단순히 랩 속도로 보면 안 돼. 비트 위에서 언제 치고 언제 쉬는지, 어디서 라임을 맺는지가 다 음악적 선택이야. 재즈 임프로비제이션이랑 같은 원리야"'
-        ],
-        films: [
-          { title: 'To Pimp a Butterfly', year: '2015', image: 'images/tpab.png' },
-          { title: 'Illmatic', year: '1994', image: 'images/illmatic.png' },
-          { title: 'My Beautiful Dark Twisted Fantasy', year: '2010', image: 'images/mbdtf.png' },
-          { title: 'Enter the Wu-Tang', year: '1993', image: 'images/wutang.png' }
-        ]
-      },
-      {
-        name: '하우스',
-        image: 'images/house.jpg',
-        videoLink: 'https://www.youtube.com/watch?v=4nvewes8Inc&list=RD4nvewes8Inc&start_radio=1',
-        videoThumb: 'images/houseim.png',
-        info: { 장르: 'House', 기원: '1980년대 시카고', 하위장르: '개러지 하우스, 뉴욕 하우스, 시카고 하우스, <br> 디트로이트 하우스, 프렌치 하우스', 대표: 'Larry Heard, Frankie Knuckles' },
-        desc: '4/4박자의 정박자 비트에 4분음표를 기반으로 하는 장르로 1970년대 유행하던 디스코 이후로 당시 마약과 함께 클럽에서 문제가 되던 디스코에 대한 저항운동이 생겨남에 따라 1980년대 디스코 음악이 듣기 힘들어질 즈음에 미국 일리노이주 시카고에 위치한 웨어하우스라는 대형 게이 클럽에서 디제잉을 하던 프랭키 너클즈에 의해 유래되었다. 사람들이 그의 음악을 찾기 시작했고, 음반샵에서 이런 류의 음악을 따로 분류해서 팔던 것이 축약되어 하우스라는 이름의 유래가 되었다.',
-        phrases: [
-          '"프랭키 나클스가 Warehouse 클럽에서 틀던 음악이 하우스의 시작이야. 장소 이름이 장르 이름이 된 거야. 그 클럽이 없었으면 EDM도 없었어"',
-          '"Larry Heard의 Can You Feel It은 신디사이저 세 개로 만든 곡이야. 그 단순함이 어떻게 그렇게 깊은 감정을 만드는지가 하우스의 비밀이야"',
-          '"하우스가 흑인 퀴어 커뮤니티에서 나왔다는 걸 알고 들으면 달라져. 억압받은 이들이 만들어낸 해방의 음악이야. 그 역사가 비트 안에 있어"',
-          '"딥하우스랑 테크하우스를 구분 못 하면 하우스 아는 척하기 어려워. 딥하우스는 감정이고 테크하우스는 기능이야. 그 차이가 느껴지면 귀가 열린 거야"'
-        ],
-        films: [
-          { title: 'Can You Feel It', year: '1986', image: 'images/canyou.png' },
-          { title: 'Move Your Body', year: '1986', image: 'images/movebody.png' },
-          { title: 'Finally', year: '1992', image: 'images/finally.png' },
-          { title: 'Your Love', year: '1987', image: 'images/yourlove.png' }
-        ]
-      },
-      {
-        name: '인디팝',
-        image: 'images/indiepop.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Indie Pop', 기원: '1980년대 영국', 키워드: '독립, 멜로디, 감수성', 대표: 'The Smiths, Belle and Sebastian' },
-        desc: '인디팝은 주류에 편입되지 않겠다는 태도에서 출발했다. 작은 레이블, 작은 공연장, 작은 예산. 하지만 그 작음이 오히려 더 솔직한 감정을 만들었다. 모든 아웃사이더의 음악이다.',
-        phrases: [
-          '"The Smiths를 단순한 80년대 영국 밴드로 보면 안 돼. 모리세이의 가사는 소외감과 자기혐오를 이렇게 아름답게 만들 수 있다는 걸 보여줘. 불행이 멜로디가 된 거야"',
-          '"인디팝의 미학은 불완전함이야. 녹음이 약간 거칠고, 목소리가 약간 떨리고, 그게 오히려 진짜처럼 들려. 완벽한 프로덕션이 오히려 거리감을 만들 때가 있어"',
-          '"Belle and Sebastian의 If You\'re Feeling Sinister는 1996년 앨범인데 지금 들어도 오늘 만든 것 같아. 시대를 타지 않는 음악이 뭔지를 보여주는 예야"',
-          '"인디팝이 주류가 되면 인디팝이 아니라는 역설이 있어. 그 긴장감이 장르를 계속 새롭게 만드는 동력이야"'
-        ],
-        films: [
-          { title: 'The Queen Is Dead', year: '1986', image: 'images/queen.png' },
-          { title: 'If You\'re Feeling Sinister', year: '1996', image: 'images/sinister.png' },
-          { title: 'Tigermilk', year: '1996', image: 'images/tigermilk.png' },
-          { title: 'Heaven or Las Vegas', year: '1990', image: 'images/heaven.png' }
-        ]
-      },
-      {
-        name: '인디락',
-        image: 'images/indierock.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Indie Rock', 기원: '1980년대 미국', 키워드: '자립, 노이즈, 얼터너티브', 대표: 'Pavement, Sonic Youth' },
-        desc: '인디락은 메이저 레이블 시스템 밖에서 자립하겠다는 선언이었다. 노이즈, 불협화음, 거친 녹음. 그 불완전함이 미학이 됐다. 너바나가 주류로 가기 전까지 인디락이 어떤 세계였는지를 알면 90년대 음악이 다르게 보인다.',
-        phrases: [
-          '"Pavement는 인디락이 얼마나 게으르게 천재적일 수 있는지를 보여줘. 완성되지 않은 것 같은 곡들이 사실 치밀하게 설계된 거야. 그 아이러니가 90년대 인디의 정수야"',
-          '"Sonic Youth는 기타를 악기가 아니라 소음 발생 장치로 썼어. 그 노이즈가 음악이 될 수 있다는 걸 보여주면서 얼터너티브 록의 문법을 만들었어"',
-          '"너바나가 Nevermind로 빌보드 1위 했을 때 인디 씬이 무너졌다는 사람들이 있어. 근데 사실 그게 인디의 영향력이 주류에 도달한 순간이기도 해"',
-          '"인디락을 듣는다는 건 어떤 레이블, 어떤 레코드숍에서 나온 음악인지까지 아는 거야. 그 생태계를 알아야 음악이 왜 그렇게 들리는지가 보여"'
-        ],
-        films: [
-          { title: 'Slanted and Enchanted', year: '1992', image: 'images/slanted.png' },
-          { title: 'Daydream Nation', year: '1988', image: 'images/daydream.png' },
-          { title: 'Nevermind', year: '1991', image: 'images/nevermind.png' },
-          { title: 'Crooked Rain', year: '1994', image: 'images/crooked.png' }
-        ]
-      },
-      {
-        name: '재즈',
-        image: 'images/jazz.jpg',
-        videoLink: 'https://youtu.be/uco5FNbjqv0?si=qgbSZSqI9VJ7Gtb3',
-        videoThumb: 'images/jazzim.png',
-        info: { 장르: 'Jazz', 기원: '1900년대 뉴올리언스', 키워드: '즉흥, 스윙, 블루노트', 대표: 'Miles Davis, John Coltrane' },
-        desc: '재즈는 악보 밖에서 태어나는 음악이다. 즉흥연주가 핵심이고, 같은 곡도 매번 다르게 연주된다. 흑인 음악에서 출발해 20세기 가장 복잡하고 정교한 음악 언어가 됐다. 재즈를 알면 이후 모든 음악의 뿌리가 보인다.',
-        phrases: [
-          '"재즈에서 즉흥이 그냥 아무렇게나 치는 게 아니야. 코드 진행을 완벽하게 이해한 위에서만 자유롭게 이탈할 수 있어. 구조를 알아야 구조를 벗어날 수 있는 거야"',
-          '"블루노트 레이블 커버 디자인만 봐도 재즈의 미학이 보여. 음악과 시각 디자인이 같은 감수성으로 만들어진 거야. 그 레이블 자체가 하나의 예술 운동이야"',
-          '"스탠다드 넘버를 아는 게 재즈 입문의 기본이야. All the Things You Are, Autumn Leaves. 그 곡들이 어떻게 변주되는지를 들으면 재즈가 뭔지 느껴져"',
-          '"재즈 클럽에서 연주자들이 서로 대화하는 거 보이면 음악이 다르게 들려. 한 명이 뭔가를 말하면 다른 명이 받아서 이어가는 거야. 음악이 언어가 되는 순간이야"'
-        ],
-        films: [
-          { title: 'Kind of Blue', year: '1959', image: 'images/kindofblue.png' },
-          { title: 'A Love Supreme', year: '1965', image: 'images/lovesupreme.png' },
-          { title: 'Mingus Ah Um', year: '1959', image: 'images/mingusahum.png' },
-          { title: 'Time Out', year: '1959', image: 'images/timeout.png' }
-        ]
-      },
-      {
-        name: '팝라틴',
-        image: 'images/latinpop.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Latin Pop', 기원: '1950년대', 키워드: '살사, 레게톤, 리듬', 대표: 'Bad Bunny, Rosalía' },
-        desc: '라틴팝은 지금 세계에서 가장 빠르게 성장하는 음악이다. 스페인어 가사가 전 세계 차트를 점령하고, 레게톤 리듬이 팝의 기본 문법이 됐다. 로살리아는 플라멩코와 전자음악을 결합해 라틴음악이 어디까지 갈 수 있는지를 보여줬다.',
-        phrases: [
-          '"Bad Bunny가 스페인어로 빌보드 1위 한 게 왜 중요한지 알아? 영어가 아니어도 세계 음악 시장을 지배할 수 있다는 걸 처음으로 증명한 거야"',
-          '"레게톤의 뎀보우 리듬이 뭔지 알면 지금 팝의 절반이 거기서 왔다는 걸 알게 돼. 그 리듬이 얼마나 중독성 있게 설계되어 있는지가 보여"',
-          '"로살리아의 MOTOMAMI는 플라멩코가 어떻게 현재가 될 수 있는지를 보여줘. 전통을 해체하고 재조합하는 방식이 봉준호 영화 보는 것 같아"',
-          '"살사가 단순한 댄스 음악이 아니야. 뉴욕 라틴 커뮤니티의 정체성과 저항이 담긴 음악이야. 몸을 움직이게 하면서 동시에 이야기를 하는 거야"'
-        ],
-        films: [
-          { title: 'Un Verano Sin Ti', year: '2022', image: 'images/badbunny.png' },
-          { title: 'MOTOMAMI', year: '2022', image: 'images/motomami.png' },
-          { title: 'El Mal Querer', year: '2018', image: 'images/malquerer.png' },
-          { title: 'Laberinto', year: '2010', image: 'images/laberinto.png' }
-        ]
-      },
-      {
-        name: '팝',
-        image: 'images/pop.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Pop', 기원: '1950년대', 키워드: '훅, 멜로디, 대중성', 대표: 'The Beatles, Taylor Swift' },
-        desc: '팝은 가장 많은 사람에게 닿는 음악을 목표로 한다. 단순해 보이지만 완벽한 팝 송을 만드는 건 가장 어려운 일이다. 비틀즈가 3분짜리 노래로 세상을 바꿨다. 팝을 얕보는 순간 음악의 절반을 놓친다.',
-        phrases: [
-          '"비틀즈의 위대함은 대중성과 실험성을 동시에 가져갔다는 거야. Sgt. Pepper는 팝 앨범이면서 동시에 록 역사상 가장 실험적인 작품이야"',
-          '"완벽한 팝 훅을 만드는 게 얼마나 어려운지 알아? 멜로디, 가사, 리듬이 3초 안에 귀에 꽂혀야 해. 그걸 ABBA, 마이클 잭슨이 반복해서 해냈어"',
-          '"테일러 스위프트가 대단한 건 팬덤이 아니야. 자기 서사를 앨범마다 완전히 다른 장르로 표현하면서도 팝의 접근성을 잃지 않는 거야"',
-          '"팝을 가볍게 보는 건 대중을 가볍게 보는 거야. 가장 많은 사람이 듣는 음악이 어떻게 만들어지는지를 이해하는 게 음악을 이해하는 핵심이야"'
-        ],
-        films: [
-          { title: 'Sgt. Pepper\'s Lonely Hearts Club Band', year: '1967', image: 'images/sgtpepper.png' },
-          { title: 'Thriller', year: '1982', image: 'images/thriller.png' },
-          { title: 'Abbey Road', year: '1969', image: 'images/abbeyroad.png' },
-          { title: 'Midnights', year: '2022', image: 'images/midnights.png' }
-        ]
-      },
-      {
-        name: '제이팝',
-        image: 'images/jpop.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'J-Pop', 기원: '1990년대 일본', 키워드: '시티팝, 아이돌, 오타쿠', 대표: '하루미 유키, 시티팝, Perfume' },
-        desc: '제이팝은 일본 특유의 감수성으로 만들어진 음악 생태계다. 80년대 시티팝이 세계적으로 재발견되고, 아이돌 시스템이 케이팝의 모델이 됐다. 일본 음악은 멜로디에 대한 집착과 섬세한 편곡이 특징이다.',
-        phrases: [
-          '"시티팝이 지금 전 세계에서 다시 뜨는 이유가 있어. 80년대 일본의 경제 호황기가 만들어낸 그 여유로운 감각이 지금 시대에 오히려 판타지로 작동하는 거야"',
-          '"다케우치 마리야의 Plastic Love가 유튜브 알고리즘으로 바이럴된 거 알아? 1984년 곡이 2010년대에 발견된 거야. 좋은 음악은 시간을 타지 않는다는 증거야"',
-          '"Perfume의 음악은 나카타 야스타카가 만드는데 인간 목소리를 전자음처럼 처리하는 방식이 독특해. 제이팝과 일렉트로닉의 결합을 가장 잘 보여주는 예야"',
-          '"일본 아이돌 시스템이 케이팝의 원형이야. AKB48 모델, 악수회, 팬 참여 구조. 케이팝이 그걸 더 세련되게 세계화한 거야"'
-        ],
-        films: [
-          { title: 'Plastic Love', year: '1984', image: 'images/plasticlove.png' },
-          { title: 'Riding on the Music', year: '1982', image: 'images/citypop.png' },
-          { title: 'Game', year: '2008', image: 'images/perfume.png' },
-          { title: 'Surf\'s Up', year: '1980', image: 'images/surfsup.png' }
-        ]
-      },
-      {
-        name: '케이팝',
-        image: 'images/kpop.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'K-Pop', 기원: '1990년대 한국', 키워드: '아이돌, 퍼포먼스, 글로벌', 대표: 'BTS, BLACKPINK, SHINee' },
-        desc: '케이팝은 음악이 아니라 시스템이다. 트레이닝, 비주얼, 안무, 세계관, 팬덤 관리까지 모든 것이 설계된다. 그 설계가 어떻게 전 세계를 움직이는지를 이해하면 케이팝이 단순한 아이돌 음악이 아니라는 게 보인다.',
-        phrases: [
-          '"BTS가 위대한 건 인기가 아니야. 한국어 가사로 빌보드를 점령하면서 동시에 UN에서 연설하는 팀이 됐어. 팝스타와 문화외교관을 동시에 한 거야"',
-          '"케이팝 뮤직비디오 미장센을 분석해봐. 색채, 의상, 안무 동선이 세계관과 연결돼. 3분짜리 영상이 영화 한 편보다 더 치밀하게 만들어지는 경우가 있어"',
-          '"SHINee가 케이팝에서 중요한 건 퍼포먼스의 기준을 올린 거야. 보컬, 댄스, 비주얼 세 가지를 동시에 유지하는 걸 표준으로 만들었어"',
-          '"케이팝 팬덤 문화를 그냥 팬질로 보면 안 돼. 그 집단적 에너지가 어떻게 조직되고 움직이는지는 사회학적으로도 흥미로운 현상이야"'
-        ],
-        films: [
-          { title: 'MAP OF THE SOUL: 7', year: '2020', image: 'images/bts7.png' },
-          { title: 'BORN PINK', year: '2022', image: 'images/bornpink.png' },
-          { title: 'Sherlock', year: '2012', image: 'images/shinee.png' },
-          { title: 'MIROH', year: '2019', image: 'images/stray.png' }
-        ]
-      },
-      {
-        name: '메탈',
-        image: 'images/metal.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Metal', 기원: '1960년대 말 영국', 키워드: '리프, 디스토션, 헤비니스', 대표: 'Black Sabbath, Metallica' },
-        desc: '메탈은 가장 오해받는 장르 중 하나다. 시끄럽고 어둡다는 편견 뒤에 가장 정교한 음악 이론과 연주 기술이 있다. 블랙 사바스가 1970년에 만들어낸 리프 하나가 50년 넘게 이어지는 장르를 탄생시켰다.',
-        phrases: [
-          '"블랙 사바스의 Black Sabbath 리프는 세 음으로 만들어졌어. 증4도 음정, 트리토누스. 중세에 악마의 음정이라고 금지됐던 그 음이 메탈의 시작이야"',
-          '"메탈 기타리스트들이 클래식 음악 이론을 공부하는 거 알아? 드래곤 포스, 잉베이 맘스틴. 기술적 복잡성으로 보면 재즈나 클래식에 전혀 뒤지지 않아"',
-          '"메탈이 일본에서 유독 강한 이유가 있어. 정교함과 장인정신을 중시하는 문화랑 메탈의 기술적 완벽주의가 만나는 거야. 베이비메탈이 그 결합의 극단적 예야"',
-          '"Metallica의 Master of Puppets는 메탈이 사회 비판을 할 수 있다는 걸 보여줘. 약물 중독을 다루는 가사인데 그 분노가 음악의 헤비니스랑 완벽하게 일치해"'
-        ],
-        films: [
-          { title: 'Black Sabbath', year: '1970', image: 'images/blacksabbath.png' },
-          { title: 'Master of Puppets', year: '1986', image: 'images/master.png' },
-          { title: 'Paranoid', year: '1970', image: 'images/paranoid.png' },
-          { title: 'Ride the Lightning', year: '1984', image: 'images/ridethelightning.png' }
-        ]
-      },
-      {
-        name: '알앤비',
-        image: 'images/rnb.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'R&B', 기원: '1940년대 미국', 키워드: '소울, 그루브, 보컬', 대표: 'Marvin Gaye, Frank Ocean' },
-        desc: '알앤비는 흑인 음악의 감정적 핵심이다. 소울, 펑크, 고스펠이 결합된 이 장르는 인간의 가장 깊은 감정을 목소리로 전달한다. 마빈 게이의 What\'s Going On은 음악이 시대의 양심이 될 수 있다는 걸 보여줬다.',
-        phrases: [
-          '"마빈 게이의 What\'s Going On은 모타운이 정치적인 노래를 내지 말라고 했는데 그가 강행한 앨범이야. 그 저항이 알앤비 역사상 가장 위대한 앨범을 만들었어"',
-          '"프랭크 오션의 Channel Orange는 현대 알앤비가 어떻게 장르의 경계를 지울 수 있는지를 보여줘. 소울, 팝, 힙합, 포크가 다 들어있는데 장르가 없어"',
-          '"알앤비 보컬의 멜리스마, 그 음절 하나에 여러 음을 넣는 기법이 복잡해 보여도 그게 흑인 교회 음악에서 온 거야. 복음의 황홀경이 팝으로 온 거야"',
-          '"위켄드가 보여주는 건 알앤비가 어두워질 수 있다는 거야. 섹슈얼리티, 약물, 고독을 이렇게 아름답게 만드는 건 장르가 얼마나 넓어졌는지를 보여줘"'
-        ],
-        films: [
-          { title: 'What\'s Going On', year: '1971', image: 'images/whatsgoing.png' },
-          { title: 'Channel Orange', year: '2012', image: 'images/channelorange.png' },
-          { title: 'I Never Loved a Man the Way I Love You', year: '1967', image: 'images/aretha.png' },
-          { title: 'Blonde', year: '2016', image: 'images/blonde.png' }
-        ]
-      },
-      {
-        name: '락',
-        image: 'images/rock.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Rock', 기원: '1950년대 미국', 키워드: '기타, 반항, 라이브', 대표: 'Led Zeppelin, Rolling Stones' },
-        desc: '록은 20세기 가장 강력한 반항의 음악이었다. 전기 기타가 소리를 키웠고, 그 소리가 청년 문화를 만들었다. 지금은 주류가 됐지만 록이 처음 나왔을 때 어른들이 얼마나 두려워했는지를 알면 이 음악이 다르게 들린다.',
-        phrases: [
-          '"레드 제플린의 위대함은 블루스를 어떻게 거대하게 만들었는지야. Whole Lotta Love의 그 리프는 블루스 진행인데 그게 그렇게 무거워질 수 있다는 걸 보여줬어"',
-          '"록 공연이 왜 클래식 공연보다 에너지가 다르냐면 관객이 같이 만드는 음악이기 때문이야. 라이브에서 밴드와 관객이 서로를 증폭시키는 그 경험이 록의 본질이야"',
-          '"핑크 플로이드의 The Dark Side of the Moon은 록 앨범이 개념 예술이 될 수 있다는 걸 보여줘. 50주년이 지난 지금도 차트에 있는 건 그냥 향수가 아니야"',
-          '"롤링 스톤스가 50년 넘게 투어하는 게 단순한 상업적 이유가 아니야. 록이 무대 위에서 살아있는 음악이라는 걸 몸으로 증명하는 거야"'
-        ],
-        films: [
-          { title: 'Led Zeppelin IV', year: '1971', image: 'images/ledzep.png' },
-          { title: 'The Dark Side of the Moon', year: '1973', image: 'images/darkside.png' },
-          { title: 'Exile on Main St.', year: '1972', image: 'images/exile.png' },
-          { title: 'London Calling', year: '1979', image: 'images/londoncalling.png' }
-        ]
-      },
-      {
-        name: '얼터너티브',
-        image: 'images/alternative.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 장르: 'Alternative', 기원: '1980년대', 키워드: '비주류, 실험, 포스트펑크', 대표: 'Radiohead, R.E.M.' },
-        desc: '얼터너티브는 이름 그대로 대안이다. 주류 록에 대한 대안, 팝의 공식에 대한 대안. 라디오헤드는 OK Computer로 록이 기술 문명의 공포를 담을 수 있다는 걸 보여줬다. 불안한 시대의 음악이다.',
-        phrases: [
-          '"Radiohead의 OK Computer는 1997년에 인터넷 시대의 소외감을 노래한 앨범이야. 지금 들으면 그게 지금 이야기야. 예언적인 음악이 뭔지를 보여주는 예야"',
-          '"Kid A가 나왔을 때 록 팬들이 당황했어. 기타가 없고 전자음악이야. 근데 그게 록 밴드가 어떻게 자기를 해체하고 다시 만드는지를 보여준 가장 용감한 예야"',
-          '"R.E.M.이 얼터너티브를 주류로 만들기 전에 10년 동안 작은 클럽에서 했어. 그 축적이 있었기 때문에 Losing My Religion이 나왔을 때 진심이 들린 거야"',
-          '"얼터너티브의 핵심은 타협하지 않는다는 거야. 상업적으로 성공해도 그 태도를 잃으면 얼터너티브가 아니야. 그 긴장이 장르를 살아있게 해"'
-        ],
-        films: [
-          { title: 'OK Computer', year: '1997', image: 'images/okcomputer.png' },
-          { title: 'Kid A', year: '2000', image: 'images/kida.png' },
-          { title: 'Automatic for the People', year: '1992', image: 'images/rem.png' },
-          { title: 'The Bends', year: '1995', image: 'images/bends.png' }
-        ]
-      }
+      { name: '댄스', image: 'images/dance.png', videoLink: 'https://youtu.be/VOj_xsc-EBM?si=KEWyUCfWV2jO64gm', videoThumb: 'images/danceim.png', info: { 장르: 'Dance', 기원: '1970년대', 키워드: '비트, 그루브, 클럽', 대표: 'Daft Punk, Michael Jackson' }, desc: '댄스는 대중의 원초적인 신체적 반응과 도파민을 가장 직관적으로 제어하는 대중음악 프로덕션의 최전선이다. 정교하게 계산된 비트와 직관적인 룹 사운드를 통해 감상자를 복잡한 사유의 영역에서 해방시키고, 오직 청각적 자극과 신체적 움직임의 일치라는 순수한 쾌감만을 선사한다. 상업적 소비재의 형태를 띠고 있지만, 시대를 선도하는 가장 세련된 사운드 소스와 믹싱 기술이 집약된 장르이기도 하다. 결국 가장 본능적이고 보편적인 신체 언어를 이끌어내며 대중문화의 심장 역할을 하는 음악이다.', phrases: ['"댄스 음악을 그냥 클럽 음악으로 보면 안 돼. 디스코에서 하우스, 테크노로 이어지는 계보가 있고 그게 지금 팝 프로덕션의 기초야"','"마이클 잭슨의 Billie Jean 베이스라인이 왜 완벽한지 알아? 4마디 루프인데 긴장을 풀지 않아. 댄스 음악에서 그루브가 뭔지를 가장 잘 보여주는 예야"','"Daft Punk의 Random Access Memories는 댄스 음악이 얼마나 정교한 레이어로 만들어지는지를 보여줘. 디지털 시대에 일부러 아날로그로 만든 그 선택이 핵심이야"','"댄스팝의 진짜 미학은 보컬의 가창력이 아니라 탑라인의 중독성에 있지. 가사를 뭉개면서까지 사운드의 질감이랑 리듬감만 남겨두는 그 과감함이 진짜 팝 트렌드거든"'], films: [{ title: 'Billie Jean', year: 'Michael Jackson', image: 'images/dance1.png' },{ title: 'Uptown Funk', year: 'Mark Ronson, Bruno···', image: 'images/dance2.png' },{ title: 'Le Freak', year: 'Chic', image: 'images/dance3.png' },{ title: 'September', year: 'Earth Wind & Fire', image: 'images/dance4.png' },{ title: 'Stayin Alive', year: 'Bee Gees', image: 'images/dance5.png' },{ title: 'Footloose', year: 'Kenny Loggins', image: 'images/dance6.png' },{ title: 'Wake Me Up B···', year: 'Wham!', image: 'images/dance7.png' },{ title: 'Dancing Queen', year: 'ABBA', image: 'images/dance8.png' }] },
+
+      { name: '일렉트로닉', image: 'images/ele.png', videoLink: 'https://youtu.be/bk6Xst6euQk?si=agy97FKoCadD9SvQ', videoThumb: 'images/eleim.png', info: { 장르: 'Electronic', 기원: '1960년대', 키워드: '신디사이저, 테크노, 앰비언트', 대표: 'Kraftwerk, Aphex Twin' }, desc: '일렉트로닉은 아날로그 악기의 물리적 한계를 완전히 초월하여 소리의 질감 자체를 디자인하는 청각적 현대 미술이다. 가상 악기와 사운드 신시사이징을 통해 세상에 존재하지 않던 주파수를 창조하고, 이를 파편화하거나 중첩시키며 미니멀하면서도 압도적인 음향적 공간감을 구축해 낸다. 서사적인 가사나 익숙한 탑라인에 의존하기보다 소리의 파형과 이펙터의 변화만으로 청자의 감각을 조작하고 낯선 세계로 인도하는 실험성을 지닌다. 결국 기술적 진보를 미학적 영토로 치환하며 소리의 무한한 가능성을 증명해 내는 미래지향적인 장르다.', phrases: ['"크라프트베르크의 Autobahn은 고속도로 드라이브를 신디사이저로 만든 곡이야."','"Aphex Twin의 Selected Ambient Works II는 들으면 꿈인지 현실인지 모르게 돼."','"테크노가 디트로이트에서 나온 게 우연이 아니야."','"신디사이저가 나왔을 때 기존 음악가들이 진짜 악기가 아니라고 했어."'], films: [{ title: 'Autobahn', year: 'Kraftwerk', image: 'images/ele1.png' },{ title: 'Selected Ambient ···', year: 'Aphex Twin', image: 'images/ele2.png' },{ title: 'Music Has the R···', year: 'Boards of Canada', image: 'images/ele3.png' },{ title: '4×4=12', year: 'deadmau5', image: 'images/ele4.png' },{ title: 'Further', year: 'The Chemical Brothers', image: 'images/ele5.png' },{ title: 'Cross', year: 'Justice', image: 'images/ele6.png' },{ title: 'Tri Repetae', year: 'Autechre', image: 'images/ele7.png' },{ title: 'Disc-Overy', year: 'Tinie Tempah', image: 'images/ele8.png' }] },
+
+      { name: '포크', image: 'images/folk.jpg', videoLink: 'https://youtu.be/FvVnP8G6ITs?si=MdNWnukn1fiWHXqc', videoThumb: 'images/folkim.png', info: { 장르: 'Folk', 기원: '1940년대', 키워드: '어쿠스틱, 내러티브, 사회참여', 대표: 'Bob Dylan, Joni Mitchell' }, desc: '포크는 화려한 전자음과 과장된 사운드를 완벽히 걷어내고 인간의 날것 그대로의 목소리와 통기타 한 대의 울림만으로 서사의 본질을 꿰뚫는 미니멀리즘의 정수다. 정교하게 다듬어진 기술적 완벽함 대신, 일상의 평범한 이야기와 시대의 아픔을 소박하고도 시적인 노랫말에 담아내며 청자와의 가장 친밀하고 내밀한 정서적 연대를 형성한다. 가장 자연주의적인 사운드를 지향하면서도 그 이면에는 인간 실존에 대한 깊은 성찰과 고요하지만 묵직한 사회적 울림을 내포하고 있다. 결국 아날로그적 온기와 언어의 힘만으로 가장 시대를 초월하는 보편적인 감동을 복원해 내는 음악이다.', phrases: ['"밥 딜런이 일렉트릭 기타 들었을 때 포크 팬들이 배신자라고 했어."','"조니 미첼의 Blue는 자기 고백이 얼마나 보편적인 예술이 될 수 있는지를 보여줘."','"포크의 핵심은 이야기야."','"닉 드레이크는 살아있을 때 앨범이 거의 안 팔렸어."'], films: [{ title: 'Hard Travellin', year: 'Woody Guthrie', image: 'images/folk1.png' },{ title: 'Live At Newport', year: 'Pete Seeger', image: 'images/folk2.png' },{ title: 'We Shall Overcome', year: 'Joan Baez', image: 'images/folk3.png' },{ title: 'The Freewheelin···', year: 'Bob Dylan', image: 'images/folk4.png' },{ title: 'In the Wind', year: 'Peter Paul & Mary', image: 'images/folk5.png' },{ title: 'Mr. Tambourine Man', year: 'The Byrds', image: 'images/folk6.png' },{ title: 'Sounds Of Silence', year: 'Simon & Garfunkel', image: 'images/folk7.png' },{ title: 'If You Can Believe···', year: 'The Mamas &···', image: 'images/folk8.png' }] },
+
+      { name: '힙합', image: 'images/hip.jpg', videoLink: 'https://youtu.be/KDorKy-13ak?si=xDl1QN02Yw30RH4n', videoThumb: 'images/hipim.png', info: { 장르: 'Hip-Hop', 기원: '1970년대 브롱크스', 키워드: '샘플링, 플로우, 라임', 대표: 'Kendrick Lamar, Nas' }, desc: '힙합은 거리의 거친 생명력과 서사의 주도권을 오직 래퍼의 라이밍과 비트의 쾌감만으로 쟁취해 내는 가장 동시대적이고 파괴적인 장르다. 드럼 머신의 묵직한 베이스와 샘플링이라는 해체주의적 기법을 통해 기존 음악의 문법을 전복하고, 멜로디의 자리에 텍스트의 리듬감을 채워 넣으며 독보적인 헤게모니를 형성한다. 개인의 지극히 사적인 서사부터 계급, 인종, 시스템에 대한 분노와 날카로운 비판을 가장 직설적이고 거침없는 언어로 폭로하는 저항 정신이 그 저변에 깔려 있다. 결국 가공되지 않은 날것의 비트 위에서 텍스트가 가진 리드미컬한 파괴력을 극대화하여 현대 대중문화의 거대한 트렌드를 지배해 버린 음악이다.', phrases: ['"Kendrick Lamar의 To Pimp a Butterfly는 힙합 앨범이 어떻게 재즈, 펑크, 시, 정치를 하나로 묶을 수 있는지를 보여줘."','"샘플링이 단순히 남의 음악 가져오는 게 아니야."','"Nas의 Illmatic은 22살이 만든 앨범이야."','"플로우를 단순히 랩 속도로 보면 안 돼."'], films: [{ title: 'Empire state···', year: 'Jay-Z', image: 'images/hip1.png' },{ title: 'luther', year: 'Kendrick Lamar', image: 'images/hip2.png' },{ title: 'If I Ruled···', year: 'Nas', image: 'images/hip3.png' },{ title: 'All Eyes On Me', year: '2Pac', image: 'images/hip4.png' },{ title: 'Without Me', year: 'Eminem', image: 'images/hip5.png' },{ title: 'Hypnotize', year: 'The Notorious B.I.G.', image: 'images/hip6.png' },{ title: 'Love Me', year: 'Lil Wayne', image: 'images/hip7.png' },{ title: 'One Dance', year: 'Drake', image: 'images/hip8.png' }] },
+      
+      { name: '하우스', image: 'images/house.jpg', videoLink: 'https://www.youtube.com/watch?v=4nvewes8Inc&list=RD4nvewes8Inc&start_radio=1', videoThumb: 'images/houseim.png', info: { 장르: 'House', 기원: '1980년대 시카고', 하위장르: '개러지 하우스, 뉴욕 하우스, 시카고 하우스, 디트로이트 하우스, 프렌치 하우스', 대표: 'Larry Heard, Frankie Knuckles' }, desc: '하우스는 4분의 4박자의 일정한 킥 드럼과 일정한 템포 안에서 인간을 무한한 트랜스 상태로 몰고 가는 클럽 문화의 구조적 뼈대이자 뿌리다. 신디사이저의 반복적인 베이스 라인과 미니멀한 리듬의 루프를 끊임없이 변주하며, 청자가 사운드의 층위 속에 완전히 매몰되어 음악과 하나가 되는 공감각적인 체험을 선사한다. 화려한 극적 구성이나 기승전결의 강박에서 벗어나 일정한 리듬의 연속성 속에서 은근한 서스펜스와 그루브를 만들어내는 지독한 반복의 미학이 돋보인다. 결국 가장 규칙적이고 통제된 비트 속에서 해방감이라는 역설적인 감정을 이끌어내는 전자음악의 영원한 마스터피스다.', phrases: ['"프랭키 나클스가 Warehouse 클럽에서 틀던 음악이 하우스의 시작이야."','"Larry Heard의 Can You Feel It은 신디사이저 세 개로 만든 곡이야."','"하우스가 흑인 퀴어 커뮤니티에서 나왔다는 걸 알고 들으면 달라져."','"딥하우스랑 테크하우스를 구분 못 하면 하우스 아는 척하기 어려워."'], films: [{ title: 'Shower Scene', year: 'Saint Etienne', image: 'images/house1.png' },{ title: 'Mystery of love', year: 'Mr. Fingers', image: 'images/house2.png' },{ title: 'Pha Na Pha', year: 'Âme & Busiswa', image: 'images/house3.png' },{ title: 'Nitelife', year: 'Kim English', image: 'images/house4.png' },{ title: 'Move Your Body', year: 'Marshall Jefferson', image: 'images/house5.png' },{ title: 'Han Pan', year: 'Peggy Gou', image: 'images/house6.png' },{ title: 'Gypsy Woman', year: 'Crystal Waters', image: 'images/house7.png' },{ title: 'Flylife', year: 'Basement Jaxx', image: 'images/house8.png' }] },
+      { name: '인디팝' }, { name: '인디락' }, { name: '재즈' }, { name: '팝라틴' }, { name: '팝' }, { name: '제이팝' }, { name: '케이팝' }, { name: '메탈' }, { name: '알앤비' }, { name: '락' }, { name: '얼터너티브' }
     ]
   },
   book: {
     label: 'Book',
     items: [
-      {
-        name: '헤르만 헤세',
-        image: 'images/hesse.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '독일/스위스', 장르: '성장소설, 철학소설', 시대: '1900–1962', 대표작: '데미안, 싯다르타, 유리알 유희' },
-        desc: '헤르만 헤세는 자아를 찾는 여정을 가장 아름다운 산문으로 쓴 작가다. 동양 철학과 서양 심리학을 결합한 그의 소설은 한 번이 아니라 나이가 들 때마다 다르게 읽힌다. 데미안을 열여섯에 읽는 것과 서른에 읽는 것은 완전히 다른 경험이다.',
-        phrases: [
-          '"데미안의 첫 문장을 알아? 나는 내 속에서 솟아나오려고 하는 것, 그것을 살아보려고 했다. 그게 왜 어려웠는지는 읽고 나면 알아"',
-          '"싯다르타는 불교 이야기지만 불교 소설이 아니야. 어떤 가르침도 직접 경험을 대신할 수 없다는 이야기야. 그게 헤세가 동양 철학에서 가져온 핵심이야"',
-          '"헤세가 노벨상 받은 게 유리알 유희야. 근데 유리알 유희보다 데미안을 더 좋아한다면 그게 더 정직한 독자야. 상이 위대함을 보장하지 않는다는 것도 독서의 교훈이야"',
-          '"헤세 소설 주인공들은 항상 떠나. 집을 떠나고, 스승을 떠나고, 안전한 것을 떠나. 성장이 머무름이 아니라 이탈이라는 걸 그는 반복해서 말해"'
-        ],
-        films: [
-          { title: '데미안', year: '1919', image: 'images/demian.png' },
-          { title: '싯다르타', year: '1922', image: 'images/siddhartha.png' },
-          { title: '황야의 이리', year: '1927', image: 'images/steppenwolf.png' },
-          { title: '유리알 유희', year: '1943', image: 'images/glassbead.png' }
-        ]
-      },
-      {
-        name: '알베르 카뮈',
-        image: 'images/camus.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '프랑스/알제리', 장르: '부조리 문학', 시대: '1937–1960', 대표작: '이방인, 페스트' },
-        desc: '카뮈는 부조리 철학을 소설로 구현한 작가다. 인간 존재의 무의미함을 직시하면서도 그 안에서 반항과 연대를 주장했다. 허무주의와 다르다. 의미가 없다는 걸 알면서도 살아야 한다고, 그리고 그게 가장 용감한 일이라고 그는 말한다.',
-        phrases: [
-          '"이방인의 첫 문장은 오늘 엄마가 죽었다야. 근데 주인공이 슬프지 않아. 그 감정의 부재가 독자를 불편하게 하는데, 카뮈는 그게 부조리한 게 아니라 솔직한 거라고 해"',
-          '"시지프 신화에서 카뮈는 시지프가 행복해야 한다고 말해. 바위를 영원히 굴려도 행복할 수 있어. 의미 없음을 받아들이는 순간 자유로워지기 때문이야"',
-          '"페스트는 알제리 흑사병 이야기지만 2차대전 나치 점령의 알레고리야. 재난 앞에서 인간이 어떻게 행동하는지를 가장 정밀하게 쓴 소설이야"',
-          '"카뮈는 사르트르랑 절친이었다가 철학적 견해 차이로 완전히 결별했어. 그 논쟁 자체가 20세기 지성사의 한 페이지야"'
-        ],
-        films: [
-          { title: '이방인', year: '1942', image: 'images/stranger.png' },
-          { title: '페스트', year: '1947', image: 'images/plague.png' },
-          { title: '시지프 신화', year: '1942', image: 'images/sisyphus.png' },
-          { title: '전락', year: '1956', image: 'images/fall.png' }
-        ]
-      },
-      {
-        name: '조지 오웰',
-        image: 'images/orwell.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '영국', 장르: '정치소설, 디스토피아', 시대: '1933–1949', 대표작: '1984, 동물농장' },
-        desc: '조지 오웰은 언어가 권력의 도구가 될 수 있다는 것을 가장 명료하게 보여준 작가다. 빅브라더, 이중사고, 뉴스피크. 그가 만들어낸 개념들이 현실 정치 분석의 언어가 됐다. 1948년에 쓴 소설이 지금도 정확하게 들어맞는다.',
-        phrases: [
-          '"1984에서 진짜 무서운 건 감시가 아니야. 과거를 다시 쓰는 거야. 사실이 권력에 의해 바뀔 수 있다는 그 공포가 지금 가짜뉴스 시대에 더 정확해"',
-          '"동물농장은 동화처럼 보이는데 스탈린주의 비판이야. 모든 동물은 평등하다, 하지만 일부 동물은 더 평등하다. 그 문장 하나가 모든 걸 말해"',
-          '"오웰의 문체가 왜 중요한지 알아? 그는 정치적 글쓰기는 명료해야 한다고 했어. 모호한 언어가 모호한 사고를 만들고 그게 권력이 원하는 거라는 거야"',
-          '"오웰이 스페인 내전에 직접 참전한 거 알아? 그 경험이 1984의 토대야. 이상이 현실에서 어떻게 배신당하는지를 몸으로 경험한 사람이 쓴 소설이야"'
-        ],
-        films: [
-          { title: '1984', year: '1949', image: 'images/1984.png' },
-          { title: '동물농장', year: '1945', image: 'images/animalfarm.png' },
-          { title: '카탈로니아 찬가', year: '1938', image: 'images/catalonia.png' },
-          { title: '버마 시절', year: '1934', image: 'images/burmese.png' }
-        ]
-      },
-      {
-        name: '서머싯 몸',
-        image: 'images/maugham.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '영국', 장르: '단편소설, 장편소설', 시대: '1897–1965', 대표작: '인간의 굴레, 달과 6펜스' },
-        desc: '서머싯 몸은 20세기 가장 재미있게 읽히는 작가 중 하나다. 날카로운 관찰력과 냉소적 유머로 인간의 허영과 욕망을 해부한다. 달과 6펜스는 고갱의 삶에서 영감을 받은 소설인데, 예술과 평범한 삶 사이에서 선택해야 하는 인간의 이야기다.',
-        phrases: [
-          '"달과 6펜스에서 주인공이 가족과 안정된 삶을 버리고 그림을 그리러 떠나는 거, 그걸 비난하기 어려운 이유가 있어. 몸은 그 선택을 판단하지 않아. 그냥 보여줘"',
-          '"인간의 굴레는 반자전적 소설인데 주인공의 절름발이가 인간 조건의 메타포야. 우리 모두 뭔가에 굴레가 있고, 그걸 인정하는 데서 자유가 시작된다는 거야"',
-          '"몸의 단편이 위대한 건 마지막 문장이야. 한 번도 예상한 방향으로 끝나지 않아. 그 반전이 기술이 아니라 인간에 대한 통찰에서 나오는 거야"',
-          '"몸은 살아있을 때 비평가들한테 무시당했어. 너무 읽기 쉽다는 이유로. 근데 쉽게 읽힌다는 게 얼마나 어려운 건지는 써본 사람만 알아"'
-        ],
-        films: [
-          { title: '달과 6펜스', year: '1919', image: 'images/moon.png' },
-          { title: '인간의 굴레', year: '1915', image: 'images/bondage.png' },
-          { title: '면도날', year: '1944', image: 'images/razor.png' },
-          { title: '과자와 맥주', year: '1930', image: 'images/cakes.png' }
-        ]
-      },
-      {
-        name: '어니스트 헤밍웨이',
-        image: 'images/hemingway.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '미국', 장르: '모더니즘 소설', 시대: '1923–1961', 대표작: '노인과 바다, 태양은 다시 떠오른다' },
-        desc: '헤밍웨이는 쓰지 않은 것으로 말하는 작가다. 빙산 이론, 표면 아래 숨겨진 감정. 짧은 문장, 단순한 단어로 가장 복잡한 감정을 전달한다. 남성성, 용기, 죽음에 대한 그의 집착은 그 자신의 삶과 맞닿아있다.',
-        phrases: [
-          '"헤밍웨이의 빙산 이론이 뭔지 알아? 텍스트에 있는 것보다 없는 것이 더 많아야 한다는 거야. 쓰지 않아도 독자가 느끼게 하는 게 진짜 글쓰기라는 거야"',
-          '"노인과 바다는 단순한 낚시 이야기가 아니야. 이길 수 없는 싸움을 끝까지 하는 것, 그 과정 자체가 존엄이라는 이야기야. 결과가 아니라 태도의 문제야"',
-          '"헤밍웨이 문장이 짧은 게 단순한 스타일이 아니야. 1차대전 후 언어에 대한 불신이 그 문체를 만든 거야. 거창한 말이 거짓이라는 걸 경험한 사람의 글쓰기야"',
-          '"태양은 다시 떠오른다의 잃어버린 세대라는 개념이 거기서 나왔어. 전쟁 후 방향을 잃은 청년들의 이야기인데 지금도 그 감각이 유효해"'
-        ],
-        films: [
-          { title: '노인과 바다', year: '1952', image: 'images/oldman.png' },
-          { title: '태양은 다시 떠오른다', year: '1926', image: 'images/sunsalso.png' },
-          { title: '무기여 잘 있거라', year: '1929', image: 'images/farewell.png' },
-          { title: '누구를 위하여 종은 울리나', year: '1940', image: 'images/bell.png' }
-        ]
-      },
-      {
-        name: '프란츠 카프카',
-        image: 'images/kafka.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '체코/독일어권', 장르: '실존주의 소설', 시대: '1900년대 초', 대표작: '변신, 소송, 성' },
-        desc: '카프카의 작품은 관료주의와 실존적 불안을 기묘하고 부조리한 방식으로 그려낸다. 카프카에스크라는 단어가 사전에 등재될 만큼 문화적 영향력이 압도적이다. 그는 살아있는 동안 거의 인정받지 못했고, 원고를 불태워달라고 유언했다.',
-        phrases: [
-          '"변신에서 그레고르가 벌레로 변하는 게 충격적인 게 아니야. 가족이 그걸 받아들이고 결국 그를 짐으로 여기게 되는 과정이 충격이야. 자본주의 가족 구조에 대한 이야기야"',
-          '"소송은 주인공이 왜 재판받는지 끝까지 안 나와. 이유 없이 시스템에 의해 심판받는 공포. 관료제를 가장 정확하게 묘사한 소설이야"',
-          '"카프카는 낮엔 보험회사 다니고 밤에 글 썼어. 그 일상의 무게가 그의 소설에 다 녹아있어. 실존적 불안이 관념이 아니라 매일의 경험에서 나온 거야"',
-          '"그가 죽기 전에 원고 다 태우라고 했는데 친구가 안 태운 거야. 작가의 의지보다 독자의 의지가 살린 작가라는 아이러니야"'
-        ],
-        films: [
-          { title: '변신', year: '1915', image: 'images/metamorphosis.png' },
-          { title: '소송', year: '1925', image: 'images/trial.png' },
-          { title: '성', year: '1926', image: 'images/castle.png' },
-          { title: '아메리카', year: '1927', image: 'images/america.png' }
-        ]
-      },
-      {
-        name: '나쓰메 소세키',
-        image: 'images/soseki.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '일본', 장르: '근대소설', 시대: '1905–1916', 대표작: '나는 고양이로소이다, 마음, 도련님' },
-        desc: '나쓰메 소세키는 일본 근대문학의 아버지다. 메이지 시대 서구화 속에서 흔들리는 일본인의 자아를 가장 정밀하게 포착했다. 그의 소설은 100년 전 이야기지만 현대인의 고독과 소외를 정확하게 건드린다.',
-        phrases: [
-          '"마음은 메이지 시대가 끝나는 시점에 쓰인 소설이야. 한 시대가 죽을 때 인간이 어떻게 반응하는지를 가장 내밀하게 보여준 작품이야"',
-          '"나는 고양이로소이다는 제목이 다야. 고양이 시점으로 인간 사회를 관찰하는 거잖아. 가장 날카로운 비판은 외부자의 눈으로 온다는 걸 소세키가 보여줬어"',
-          '"소세키는 영국 유학 중에 신경쇠약을 겪었어. 그 경험이 그의 소설 전반에 깔린 고독의 감각이야. 문화 충격이 문학을 만든 거야"',
-          '"도련님은 소세키 소설 중 가장 유머러스해. 근데 그 유머 뒤에 성실함이 바보 취급받는 사회에 대한 분노가 있어. 웃기면서 화나는 소설이야"'
-        ],
-        films: [
-          { title: '나는 고양이로소이다', year: '1905', image: 'images/cat.png' },
-          { title: '도련님', year: '1906', image: 'images/botchan.png' },
-          { title: '마음', year: '1914', image: 'images/kokoro.png' },
-          { title: '삼사랑', year: '1908', image: 'images/sanshiro.png' }
-        ]
-      },
-      {
-        name: '아쿠타가와 류노스케',
-        image: 'images/akutagawa.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '일본', 장르: '단편소설', 시대: '1915–1927', 대표작: '라쇼몽, 코, 지옥변' },
-        desc: '아쿠타가와는 단편소설의 극한을 보여준 작가다. 짧은 분량 안에 인간의 이기심, 위선, 생존 본능을 압축한다. 구로사와 아키라의 영화 라쇼몽이 그의 단편 두 편에서 나왔다. 일본에서 그의 이름을 딴 문학상이 가장 권위 있다.',
-        phrases: [
-          '"라쇼몽에서 같은 사건을 여러 사람이 다르게 증언해. 진실이 하나가 아닐 수 있다는 걸 1915년에 이미 소설로 보여줬어. 포스트모더니즘의 선구자야"',
-          '"아쿠타가와의 단편은 5페이지짜리도 있어. 근데 그 안에 인간 본성의 한 단면이 완벽하게 담겨있어. 압축이 얼마나 강력한 문학적 기술인지를 보여주는 작가야"',
-          '"지옥변은 예술을 위해 딸을 희생시키는 화가의 이야기야. 예술과 윤리의 충돌을 이렇게 극단적으로 가져간 소설이 얼마나 있어"',
-          '"아쿠타가와가 35세에 자살했어. 유서에 막연한 불안이라고 썼어. 그 막연함이 그의 소설이 왜 그렇게 불안한지를 설명해줘"'
-        ],
-        films: [
-          { title: '라쇼몽', year: '1915', image: 'images/rashomon.png' },
-          { title: '코', year: '1916', image: 'images/nose.png' },
-          { title: '지옥변', year: '1918', image: 'images/hell.png' },
-          { title: '덤불 속', year: '1922', image: 'images/grove.png' }
-        ]
-      },
-      {
-        name: '무라카미 하루키',
-        image: 'images/murakami.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '일본', 장르: '현대소설', 시대: '1979–현재', 대표작: '노르웨이의 숲, 1Q84' },
-        desc: '무라카미의 소설은 고독과 상실, 일상과 초현실을 세련된 문체로 엮는다. 재즈, 클래식, 위스키, 파스타. 그의 소설 속 주인공은 늘 혼자이지만 혼자인 방법을 알고 있다. 그 고독의 미학이 전 세계 독자를 매혹시켰다.',
-        phrases: [
-          '"하루키 소설에서 주인공은 항상 요리를 잘 해. 혼자 파스타 삶고 맥주 마시는 장면이 멋있는 건 고독을 자기만의 의식으로 만드는 사람의 모습이기 때문이야"',
-          '"노르웨이의 숲이 연애소설로 읽히는데 사실은 60년대 일본 학생운동의 패배와 그 세대의 상실에 대한 소설이야. 정치가 한 번도 직접 언급 안 되는데 그 그늘이 전편에 깔려있어"',
-          '"1Q84에서 달이 두 개인 세계는 그냥 판타지 설정이 아니야. 우리가 사는 현실 옆에 항상 다른 현실이 있을 수 있다는 감각, 그게 하루키 소설 전체의 기저야"',
-          '"해변의 카프카는 카프카 소설 구조를 일본으로 가져온 거야. 오이디푸스 신화도 들어가 있어. 그 레퍼런스들이 드러나지 않게 소설 안에 녹아있는 게 하루키의 기술이야"'
-        ],
-        films: [
-          { title: '노르웨이의 숲', year: '1987', image: 'images/norwegian.png' },
-          { title: '1Q84', year: '2009', image: 'images/1q84.png' },
-          { title: '해변의 카프카', year: '2002', image: 'images/kafkasea.png' },
-          { title: '상실의 시대', year: '1987', image: 'images/loss.png' }
-        ]
-      },
-      {
-        name: '레프 톨스토이',
-        image: 'images/tolstoy.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '러시아', 장르: '사실주의 소설', 시대: '1852–1910', 대표작: '전쟁과 평화, 안나 카레니나' },
-        desc: '톨스토이는 인간을 가장 넓은 캔버스에 가장 정밀하게 그린 작가다. 전쟁과 평화는 600명의 등장인물이 나오는데 그 모두가 살아있다. 소설이 어떻게 삶 전체를 담을 수 있는지를 보여준 작가다.',
-        phrases: [
-          '"안나 카레니나의 첫 문장이 왜 유명한지 알아? 행복한 가정은 다 비슷하지만 불행한 가정은 저마다의 이유로 불행하다. 소설 전체를 한 문장으로 요약한 거야"',
-          '"전쟁과 평화를 두꺼워서 못 읽겠다고 하면 손해야. 나폴레옹 전쟁이라는 역사적 사건 위에서 인간이 어떻게 살아가는지를 이렇게 생생하게 보여준 소설이 없어"',
-          '"톨스토이가 말년에 모든 재산을 포기하고 귀족 작위도 버린 거 알아? 그게 그의 소설이 말하는 것과 일치하는 삶이야. 작가가 자기 작품대로 살았어"',
-          '"이반 일리치의 죽음은 중편소설인데 죽음을 직면하는 과정이 이렇게 정확할 수 있나 싶어. 50페이지짜리가 인생의 의미를 전쟁과 평화보다 더 직접적으로 물어"'
-        ],
-        films: [
-          { title: '전쟁과 평화', year: '1869', image: 'images/warandpeace.png' },
-          { title: '안나 카레니나', year: '1878', image: 'images/anna.png' },
-          { title: '이반 일리치의 죽음', year: '1886', image: 'images/ivan.png' },
-          { title: '부활', year: '1899', image: 'images/resurrection.png' }
-        ]
-      },
-      {
-        name: '표도르 도스토옙스키',
-        image: 'images/dostoevsky.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '러시아', 장르: '심리소설', 시대: '1846–1881', 대표작: '죄와 벌, 카라마조프의 형제들' },
-        desc: '도스토옙스키는 인간 내면의 가장 어두운 곳을 탐험한 작가다. 죄의식, 구원, 신의 존재, 자유의지. 그의 소설은 철학 논문보다 더 깊이 이 질문들을 파고든다. 카라마조프의 형제들의 대심문관 챕터는 신학과 철학을 소설로 만든 극한이다.',
-        phrases: [
-          '"죄와 벌에서 라스콜리니코프가 살인을 정당화하는 논리가 무서운 건 그게 틀렸기 때문이 아니야. 어느 정도 설득력이 있기 때문이야. 그 불편함이 도스토옙스키의 힘이야"',
-          '"카라마조프의 형제들에서 대심문관 챕터는 소설 안의 소설이야. 예수가 다시 나타났는데 종교재판소가 그를 체포해. 신이 돌아와도 제도 종교는 그를 받아들이지 않는다는 거야"',
-          '"도스토옙스키는 사형 선고를 받고 총살대 앞에 섰다가 마지막 순간에 감형됐어. 그 경험이 그의 소설에서 죽음과 구원이 그렇게 강렬한 이유야"',
-          '"지하로부터의 수기는 현대 소설의 가장 중요한 선구자야. 자기 파괴적이고 모순된 내면을 1인칭으로 쓴 최초의 소설 중 하나야. 실존주의 문학의 조상이야"'
-        ],
-        films: [
-          { title: '죄와 벌', year: '1866', image: 'images/crime.png' },
-          { title: '카라마조프의 형제들', year: '1880', image: 'images/brothers.png' },
-          { title: '백치', year: '1869', image: 'images/idiot.png' },
-          { title: '악령', year: '1872', image: 'images/demons.png' }
-        ]
-      },
-      {
-        name: '안톤 체호프',
-        image: 'images/chekhov.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '러시아', 장르: '단편소설, 희곡', 시대: '1880–1904', 대표작: '갈매기, 벚꽃 동산, 단편선' },
-        desc: '체호프는 아무 일도 일어나지 않는 것처럼 보이는 이야기로 가장 많은 것을 말하는 작가다. 그의 단편은 결말이 없다. 대신 삶의 한 단면이 끝난다. 그 열린 결말이 현대 단편소설의 문법이 됐다.',
-        phrases: [
-          '"체호프의 총이라는 개념 알아? 1막에 총이 나오면 3막에 쏴야 한다는 거야. 불필요한 요소를 제거하라는 원칙인데 현대 스토리텔링의 기본이야"',
-          '"체호프 단편에서는 클라이맥스가 없어. 그냥 어느 날 어떤 사람의 삶이 보이고, 그게 끝나. 그 무결론이 오히려 더 많은 여운을 남겨"',
-          '"갈매기는 처음 공연했을 때 완전히 실패했어. 관객이 이게 뭔지 몰랐던 거야. 근데 지금은 현대 연극의 가장 중요한 텍스트야. 이해받는 데 시간이 걸리는 예술이 있어"',
-          '"체호프 소설에서 등장인물들은 항상 뭔가를 말하려다 못 해. 그 말 못 한 것들이 소설의 핵심이야. 침묵을 문학으로 만든 작가야"'
-        ],
-        films: [
-          { title: '갈매기', year: '1896', image: 'images/seagull.png' },
-          { title: '벚꽃 동산', year: '1904', image: 'images/cherry.png' },
-          { title: '세 자매', year: '1901', image: 'images/threesissters.png' },
-          { title: '6호 병실', year: '1892', image: 'images/ward6.png' }
-        ]
-      },
-      {
-        name: '알렉산드르 푸시킨',
-        image: 'images/pushkin.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '러시아', 장르: '시, 소설', 시대: '1814–1837', 대표작: '예브게니 오네긴, 대위의 딸' },
-        desc: '푸시킨은 러시아 문학의 태양이라 불린다. 톨스토이도, 도스토옙스키도 그에게서 시작됐다. 예브게니 오네긴은 운문으로 쓴 소설인데, 그 형식 자체가 하나의 혁명이었다. 37세에 결투로 죽었다.',
-        phrases: [
-          '"예브게니 오네긴을 운문으로 썼다는 게 얼마나 대단한 건지 알아? 소설의 서사를 시의 형식으로 담은 거야. 그 두 장르의 결합이 러시아 문학의 출발점이야"',
-          '"푸시킨이 37세에 결투로 죽은 거 알아? 아내의 명예를 지키기 위해서. 그 낭만적인 죽음이 그의 신화를 만들었어. 문학과 삶이 일치한 작가야"',
-          '"러시아 문학을 이해하려면 푸시킨에서 시작해야 해. 도스토옙스키, 톨스토이, 체호프 모두 푸시킨 없이는 없어. 그가 러시아어 문학 언어를 만들었어"',
-          '"대위의 딸은 역사소설인데 사랑 이야기이기도 해. 푸시킨이 역사를 다루는 방식은 인간 개인의 이야기를 통해서야. 거대한 사건이 한 사람의 삶을 어떻게 바꾸는지야"'
-        ],
-        films: [
-          { title: '예브게니 오네긴', year: '1833', image: 'images/onegin.png' },
-          { title: '대위의 딸', year: '1836', image: 'images/captain.png' },
-          { title: '벨킨 이야기', year: '1831', image: 'images/belkin.png' },
-          { title: '스페이드 여왕', year: '1834', image: 'images/queen2.png' }
-        ]
-      },
-      {
-        name: '한강',
-        image: 'images/hangang.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '한국', 장르: '소설, 시', 시대: '1995–현재', 대표작: '채식주의자, 소년이 온다, 흰' },
-        desc: '한강은 폭력과 고통, 그리고 그 속에서 인간이 어떻게 존엄을 지키는지를 묻는 작가다. 2024년 노벨문학상 수상자. 그의 문장은 조용하지만 읽고 나면 오래 남는다. 한국 현대사의 상처를 가장 섬세하게 문학으로 만든 작가다.',
-        phrases: [
-          '"채식주의자는 고기를 안 먹겠다는 선택이 왜 폭력이 되는지를 보여줘. 개인의 몸에 대한 선택이 가족과 사회와 충돌하는 방식이 한국 사회를 정확하게 반영해"',
-          '"소년이 온다는 5·18 광주민주화운동을 다루는데 죽은 자의 시점에서 써. 그 서술 방식이 역사적 트라우마를 어떻게 문학으로 담는지를 보여주는 가장 강력한 예야"',
-          '"한강 소설의 문장은 짧고 조용해. 근데 그 조용함 안에 엄청난 폭력과 고통이 담겨있어. 그 대비가 오히려 더 강력하게 작동해"',
-          '"흰은 흰색에 관한 소설인데 애도에 관한 소설이야. 태어나자마자 죽은 언니를 위한 글쓰기. 산문과 시의 경계에 있는 형식 자체가 애도의 방식이야"'
-        ],
-        films: [
-          { title: '채식주의자', year: '2007', image: 'images/vegetarian.png' },
-          { title: '소년이 온다', year: '2014', image: 'images/humanacts.png' },
-          { title: '흰', year: '2016', image: 'images/white.png' },
-          { title: '작별하지 않는다', year: '2021', image: 'images/goodbye.png' }
-        ]
-      },
-      {
-        name: '루쉰',
-        image: 'images/luxun.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '중국', 장르: '단편소설, 수필', 시대: '1918–1936', 대표작: '아Q정전, 광인일기' },
-        desc: '루쉰은 현대 중국 문학의 아버지다. 봉건 사회의 위선과 중국인의 정신적 노예 상태를 가장 날카롭게 비판했다. 의학을 공부하다 그만두고 문학으로 전향한 건 몸이 아니라 정신을 고쳐야 한다는 판단이었다.',
-        phrases: [
-          '"루쉰이 의대를 그만두고 문학을 선택한 이유가 있어. 몸의 병은 의학으로 고칠 수 있지만 정신의 병은 문학으로 고쳐야 한다고 했어. 그 선택이 중국 현대문학을 만든 거야"',
-          '"아Q정전의 아Q가 하는 정신승리법 알아? 지면서도 이겼다고 생각하는 자기기만. 루쉰은 그게 중국인의 집단적 심리라고 비판했어. 지금도 유효한 비판이야"',
-          '"광인일기는 중국 최초의 현대소설이야. 봉건 예교를 사람 잡아먹는 것으로 표현한 거야. 그 은유가 얼마나 급진적이었는지는 당시 맥락을 알아야 해"',
-          '"루쉰이 말한 철방 비유 알아? 창문 없는 철방에서 사람들이 자고 있어. 깨워봤자 나갈 수 없어 고통만 줘. 그래도 깨워야 하는가? 그게 지식인의 딜레마야"'
-        ],
-        films: [
-          { title: '아Q정전', year: '1921', image: 'images/aq.png' },
-          { title: '광인일기', year: '1918', image: 'images/madman.png' },
-          { title: '고향', year: '1921', image: 'images/hometown.png' },
-          { title: '약', year: '1919', image: 'images/medicine.png' }
-        ]
-      },
-      {
-        name: '샤를 보들레르',
-        image: 'images/baudelaire.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '프랑스', 장르: '시', 시대: '1840–1867', 대표작: '악의 꽃, 파리의 우울' },
-        desc: '보들레르는 현대시의 출발점이다. 아름다움이 추함에서도 나올 수 있다는 것을 처음 선언한 시인이다. 악의 꽃은 출판되자마자 외설 판결을 받았다. 지금은 프랑스 문학의 정전이다.',
-        phrases: [
-          '"악의 꽃이 외설 판결 받은 게 왜 중요한지 알아? 아름다움의 기준을 바꾸려는 시도가 항상 먼저 검열받는다는 거야. 불편한 아름다움이 진짜 혁명이야"',
-          '"보들레르의 스플린 개념이 뭔지 알아? 권태, 우울, 도시의 피로. 현대인의 감각을 가장 먼저 포착한 시인이야. 19세기 파리가 지금 서울이야"',
-          '"파리의 우울은 산문시야. 시의 음악성과 산문의 자유를 결합한 형식인데 보들레르가 그걸 발명했어. 형식 자체가 내용이 된 거야"',
-          '"보들레르는 마약, 빚, 방탕한 생활로 살았어. 근데 그 삶이 그의 시의 재료야. 경험 없는 예술은 없다는 걸 극단적으로 보여준 시인이야"'
-        ],
-        films: [
-          { title: '악의 꽃', year: '1857', image: 'images/fleurs.png' },
-          { title: '파리의 우울', year: '1869', image: 'images/spleen.png' },
-          { title: '낭만주의 예술', year: '1868', image: 'images/romantic.png' }
-        ]
-      },
-      {
-        name: '마르셀 프루스트',
-        image: 'images/proust.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '프랑스', 장르: '의식의 흐름 소설', 시대: '1913–1927', 대표작: '잃어버린 시간을 찾아서' },
-        desc: '프루스트는 기억이 어떻게 작동하는지를 소설로 보여준 작가다. 잃어버린 시간을 찾아서는 7권짜리 소설인데 마들렌 과자 하나로 시작된다. 냄새, 맛, 감각이 어떻게 과거 전체를 불러오는지를 가장 정밀하게 썼다.',
-        phrases: [
-          '"프루스트의 마들렌이 뭔지 알아? 홍차에 적신 마들렌 과자를 먹는 순간 유년의 기억 전체가 쏟아지는 거야. 비자발적 기억이라는 개념이 거기서 나왔어"',
-          '"잃어버린 시간을 찾아서가 7권인데 읽어야 하는 이유가 있어. 1권만 읽어도 기억과 시간에 대한 감각이 완전히 바뀌어. 그 변화가 문학이 줄 수 있는 가장 큰 선물이야"',
-          '"프루스트 문장이 왜 그렇게 긴지 알아? 의식이 흐르는 방식 자체를 문장 구조로 만든 거야. 생각이 이어지고 가지치고 돌아오는 그 방식을 문법으로 구현한 거야"',
-          '"프루스트는 방음 코르크를 붙인 방에서 누워서 글을 썼어. 세상을 차단하고 기억만으로 살았어. 그 방식이 그 소설을 만든 거야. 환경이 예술을 만든다는 극단적 예야"'
-        ],
-        films: [
-          { title: '잃어버린 시간을 찾아서 1권', year: '1913', image: 'images/proust1.png' },
-          { title: '잃어버린 시간을 찾아서 2권', year: '1919', image: 'images/proust2.png' },
-          { title: '잃어버린 시간을 찾아서 7권', year: '1927', image: 'images/proust7.png' }
-        ]
-      },
-      {
-        name: '요한 볼프강 폰 괴테',
-        image: 'images/goethe.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '독일', 장르: '시, 소설, 희곡', 시대: '1770–1832', 대표작: '파우스트, 젊은 베르테르의 슬픔' },
-        desc: '괴테는 독일 문학의 가장 높은 봉우리다. 파우스트는 인간의 욕망과 지식의 한계를 다루는 서양 문학의 핵심 텍스트다. 젊은 베르테르의 슬픔은 출판 후 유럽 전역에 모방 자살을 일으킬 만큼 강렬했다.',
-        phrases: [
-          '"젊은 베르테르의 슬픔이 출판됐을 때 유럽에서 베르테르처럼 옷 입는 게 유행했어. 그리고 모방 자살이 일어났어. 소설이 현실을 바꿀 수 있다는 걸 가장 극적으로 보여준 사례야"',
-          '"파우스트에서 악마에게 영혼을 판다는 설정이 단순한 이야기가 아니야. 지식과 경험을 위해서라면 영혼도 팔 수 있는가, 그게 인간의 근본적인 질문이야"',
-          '"괴테가 80년을 살면서 파우스트를 60년 동안 썼어. 인생 전체가 한 작품이 된 거야. 그 스케일이 파우스트의 깊이를 만들었어"',
-          '"괴테의 색채론은 뉴턴의 광학에 반박한 거야. 틀렸다는 게 지금은 밝혀졌지만, 과학자로서의 괴테가 예술가의 직관으로 자연을 이해하려 했다는 게 흥미로워"'
-        ],
-        films: [
-          { title: '파우스트', year: '1808', image: 'images/faust.png' },
-          { title: '젊은 베르테르의 슬픔', year: '1774', image: 'images/werther.png' },
-          { title: '빌헬름 마이스터의 수업시대', year: '1796', image: 'images/wilhelm.png' },
-          { title: '이탈리아 기행', year: '1816', image: 'images/italy.png' }
-        ]
-      },
-      {
-        name: '단테 알리기에리',
-        image: 'images/dante.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '이탈리아', 장르: '서사시', 시대: '1308–1320', 대표작: '신곡' },
-        desc: '단테의 신곡은 지옥, 연옥, 천국을 여행하는 서사시다. 700년 전에 쓰인 이 작품이 지금도 읽히는 건 인간의 죄와 구원에 대한 질문이 변하지 않았기 때문이다. 베르길리우스와 베아트리체라는 두 안내자가 이성과 사랑을 상징한다.',
-        phrases: [
-          '"신곡의 지옥 입구에 이 문을 들어오는 자여, 모든 희망을 버려라라고 써있어. 그 문장 하나가 서양 문학에서 절망을 표현하는 방식의 기준이 됐어"',
-          '"단테가 지옥에서 만나는 사람들이 당시 피렌체의 실제 정치인들이야. 적들을 지옥에 보내는 방식으로 정치 비판을 한 거야. 문학이 복수의 수단이 된 거야"',
-          '"베아트리체가 천국의 안내자라는 설정이 왜 중요한지 알아? 이성으로 갈 수 없는 곳은 사랑이 데려간다는 거야. 단테는 사랑을 가장 높은 인식론으로 본 거야"',
-          '"신곡을 이탈리아어로 쓴 게 혁명이야. 당시 진지한 글은 라틴어로 써야 했는데 단테가 일상 언어로 최고의 작품을 만들었어. 그게 현대 이탈리아어의 시작이야"'
-        ],
-        films: [
-          { title: '신곡 - 지옥편', year: '1308', image: 'images/inferno.png' },
-          { title: '신곡 - 연옥편', year: '1314', image: 'images/purgatorio.png' },
-          { title: '신곡 - 천국편', year: '1320', image: 'images/paradiso.png' },
-          { title: '새로운 삶', year: '1294', image: 'images/vitanuova.png' }
-        ]
-      }
+      { name: '알베르 카뮈', image: 'images/cami.jpg', videoLink: 'https://youtu.be/b4fCrva9DB0?si=8P8uU71IAvrsNOQp', videoThumb: 'images/camiim.png', info: { 국적: '프랑스/알제리', 장르: '부조리 문학', 시대: '1937–1960', 대표작: '이방인, 페스트' }, desc: '알베르 카뮈는 삶의 근원적인 불합리함과 마주했을 때 인간이 취해야 할 태도를 치열한 도덕적 성찰과 실존적 반항의 언어로 풀어낸 문학의 거장이다. 신도 이성도 구원해 주지 않는 차갑고 무의미한 세계, 즉 부조리라는 현실을 회피하거나 초월적 환상으로 도망치지 않고 정면으로 응시하는 팽팽한 서사를 구축한다. 삶의 허무를 긍정하면서도 그 속에서 인간으로서의 존엄성과 연대 의식을 끝까지 포기하지 않는 뜨거운 휴머니즘을 소설 속에 녹여낸다. 명징하고도 감각적인 문체를 통해 개인의 실존적 고독을 넘어 전쟁과 억압이라는 시대적 폭력에 맞서는 인간의 반항 정신을 치밀하게 해부한다. 결국 그는 영원히 돌을 굴려 올려야 하는 시시포스의 운명처럼, 무의미한 삶에 지지 않고 뜨겁게 살아가는 반항적 인간의 숭고한 아름다움을 정립한 사상가다.', phrases: ['"이방인의 첫 문장은 오늘 엄마가 죽었다야."','"시지프 신화에서 카뮈는 시지프가 행복해야 한다고 말해."','"페스트는 알제리 흑사병 이야기지만 2차대전 나치 점령의 알레고리야."','"카뮈는 사르트르랑 절친이었다가 철학적 견해 차이로 완전히 결별했어."'], films: [{ title: '이방인', year: '1942', image: 'images/cami1.png' },{ title: '페스트', year: '1947', image: 'images/cami2.png' },{ title: '시지프 신화', year: '1942', image: 'images/cami3.png' },{ title: '전락', year: '1956', image: 'images/cami4.png' },{ title: '결혼', year: '1928', image: 'images/cami5.png' },{ title: '여름', year: '1953', image: 'images/cami6.png' },{ title: '안과 겉', year: '1937', image: 'images/cami7.png' },{ title: '저항, 반항, 죽음', year: '1960', image: 'images/cami8.png' }] },
+
+      { name: '요한 볼프강 폰 괴테', image: 'images/pon.jpg', videoLink: 'https://youtu.be/zNEpojtXotE?si=lwzD33essZy2P4Zu', videoThumb: 'images/ponim.png', info: { 국적: '독일', 장르: '시, 소설, 희곡', 시대: '1770–1832', 대표작: '파우스트, 젊은 베르테르의 슬픔' }, desc: '요한 볼프강 폰 괴테는 인간 영혼의 모순적인 갈망과 구원의 문제를 고전주의적 예술성과 낭만주의적 열정의 완벽한 조화 속에 담아낸 대문호다. 지식을 향한 끝없는 집착과 관능적 욕망 사이에서 방황하는 파우스트적 인간상을 통해, 선과 악의 경계에서 끊임없이 흔들리며 전진하는 현대적 인간의 정체성을 최초로 서사화했다. 이성적 통제를 벗어난 파괴적인 감정의 소용돌이를 날카롭게 포착하면서도, 기어코 이를 거대한 문학적 질서와 세계관 속으로 통합해 내는 사유의 통제력이 독보적이다. 시, 소설, 희곡을 넘나드는 방대한 텍스트 속에 인간 심리의 미시적인 파동부터 우주적인 섭리까지 현미경처럼 집요하게 해부해 둔다. 결국 그는 끊임없이 방황하고 노력하는 인간은 구원받는다는 거대한 낙관을 바탕으로, 유한한 삶 속에서 무한을 갈구하는 인간 존재의 위대함을 가장 웅장하게 서술한 창작자다.', phrases: ['"젊은 베르테르의 슬픔이 출판됐을 때 유럽에서 모방 자살이 일어났어."','"파우스트에서 악마에게 영혼을 판다는 설정이 단순한 이야기가 아니야."','"괴테가 80년을 살면서 파우스트를 60년 동안 썼어."','"괴테의 색채론은 뉴턴의 광학에 반박한 거야."'], films: [{ title: '파우스트', year: '1808', image: 'images/pon1.png' },{ title: '젊은 베르테르의 슬픔', year: '1774', image: 'images/pon2.png' },{ title: '빌헬름 마이스터의 수업시대', year: '1796', image: 'images/pon3.png' },{ title: '이탈리아 기행', year: '1816', image: 'images/pon4.png' },{ title: '에그몬트', year: '1788', image: 'images/pon5.png' },{ title: '토르콰토 타소', year: '1790', image: 'images/pon6.png' },{ title: '괴테와의 대화*', year: '1836', image: 'images/pon7.png' },{ title: '잠언과 성찰*', year: '1833', image: 'images/pon8.png' }] },
+
+      { name: '나쓰메 소세키', image: 'images/na.jpg', videoLink: 'https://youtu.be/cM62gDvZW6g?si=g-1ZHoVIBvPFTdnv', videoThumb: 'images/naim.png', info: { 국적: '일본', 장르: '근대소설', 시대: '1905–1916', 대표작: '나는 고양이로소이다, 마음, 도련님' }, desc: '나쓰메 소세키는 거대한 근대화의 물결 속에서 길을 잃고 파편화된 개인의 고독과 윤리적 딜레마를 지독할 정도로 쓸쓸하고 정교하게 포획한 문학가다. 서구식 개인주의와 전통적 가치관이 충돌하는 메이지 시대의 과도기적 풍경을 배경으로, 타인과 결코 완전히 닿을 수 없는 인간의 근원적인 고립감과 에고이즘을 예리하게 응시한다. 겉보기에는 덤덤하고 위트 있는 일상적 서사의 형태를 취하는 듯하지만, 그 이면에는 지식인들의 허위의식과 도덕적 결벽증, 그리고 서서히 질식해 가는 내면의 붕괴를 밀도 높게 해부해 둔다. 극적인 사건보다 인물의 미묘한 심리적 균열과 시선의 교차를 통해 근대인이라는 존재가 필연적으로 앓아야 하는 정신적 폐부를 서늘하게 증명해 낸다. 결국 그는 가장 일본적인 배경의 이야기 속에서 현대 사회를 살아가는 인간이라면 누구나 마주할 수밖에 없는 보편적인 소외와 불안의 초상을 가장 품격 있고 냉철하게 그려낸 인물이다.', phrases: ['"마음은 메이지 시대가 끝나는 시점에 쓰인 소설이야."','"나는 고양이로소이다는 제목이 다야."','"소세키는 영국 유학 중에 신경쇠약을 겪었어."','"도련님은 소세키 소설 중 가장 유머러스해."'], films: [{ title: '나는 고양이로소이다', year: '1905', image: 'images/na1.png' },{ title: '도련님', year: '1906', image: 'images/na2.png' },{ title: '마음', year: '1914', image: 'images/na3.png' },{ title: '풀베개', year: '1908', image: 'images/na4.png' },{ title: '유리문 안에서', year: '1915', image: 'images/na5.png' },{ title: '그 후', year: '1910', image: 'images/na6.png' },{ title: '한눈팔기', year: '1915', image: 'images/na7.png' },{ title: '명암', year: '1916', image: 'images/na8.png' }] },
+
+      { name: '레프 톨스토이', image: 'images/tol.jpg', videoLink: 'https://youtu.be/Lr6DYLBkyG0?si=sCgqupB61zUz2k2C', videoThumb: 'images/tolim.png', info: { 국적: '러시아', 장르: '사실주의 소설', 시대: '1852–1910', 대표작: '전쟁과 평화, 안나 카레니나' }, desc: '레프 톨스토이는 인간 삶의 모든 스펙트럼과 역사적 소용돌이를 한 편의 거대한 벽화처럼 스크린이 아닌 텍스트 위에 완벽하게 구현해 낸 사실주의의 거장이다. 전쟁과 평화, 귀족과 민중, 삶과 죽음이라는 양극단의 가치들을 기묘하리만치 거시적인 안목과 미시적인 묘사력을 결합해 하나의 거대한 유기체적 서사로 묶어낸다. 인물들의 세속적인 욕망과 도덕적 위선을 현미경처럼 날카롭게 파헤치면서도, 기어코 그 저변에 흐르는 생명의 숭고함과 종교적 구원의 갈망을 따뜻한 서사적 연민으로 감싸 안는다. 문명이라는 인위적인 껍데기를 벗겨내고 자연과 대지에 맞닿은 인간 본연의 순수함을 찬미하며, 사회 구조의 모순과 도덕적 나태함을 추호의 타협도 없이 냉정하게 고발한다. 결국 그는 거대한 서사 구조 안에서 인간 실존의 모든 모순을 온전히 담아내어, 삶의 본질이란 무엇인가에 대한 답을 가장 압도적인 스케일과 깊이로 증명해 낸 대문호다.', phrases: ['"안나 카레니나의 첫 문장이 왜 유명한지 알아?"','"전쟁과 평화를 두꺼워서 못 읽겠다고 하면 손해야."','"톨스토이가 말년에 모든 재산을 포기하고 귀족 작위도 버린 거 알아?"','"이반 일리치의 죽음은 중편소설인데 죽음을 직면하는 과정이 이렇게 정확할 수 있나 싶어."'], films: [{ title: '전쟁과 평화', year: '1869', image: 'images/tol1.png' },{ title: '안나 카레니나', year: '1878', image: 'images/tol2.png' },{ title: '이반 일리치의 죽음', year: '1886', image: 'images/tol3.png' },{ title: '부활', year: '1899', image: 'images/tol4.png' },{ title: '참회록', year: '1882', image: 'images/tol5.png' },{ title: '바보 이반', year: '1886', image: 'images/tol6.png' },{ title: '사람은 무엇으로 사는가', year: '1899', image: 'images/tol7.png' },{ title: '사랑이 있는 곳에 신이 있다', year: '1899', image: 'images/tol8.png' }] },
+
+      { name: '표도르 도스토옙스키', image: 'images/dos.jpg', videoLink: 'https://youtu.be/F9kfiUhmRO8?si=VdfxmsQltxGJGOQf', videoThumb: 'images/dosim.png', info: { 국적: '러시아', 장르: '심리소설', 시대: '1846–1881', 대표작: '죄와 벌, 카라마조프의 형제들' }, desc: '표도르 도스토예프스키는 인간 심리의 가장 어둡고 기괴한 심연까지 내려가 신성과 야수성이 공존하는 다성악적 내면을 서늘하게 해부해 낸 천재적인 소설가다. 범죄, 광기, 살인, 종교적 황홀경 등 극단적인 한계 상황 속에 인물들을 밀어 넣고, 선과 악이라는 기성의 이분법적 도덕관을 완전히 깨부수며 인간이라는 존재의 복잡성을 가혹하리만치 집요하게 파고든다. 자본주의적 합리성과 무신론이 인간을 어떻게 황폐하게 만드는지 추적하는 동시에, 죄의식과 고통을 통해서만 도달할 수 있는 영혼의 구원과 신의 존재를 고통스러울 정도로 치열하게 텍스트에 새겨 넣는다. 인물들이 내뱉는 날것의 독백과 사상적 충돌은 단순한 서사 전개를 넘어 신과 인간, 자유의지에 대한 거대한 철학적 논쟁의 장을 형성한다. 결국 그는 이성과 논리로는 설명할 수 없는 인간 내면의 모순과 영적 심연을 가장 격렬하고 파괴적인 필치로 탐구하여 현대 문학의 영토를 무한히 확장한 독보적인 예술가다.', phrases: ['"죄와 벌에서 라스콜리니코프가 살인을 정당화하는 논리가 무서운 건 그게 틀렸기 때문이 아니야."','"카라마조프의 형제들에서 대심문관 챕터는 소설 안의 소설이야."','"도스토옙스키는 사형 선고를 받고 총살대 앞에 섰다가 마지막 순간에 감형됐어."','"지하로부터의 수기는 현대 소설의 가장 중요한 선구자야."'], films: [{ title: '죄와 벌', year: '1866', image: 'images/dos1.png' },{ title: '카라마조프의 형제들', year: '1880', image: 'images/dos2.png' },{ title: '백치', year: '1869', image: 'images/dos3.png' },{ title: '악령', year: '1872', image: 'images/dos4.png' },{ title: '가난한 사람들', year: '1846', image: 'images/dos5.png' },{ title: '미성년', year: '1875', image: 'images/dos6.png' },{ title: '백야', year: '1848', image: 'images/dos7.png' },{ title: '지하로부터의 수기', year: '1864', image: 'images/dos8.png' }] },
+      { name: '조지 오웰' }, { name: '서머싯 몸' }, { name: '어니스트 헤밍웨이' }, { name: '프란츠 카프카' }, { name: '아쿠타가와 류노스케' }, { name: '무라카미 하루키' }, { name: '레프 톨스토이' }, { name: '안톤 체호프' }, { name: '알렉산드르 푸시킨' }, { name: '한강' }, { name: '샤를 보들레르' }, { name: '마르셀 프루스트' }, { name: '단테 알리기에리' }, { name: '헤르만 헤세' }
     ]
   },
   talk: {
     label: 'Talk',
     items: [
+      { name: '악의 평범성', image: 'images/hanna.jpg', videoLink: 'https://youtu.be/k7GUB_df6l8?si=QE08XSRoyrE6inPU', videoThumb: 'images/hannaim.png', info: { 제안자: '한나 아렌트', 출처: '예루살렘의 아이히만', 분야: '정치철학, 윤리학', 연도: '1963' }, desc: '악의 평범성(Banality of Evil)은 엄청나게 잔인한 악행을 저지르는 사람이 사실은 우리 주변에서 흔히 볼 수 있는 아주 평범하고 성실한 사람일 수 있다는 개념이다. 이 말은 정치철학자 한나 아렌트가 1961년 예루살렘에서 열린 재판을 지켜보며 세상에 처음 꺼내놓은 이야기다. <br> <br>  당시 재판을 받은 사람은 아돌프 아이히만이라는 독일 나치 장교였다. 그는 2차 세계대전 당시 수많은 유대인을 강제 수용소로 실어 나르는 기차 수송 작전의 총책임자였다. 수백만 명을 죽음으로 몰아넣은 끔찍한 학살의 주범이었던 셈이다. 재판이 열리기 전, 대중은 아이히만이 피에 굶주린 괴물이거나 사이코패스 같은 악마일 것이라 예상했다. 하지만 법정에 선 그의 모습은 사람들의 생각과 완전히 달랐다.그는 너무나도 평범하고 예의 발랐으며, 가정에서는 좋은 남편이자 자상한 아버지였다. 정신과 의사들의 감정 결과도 지극히 정상이라는 판정이 나왔다. 아이히만은 법정에서 억울함을 호소하며 다음과 같이 주장했다. 나는 그저 국가의 공무원으로서 상부의 명령을 충실히 따랐을 뿐이다. 내 임무인 열차 시간표 작성과 수송 작전을 효율적이고 성실하게 처리했을 뿐, 개인적으로 유대인을 미워해서 죽인 게 아니다. <br> <br> 이 모습을 본 한나 아렌트는 큰 충격을 받았다. 그리고 진짜 무서운 악은 특별한 악마에게서 나오는 게 아니라, 스스로 생각하기를 멈춘 평범한 사람에게서 나온다는 점을 깨달았다. 아이히만은 국가가 준 임무를 열심히 수행했지만, 내가 짜는 이 기차 시간표 때문에 수많은 사람이 고통받고 죽어간다는 사실은 전혀 고려하지 않았다. 아렌트는 이를 사유의 불능이라고 불렀다. 자신이 하는 행동이 타인에게 어떤 고통을 주는지 깊이 고민하지 않고, 그저 시스템의 부속품처럼 시키는 일만 기계적으로 해낸 것이 바로 악의 본질이라는 뜻이다. <br> <br>  이 현상은 오늘날의 일상에도 쉽게 파고든다. 회사나 조직에서 다들 그렇게 하니까, 위에서 시키니까라는 이유로 누군가에게 피해를 주거나 잘못된 행위를 눈감아버리는 행동이 모두 악의 평범성에 해당할 수 있다. 결국 악의 평범성이 주는 메시지는 명확하다. 괴물은 따로 있는 게 아니며, 누구나 언제든 나쁜 일의 주범이나 방조자가 될 수 있다는 사실이다. 그렇기 때문에 인간은 늘 지금 내가 하는 행동이 다른 사람에게 어떤 영향을 미치고 있는가를 스스로 멈춰 서서 끊임없이 질문해야 한다.', phrases: ['"결니까 악의 평범성의 진짜 무서운 점은, 악인에게 서사를 부여하는 게 아니야. 사유를 멈춘 평범한 우리 모두가 시스템의 부속품으로서 언제든 가장 정교한 악의 집행자가 될 수 있다는 경고에 가깝지."','"악의 평범성을 알면 거대한 악이 어떻게 가능한지가 이해돼"','"아히만의 진짜 공포는 그가 사악해서가 아니라, 그저 관료제 시스템 속에서 주어진 근면성에만 완벽하게 충실했다는 점이야. 시스템이 사유를 지워버릴 때 개인이 얼마나 정교한 부속품으로 타락하는지 보여주는 서늘한 사례지."','현대 사회에서 악의 평범성은 멀리 있지 않아. 조직의 논리나 효율성이라는 미명 아래, 내가 하는 일이 타인에게 줄 고통에 대해 감각을 닫아버리는 순간 우리도 매일 아히만이 되는 거니까.'], films: [{ title: '예루살렘의 아이히만', year: '1963', image: 'images/eichmann.png' },{ title: '전체주의의 기원', year: '1951', image: 'images/origins.png' },{ title: '인간의 조건', year: '1958', image: 'images/humancondition.png' },{ title: '혁명론', year: '1963', image: 'images/revolution.png' }] },
+
+      { name: '장 보드리야르', image: 'images/boo.jpg', videoLink: 'https://youtu.be/kiHpGAjA33E?si=GQo0zbE5FlBMshb9', videoThumb: 'images/booim.png', info: { 국적: '프랑스', 분야: '철학, 문화이론', 대표작: '시뮬라크르와 시뮬라시옹', 스타일: '포스트모더니즘' }, desc: '장 보드리아르가 내놓은 현대 사회의 핵심 개념은 시뮬라크르와 시뮬라시옹이다. <br> <br> 용어는 어렵지만 알기 쉽게 풀면 "우리가 사는 현대 사회는 진짜(원본)보다 더 진짜 같은 가짜(복제물)가 가득 차 있으며 결국에는 가짜가 진짜를 집어삼키고 지배하게 된다"는 이론이다. <br><br> 보드리아르는 과거에는 진짜(원본)가 있고 그것을 흉내 낸 가짜(복제물)가 있었다면 현대 사회는 그 관계가 완전히 뒤집혔다고 보았다. 이를 설명하기 위해 그는 다음과 같은 개념을 제시했다. <br><br> 시뮬라크르: 진짜처럼 만들어진 가짜나 이미지를 뜻한다.<br>시뮬라시옹: 그 가짜 이미지가 실제 진짜를 대체해 가는 과정이나 현상을 말한다. <br><br>이해를 돕기 위해 일상적인 예시를 들면 다음과 같다.<br><br>우리가 맛집을 찾아갈 때 진짜 음식의 맛을 보고 결정하기보다 인스타그램에 올라온 화려한 사진(이미지)을 보고 찾아간다. 이때 인스타그램 사진이 바로 시뮬라크르다. 재미있는 점은 사람들이 식당에 가서 음식을 먹을 때도 맛 자체를 즐기기보다 사진 속 이미지와 똑같이 생겼는지 확인하고 그것을 다시 사진으로 찍어 SNS에 올리는 데 열중한다는 사실이다.<br><br>진짜 음식보다 사진 속 이미지가 더 중요해진 현상 즉 가짜가 진짜를 지배하는 현상이 바로 시뮬라시옹이다.<br><br>보드리아르는 현대인이 물건을 살 때도 물건의 원래 기능(진짜)을 보고 사는 게 아니라 그 물건이 주는 이미지(가짜)를 소비한다고 말했다. 가령 고급 가방을 사는 이유는 물건을 담는 기능이 필요해서가 아니라 그 브랜드가 가진 부유함이나 세련됨이라는 이미지를 사기 위함이다.<br><br>결국 현대 사회는 현실과 가짜의 경계가 무너진 사회다. TV 뉴스 SNS 광고가 만들어낸 수많은 가짜 이미지들이 현실을 압도하고 있으며 인간은 그것이 가짜인지도 모른 채 진짜라고 믿으며 살아간다.<br><br>장 보드리아르가 던진 메시지는 명확하다. 우리가 진짜라고 믿고 매달리는 세상의 수많은 이미지와 유행들이 사실은 알맹이가 없는 거대한 가짜의 세계일 수 있다는 점이다. 그렇기에 우리는 눈앞에 보이는 화려한 이미지에 현혹되지 않고 그 뒤에 숨겨진 진짜 현실이 무엇인지 끊임없이 꿰뚫어 보려고 노력해야 한다.',
+      phrases: ['"시뮬라크르가 뭔지 알아? 원본 없는 복사본이야."','"보드리아르가 말한 가장 서늘한 지점은 이거지. 미디어가 현실을 반영하는 게 아니라, 미디어가 만든 시뮬라크르가 역으로 현실을 규정하고 조작한다는 것. 이젠 원본과 카피의 경계 자체가 해체됐어."','"시뮬라시옹의 세계에서는 진짜인가 가짜인가를 따지는 질문 자체가 구시대적이야. 이미 현실은 기호의 놀이터가 됐고, 우리는 실체가 사라진 이미지의 껍데기를 진짜라고 믿으며 소비할 뿐이거든."', '"현대 소비사회는 물건의 기능이 아니라 기호와 이미지를 소비하잖아. 결국 우리가 쫓는 브랜드 이미지나 라이프스타일 자체가 실체가 없는 거대한 시뮬라시옹의 프로세스 위에 있는 셈이야."'], films: [{ title: '시뮬라크르와 시뮬라시옹', year: '1981', image: 'images/simulacra.png' },{ title: '소비의 사회', year: '1970', image: 'images/consumer.png' },{ title: '걸프전은 일어나지 않았다', year: '1991', image: 'images/gulf.png' },{ title: '아메리카', year: '1986', image: 'images/baudrillardamerica.png' }] },
+
+      { name: '질 들뢰즈', image: 'images/gil.jpg', videoLink: 'https://youtu.be/a_hifamdISs?si=fcXpxJidmpNvi47_', videoThumb: 'images/gilim.png', info: { 국적: '프랑스', 분야: '철학', 대표작: '천 개의 고원, 차이와 반복', 스타일: '포스트구조주의' }, desc: '질 들뢰즈가 제시한 사유 방식의 핵심에는 리좀적 사고가 있다. <br><br> 이 개념을 알기 쉽게 풀면 "지식이나 생각은 나무뿌리처럼 중심에서 사방으로 뻗어나가는 계층 구조가 아니라 고구마나 잔디 뿌리처럼 중심 없이 사방으로 얽히고설키며 무한히 확장되는 네트워크 구조를 가져야 한다"는 이론이다. <br><br>들뢰즈는 인류의 전통적인 사고방식을 식물의 두 가지 형태에 비유하여 설명했다. <br><br>수목형 사고: 하나의 단단한 줄기(중심)에서 출발해 가지가 뻗어나가는 나무 모양의 사고다. 위아래가 명확한 계층 구조이며 중심이 무너지면 전체가 무너지는 속성을 지닌다. 교과서적인 정답이나 일방적인 명령 체계가 이에 해당한다.<br><br> 리좀형 사고: 중심 줄기가 따로 없고 모든 뿌리가 수평적으로 연결된 지하경(땅속줄기) 모양의 사고다. 시작과 끝이 없고 어디로든 연결될 수 있으며 중간이 끊겨도 다른 뿌리를 통해 살아남고 끊임없이 새로운 줄기를 뻗어 올린다. <br><br>이해를 돕기 위해 일상적인 예시를 들면 다음과 같다.<br><br>전통적인 백과사전은 수목형 구조다. 대분류 중분류 소분류로 이어지는 엄격한 순서와 계층이 있다. 반면 현대의 인터넷과 위키피디아는 완벽한 리좀형 구조다. 사용자는 글을 읽다가 파란색 하이퍼링크를 타고 전혀 다른 분야의 문서로 순식간에 이동한다. 요리법을 검색하다가 역사 이야기로 넘어가고 다시 과학 정보로 이어지는 식이다. 중심도 없고 정해진 시작점도 없으며 모든 정보가 수평적으로 얽혀 있다.<br><br>현대 사회에서 리좀적 사고는 창의성의 원천이 된다. 하나의 전공이나 하나의 정답에만 갇히지 않고 예술과 기술 과학과 문학을 종횡무진 가로지르며 새로운 아이디어를 융합해내는 방식이 바로 리좀적 사고다.<br><br>결국 들뢰즈가 리좀적 사고를 통해 강조하는 메시지는 명확하다. 정해진 위계질서와 고정관념에서 벗어나 유연하고 자유롭게 생각하라는 사실이다. 우리는 생각의 중심을 무너뜨리고 세상의 수많은 지식 및 경험과 수평적으로 연결될 때 비로소 기존 사회가 만들어놓은 틀을 깨고 진짜 창조적인 삶을 살 수 있다.',
+      phrases: ['"들뢰즈와 과타리가 자본주의를 분석하는 방식이 독특해."',
+        '"사람들이 리좀을 그냥 네트워크나 얽혀 있는 선 정도로만 퉁치는데, 본질은 그게 아냐. 중심과 주변의 위계가 없고, 어디서 찢겨 나가도 그 자리에서 새로운 선을 뻗어 나가는 끊임없는 생성의 매커니즘을 말하는 거지."','"현대 웹 구조나 서브컬처의 흐름을 보면 딱 들뢰즈의 예언대로 흘러가지. 하나의 절대적인 정답이나 텍스트를 따르는 게 아니라, 파편화된 기호들이 맥락 없이 접속하고 증식하는 구조 자체가 완벽한 리좀적 풍경이니까."','"리좀적 사고를 한다는 건 구조를 복잡하게 만드는 게 아냐. A이면 B이다라는 수직적 인과율을 깨부수고, 언제든 샛길로 새서 새로운 의미의 영토를 만들어낼 수 있는 다원적인 가능성을 열어두는 거지."','"기존의 사고방식이 뿌리에서 줄기, 가지로 뻗어 나가는 이진법적 구조라면, 리좀은 시작도 끝도 없이 오직 중간만 존재하는 탈중중화된 사유야. 중심이라는 헤게모니 자체를 거부하는 거지."','"들뢰즈가 말한 리좀의 핵심은 탈영토화에 있어. 고정된 경계나 정체성에 갇히지 않고, 끊임없이 이질적인 것들과 접속하면서 자기 영역을 변형시켜 나가는 그 역동성이 진짜 맛이거든."'], films: [{ title: '차이와 반복', year: '1968', image: 'images/difference.png' },{ title: '천 개의 고원', year: '1980', image: 'images/plateaus.png' },{ title: '안티 오이디푸스', year: '1972', image: 'images/antioedipus.png' },{ title: '시네마 1', year: '1983', image: 'images/cinema1.png' }] },
+
+      { name: '테세우스의 배', image: 'images/tes.jpg', videoLink: 'https://youtu.be/dYAoiLhOuao?si=Dn10-7J4MB2Wpz2C', videoThumb: 'images/tesim.png', info: { 분야: '철학, 형이상학', 유형: '사고 실험', 키워드: '정체성, 동일성, 변화', 기원: '고대 그리스' }, desc: '그리스 신화의 영웅 테세우스의 이야기에서 유래한 철학적 난제는 바로 테세우스의 배이다. <br><br>이 개념을 알기 쉽게 풀면 "어떤 물건의 모든 부품을 오랜 시간에 걸쳐 하나씩 새것으로 바꾸었다면 그 물건은 과연 처음과 같은 물건이라고 할 수 있는가"라는 정체성에 관한 질문이다.<br><br>신화 속 고대 그리스인들은 영웅 테세우스가 타고 돌아온 배를 기념하기 위해 오랫동안 보존했다. 세월이 흐르면서 배의 나무 판자가 썩을 때마다 사람들은 썩은 판자를 떼어내고 튼튼한 새 판자로 갈아 끼웠다. 이 과정이 수백 년 동안 반복되다 보니 결국 처음 배를 만들 때 쓰였던 원래의 판자는 단 하나도 남지 않게 되었다.<br><br>이 상황을 지켜본 철학자들은 한 가지 거대한 의문을 던졌다.<br><br>관점 1 (동일하다): 비록 부품은 다 바뀌었지만 배의 형태와 기능 그리고 테세우스의 배라는 역사적 의미가 그대로 이어져 왔으므로 여전히 같은 배다.<br><br>관점 2 (다르다): 처음에 배를 구성했던 물질이 단 1퍼센트도 남아있지 않고 완전히 새로운 재료로 채워졌으므로 이것은 전혀 다른 새 배다.<br><br>여기에 철학자 홉스는 한 걸음 더 나아간 문제를 제기했다. 만약 누군가가 배에서 떼어낸 썩은 판자들을 버리지 않고 전부 모아서 똑같은 모양의 배를 다시 조립해 냈다면 과연 둘 중 어느 쪽이 진짜 테세우스의 배인가라는 질문이다. 부품은 다 바뀌었지만 원래 자리에 계속 있던 배와 원래 부품을 모아 새로 만든 배 중에서 정답을 고르기는 쉽지 않다.<br><br>이 난제는 단순히 배 이야기에 그치지 않고 인간의 존재와 정체성 문제로 직결된다.<br><br>인간의 몸을 구성하는 세포는 매일 죽고 새로 태어나며 몇 년이 지나면 몸 전체의 세포가 사실상 거의 다 교체된다. 10년 전의 나와 지금의 나는 물질적으로 완전히 다른 존재인 셈이다. 생각이나 가치관 성격도 세월이 흐르며 끊임없이 변한다. 그럼에도 우리는 나라는 존재를 동일한 한 사람으로 인식한다.<br><br>결국 테세우스의 배가 던지는 메시지는 명확하다. 나라는 존재의 본질이 단순히 나를 이루는 눈앞의 물질이나 부품에만 있는 것은 아니라는 사실이다. 물질이 끊임없이 바뀌더라도 그 안에 담긴 기억과 경험 그리고 삶의 연속성이 이어지고 있다면 인간은 어제와 다른 오늘을 살아가면서도 여전히 고유한 나로서 존재할 수 있다.',
+       phrases: ['"사람들은 부품이 다 바뀌었을 때의 물리적 실체만 보잖아. 본질은 그게 아냐. 나라는 정체성을 구성하는 건 고정된 원자가 아니라, 그 형태와 기억을 유지해 나가는 시간의 연속성에 있다는 역설이거든."','"다들 부품이 바뀌었냐 아니냐만 따지는데, 진짜 핵심은 원본의 부재야. 교체된 폐자재로 만든 배와 새로 조립된 배 사이에서, 정체성이라는 게 얼마나 허구적이고 자의적인 관념인지 그 경계를 무너뜨리는 게 이 역설의 진짜 맛이지."', '"테세우스의 배를 자아에 적용하면 불교의 무아론이랑 만나."','"결국 테세우스의 배가 던지는 서늘한 질문은 이거야. 정체성이라는 건 원래부터 존재하는 실체가 아니라, 우리가 그것을 그렇다고 믿어주는 언어적 합의와 맥락에 불과하다는 것"','"이 역설의 핵심은 형상과 질료의 대립이야. 재료(질료)가 전부 바뀌어도 설계와 기능(형상)이 유지된다면 그것을 같은 존재로 볼 것인가 하는, 본질주의에 대한 아주 오래된 전복이지"'], films: [{ title: '플루타르코스 영웅전', year: '75', image: 'images/plutarch.png' },{ title: '홉스의 리바이어던', year: '1651', image: 'images/leviathan.png' },{ title: '동일성과 차이', year: '현대', image: 'images/identity.png' }] },
+
+      { name: '그람시', image: 'images/gram.jpg', videoLink: 'https://youtu.be/RFQrV8UxpVA?si=kWa_2Y2_KWhFoZKC', videoThumb: 'images/gramim.png', info: { 국적: '이탈리아', 분야: '정치철학, 마르크스주의', 대표작: '옥중수고', 스타일: '헤게모니 이론' }, desc: '이탈리아의 사상가 안토니오 그람시가 제시한 핵심 개념은 헤게모니(Hegemony 주도권)이다. <br><br>이 개념을 알기 쉽게 풀면 지배 계급이 힘이나 군대 같은 물리적인 폭력만으로 사회를 누르는 게 아니라 문화 언론 교육 등을 통해 피지배 계급의 자발적인 동의를 얻어내어 사회를 지배하는 방식을 뜻한다.<br><br>그람시는 지배 계급이 권력을 유지하는 방법을 두 가지로 나누어 설명했다.<br><br>지배(강제력) 군대나 경찰 감옥처럼 법과 물리적인 힘을 동원해 억지로 복종하게 만드는 방식이다. 주로 독재 국가나 위기 상황에서 나타난다.<br><br>헤게모니(동의): 학교 언론 종교 문화 등을 통해 사람들의 생각과 상식을 지배하는 방식이다. 사람들이 지배 계급의 가치관을 당연한 상식으로 받아들이도록 만들어 스스로 고개를 끄덕이게 한다.<br><br>이해를 돕기 위해 일상적인 예시를 들면 다음과 같다.<br><br>현대 사회에서 많은 청년들은 밤을 새워 공부하고 좋은 스펙을 쌓아 대기업에 들어가기 위해 치열하게 경쟁한다. 이 과정에서 누구도 청년들에게 총칼을 들이대며 강요하지 않는다. 부모님의 조언 드라마나 뉴스 성공한 사람들의 유튜브 영상 등을 보며 자라나는 동안 성공이란 곧 대기업 취업이라는 생각이 당연한 상식으로 머릿속에 자리 잡았기 때문이다.<br><br>사회가 만들어놓은 상식과 가치관을 개인이 스스로 옳다고 믿으며 자발적으로 따르는 상태 바로 이것이 성공적인 헤게모니 작동의 예시다.<br><br>그람시는 자본주의 사회가 쉽게 무너지지 않는 이유가 바로 이 튼튼한 문화적 헤게모니 장벽 때문이라고 보았다. 지배 계급이 구축해 놓은 상식의 벽이 너무 두껍기 때문에 단순히 정치 권력을 빼앗는 것만으로는 사회를 바꿀 수 없다고 주장했다.<br><br>따라서 사회를 변화시키려면 교육 문화 예술 등 다양한 영역에서 기존의 잘못된 상식에 도전하고 새로운 상식을 만들어내는 진지전(공방전을 벌이며 서서히 진지를 구축하는 싸움)이 필요하다고 말했다.<br><br>결국 그람시의 헤게모니가 현대인에게 주는 메시지는 명확하다. 우리가 너무나 당연하다고 믿는 사회적 상식과 유행들이 사실은 누군가의 이익을 위해 만들어진 문화적 틀일 수 있다는 사실이다. 그렇기에 우리는 스스로 당연하게 여기는 가치관들에 의문을 던지며 내 생각이 정말 나의 주체적인 생각인지 끊임없이 비판적으로 점검해야 한다.',
+      phrases: ['"진짜 권력은 군대나 법률 같은 물리적 강제력보다 학교나 언론을 통해 대중의 무의식과 일상적인 상식을 지배하는 문화적 헤게모니야"','"그람시가 파시스트 감옥에서 쓴 노트가 옥중수고야."','"지배 계급이 자신들의 이념을 피지배 계급에게 상식이자 자연스러운 문화로 받아들이게 만드는 지독한 동의의 프로세스지"','"이걸 깨부수려면 단판 승부의 혁명이 아니라 상식의 기준을 바꾸며 밑바닥부터 진지를 구축해 나가는 지루한 진지전이 필요한 거야."','"그람시를 단순히 계급 투쟁으로만 이해하면 얕아. 그람시 사상의 진짜 매력은 이성으로는 비관하되, 의지로는 낙관한다는 태도에 있거든"'], films: [{ title: '옥중수고', year: '1929–1935', image: 'images/prisonnotebooks.png' },{ title: '현대의 군주', year: '1927', image: 'images/modernprince.png' },{ title: '남부 문제에 관한 몇 가지 측면들', year: '1926', image: 'images/southern.png' }] },
+
+      { name: '지그문트 바우만' }, { name: '기 드보르' }, { name: '자크 라캉' }, { name: '힐러리 퍼트넘' }
+    ]
+  },          // ← talk 섹션 닫기
+  etc: {
+    label: 'Etc',
+    items: [
       {
-        name: '악의 평범성',
-        image: 'images/arendt.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 제안자: '한나 아렌트', 출처: '예루살렘의 아이히만', 분야: '정치철학, 윤리학', 연도: '1963' },
-        desc: '한나 아렌트가 아이히만 재판을 취재하며 제안한 개념이다. 대규모 악은 악마 같은 인간이 아니라 생각하지 않는 평범한 인간이 저지른다는 것. 명령에 복종하고, 규칙을 따르고, 스스로 생각하지 않는 것. 그것이 악이 될 수 있다.',
-        phrases: [
-          '"아이히만이 재판에서 자기는 그냥 명령을 따랐을 뿐이라고 했어. 아렌트는 그게 거짓말이 아니라 더 무섭다고 했어. 생각하지 않는 것 자체가 악이 된다는 거야"',
-          '"악의 평범성을 알면 거대한 악이 어떻게 가능한지가 이해돼. 악당이 필요한 게 아니야. 그냥 생각 안 하는 사람들이 많으면 돼. 그게 더 무서운 이유야"',
-          '"아렌트가 이 개념으로 유대인 사회에서 엄청난 비판을 받았어. 홀로코스트를 평범화한다는 거야. 근데 아렌트의 요점은 악을 축소하는 게 아니라 그 메커니즘을 이해하자는 거야"',
-          '"악의 평범성을 직장 생활에 대입해봐. 부당한 지시에 그냥 따르는 것, 문제를 보고도 말하지 않는 것. 그 일상적 복종이 어디까지 가는지를 이 개념이 물어"'
-        ],
-        films: [
-          { title: '예루살렘의 아이히만', year: '1963', image: 'images/eichmann.png' },
-          { title: '전체주의의 기원', year: '1951', image: 'images/origins.png' },
-          { title: '인간의 조건', year: '1958', image: 'images/humancondition.png' },
-          { title: '혁명론', year: '1963', image: 'images/revolution.png' }
-        ]
+        name: '꺼드럭의 단계',
+        desc: '취향에도 단계가 있다. 첫 번째는 대중의 언어로 말하는 단계, 두 번째는 대중을 벗어난 것을 아는 단계, 세 번째는 대중과 비주류를 동시에 이해하는 단계. 가장 위험한 사람은 두 번째 단계에서 멈춘 사람이다. 가장 매력적인 사람은 세 번째 단계에서 조용히 웃는 사람이다.',
       },
       {
-        name: '장 보드리야르',
-        image: 'images/baudrillard.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '프랑스', 분야: '철학, 문화이론', 대표작: '시뮬라크르와 시뮬라시옹', 스타일: '포스트모더니즘' },
-        desc: '보드리야르는 현실이 사라지고 이미지만 남은 세계를 분석한 철학자다. 시뮬라크르, 하이퍼리얼리티. 원본 없는 복사본이 오히려 더 실재처럼 느껴지는 세계. 매트릭스의 철학적 배경이 바로 보드리야르다.',
-        phrases: [
-          '"보드리야르가 걸프전은 일어나지 않았다고 했을 때 다들 미쳤다고 했어. 근데 그 말의 의미는 미디어가 보여주는 전쟁 이미지가 실제 전쟁을 대체했다는 거야. 이미지가 현실이 된 거지"',
-          '"시뮬라크르가 뭔지 알아? 원본 없는 복사본이야. 디즈니랜드는 미국의 꿈을 재현한 곳인데, 이제 디즈니랜드가 미국의 꿈 자체야. 원본이 사라진 거야"',
-          '"보드리야르 읽으면 SNS가 다르게 보여. 우리가 올리는 사진이 경험의 기록이 아니라 경험을 대체하는 거야. 인스타를 위해 여행하는 순간 보드리야르가 맞는 거야"',
-          '"하이퍼리얼리티가 뭔지 알면 리얼리티 TV가 다르게 보여. 실제보다 더 실제 같은 것. 연출된 현실이 현실보다 더 현실처럼 소비되는 거야"'
-        ],
-        films: [
-          { title: '시뮬라크르와 시뮬라시옹', year: '1981', image: 'images/simulacra.png' },
-          { title: '소비의 사회', year: '1970', image: 'images/consumer.png' },
-          { title: '걸프전은 일어나지 않았다', year: '1991', image: 'images/gulf.png' },
-          { title: '아메리카', year: '1986', image: 'images/baudrillardamerica.png' }
-        ]
+        name: '꺼드럭은 사실 나쁜 것',
+        desc: '취향으로 사람을 판단하는 순간, 당신은 이미 그 취향보다 얕아진다. 진짜 깊이 있는 사람은 타인의 취향에 관대하다. 꺼드럭거리고 싶은 욕망 자체가 인정받고 싶다는 신호이고, 그 욕망을 직시하는 것이 진짜 성숙의 시작이다.',
       },
       {
-        name: '질 들뢰즈',
-        image: 'images/deleuze.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '프랑스', 분야: '철학', 대표작: '천 개의 고원, 차이와 반복', 스타일: '포스트구조주의' },
-        desc: '들뢰즈는 철학을 창조의 행위로 만든 철학자다. 리좀, 되기, 탈영토화. 그의 개념들은 어렵지만 한번 이해하면 세상을 보는 방식이 바뀐다. 과타리와 함께 쓴 천 개의 고원은 20세기 철학의 가장 자유로운 텍스트다.',
-        phrases: [
-          '"리좀이 뭔지 알아? 뿌리처럼 중심이 있는 게 아니라 감자처럼 어디서나 연결되고 퍼져나가는 구조야. 인터넷이 리좀이고, 도시가 리좀이야. 중심 없는 연결이 들뢰즈의 세계야"',
-          '"들뢰즈가 차이와 반복에서 말하는 건 반복은 같은 것의 되풀이가 아니라는 거야. 매번 다른 차이를 생산하는 게 반복이야. 그게 창조의 본질이라는 거야"',
-          '"되기 개념이 뭔지 알아? 여자-되기, 동물-되기, 분자-되기. 고정된 정체성이 아니라 항상 변화하는 과정으로 존재한다는 거야. 정체성이 명사가 아니라 동사야"',
-          '"들뢰즈와 과타리가 자본주의를 분석하는 방식이 독특해. 자본주의는 억압하는 게 아니라 욕망을 생산하고 관리한다는 거야. 그게 왜 혁명이 어려운지를 설명해"'
-        ],
-        films: [
-          { title: '차이와 반복', year: '1968', image: 'images/difference.png' },
-          { title: '천 개의 고원', year: '1980', image: 'images/plateaus.png' },
-          { title: '안티 오이디푸스', year: '1972', image: 'images/antioedipus.png' },
-          { title: '시네마 1', year: '1983', image: 'images/cinema1.png' }
-        ]
+        name: '진정한 승자는 멋쟁이',
+        desc: '모든 것을 알고, 모든 것을 사랑할 수 있는 사람. 봉준호도 알고 마블도 즐기는 사람. 크라프트베르크도 듣고 멜론 차트도 흥얼거리는 사람. 취향의 계급을 초월해 모든 취향 안에서 아름다움을 발견하는 것, 그게 진짜 멋이다.',
       },
       {
-        name: '그람시',
-        image: 'images/gramsci.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '이탈리아', 분야: '정치철학, 마르크스주의', 대표작: '옥중수고', 스타일: '헤게모니 이론' },
-        desc: '안토니오 그람시는 감옥에서 철학을 쓴 마르크스주의자다. 헤게모니, 유기적 지식인, 진지전. 권력이 폭력이 아니라 동의로 작동한다는 것을 가장 정밀하게 분석했다. 옥중수고는 파시스트 감옥에서 쓰인 텍스트다.',
-        phrases: [
-          '"그람시의 헤게모니가 뭔지 알아? 지배 계급이 피지배 계급의 동의를 얻어 권력을 유지하는 거야. 강제가 아니라 상식이 되는 것. 우리가 당연하다고 생각하는 것들이 헤게모니야"',
-          '"유기적 지식인 개념이 뭔지 알아? 자기 계급의 이익을 표현하고 조직하는 지식인이야. 전통적 지식인은 중립인 척하지만 유기적 지식인은 자기 편을 명확히 해"',
-          '"그람시가 진지전이라고 부른 게 뭔지 알아? 국가 권력을 한번에 뺏는 기동전이 아니라 문화, 교육, 언론을 통해 서서히 헤게모니를 바꾸는 전략이야"',
-          '"그람시가 파시스트 감옥에서 쓴 노트가 옥중수고야. 교도소 검열을 피하려고 난해하게 썼어. 그 난해함이 오히려 20세기 가장 중요한 정치 철학 텍스트가 됐어"'
-        ],
-        films: [
-          { title: '옥중수고', year: '1929–1935', image: 'images/prisonnotebooks.png' },
-          { title: '현대의 군주', year: '1927', image: 'images/modernprince.png' },
-          { title: '남부 문제에 관한 몇 가지 측면들', year: '1926', image: 'images/southern.png' }
-        ]
-      },
-      {
-        name: '테세우스의 배',
-        image: 'images/theseus.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 분야: '철학, 형이상학', 유형: '사고 실험', 키워드: '정체성, 동일성, 변화', 기원: '고대 그리스' },
-        desc: '테세우스의 배에서 판자를 하나씩 교체하다 보면 어느 순간 원래 배가 하나도 남지 않는다. 그것은 여전히 같은 배인가? 이 사고실험은 정체성의 본질을 묻는다. 세포가 교체되는 인간, 멤버가 바뀌는 밴드, 구성원이 바뀌는 국가. 무엇이 같음을 만드는가.',
-        phrases: [
-          '"테세우스의 배를 인간에 적용해봐. 우리 몸의 세포는 7년마다 완전히 바뀐다고 해. 그럼 지금의 나와 10년 전의 나는 같은 사람인가? 물리적으로는 다른데 왜 같다고 느끼지?"',
-          '"소울 이라는 영화가 이 문제를 다뤄. 밴드에서 원년 멤버가 다 나가고 새 멤버로 채워지면 그게 같은 밴드야? 원소스가 없는데 아이덴티티는 어디서 오는 거야"',
-          '"이 사고실험이 법적으로도 중요해. 리모델링을 몇 번 하면 문화재가 아닌가? 원본이 얼마나 남아야 원본인가? 그 기준을 누가 정하는가가 권력의 문제야"',
-          '"테세우스의 배를 자아에 적용하면 불교의 무아론이랑 만나. 고정된 자아는 없다는 거야. 우리가 나라고 부르는 것은 매 순간 변화하는 과정이야"'
-        ],
-        films: [
-          { title: '플루타르코스 영웅전', year: '75', image: 'images/plutarch.png' },
-          { title: '홉스의 리바이어던', year: '1651', image: 'images/leviathan.png' },
-          { title: '동일성과 차이', year: '현대', image: 'images/identity.png' }
-        ]
-      },
-      {
-        name: '지그문트 바우만',
-        image: 'images/bauman.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '폴란드/영국', 분야: '사회학, 철학', 대표작: '액체 근대', 스타일: '포스트모더니티 사회학' },
-        desc: '바우만은 현대를 액체 근대라고 명명한 사회학자다. 단단하고 견고했던 것들이 녹아 흐르는 시대. 직업, 관계, 정체성, 공동체. 모든 것이 유동적이고 불안정한 이 시대를 가장 정확하게 진단했다.',
-        phrases: [
-          '"액체 근대가 뭔지 알면 지금 세대의 불안이 설명돼. 평생직장이 없고, 관계가 유동적이고, 정체성도 계속 바뀌는 세계. 단단한 것이 없어서 불안한 게 아니라 그게 지금의 조건이야"',
-          '"바우만이 소비사회를 비판하는 방식이 독특해. 우리가 물건을 사는 게 아니라 정체성을 사는 거야. 어떤 브랜드를 입느냐가 내가 누구인지를 말해주는 세계야"',
-          '"쓰레기 인간이라는 개념 알아? 글로벌 경제에서 쓸모없어진 인간들. 이민자, 난민, 실업자. 근대가 만들어낸 잉여 인간에 대한 바우만의 분석이야"',
-          '"바우만이 사랑도 액체라고 해. 조건 없는 헌신이 아니라 언제든 해지할 수 있는 관계. 그 유동성이 현대 연애를 설명해. 소개팅 앱이 바우만의 증거야"'
-        ],
-        films: [
-          { title: '액체 근대', year: '2000', image: 'images/liquid.png' },
-          { title: '쓰레기가 되는 삶들', year: '2004', image: 'images/wasted.png' },
-          { title: '리퀴드 러브', year: '2003', image: 'images/liquidlove.png' },
-          { title: '현대성과 홀로코스트', year: '1989', image: 'images/modernity.png' }
-        ]
-      },
-      {
-        name: '기 드보르',
-        image: 'images/debord.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '프랑스', 분야: '철학, 예술이론', 대표작: '스펙타클의 사회', 스타일: '상황주의 인터내셔널' },
-        desc: '기 드보르는 현대 자본주의를 스펙타클이라고 명명한 사상가다. 삶이 스펙타클의 엄청난 축적으로 나타나는 곳에서, 직접 경험은 표상으로 교체된다. SNS, 셀럽 문화, 미디어. 드보르가 1967년에 한 말이 지금 더 정확하다.',
-        phrases: [
-          '"스펙타클의 사회가 뭔지 알아? 삶 자체가 아니라 삶의 이미지가 중요해지는 세계야. 경험이 아니라 경험의 표상. 여행을 즐기는 게 아니라 여행 사진을 올리는 것처럼"',
-          '"드보르가 만든 漂流 데리브 개념 알아? 도시를 목적 없이 걷는 거야. 소비와 광고가 설계한 동선을 거부하고 도시를 다르게 경험하는 실천이야"',
-          '"상황주의 인터내셔널이 68혁명에 직접 영향을 줬어. 드보르의 이론이 거리 시위의 슬로건이 됐어. 철학이 혁명이 된 드문 사례야"',
-          '"드보르는 만년에 영화를 만들었는데 영상 없이 말만 나오거나 검은 화면이야. 스펙타클을 비판하는 방식으로 스펙타클이 아닌 영화를 만든 거야. 그 아이러니가 드보르야"'
-        ],
-        films: [
-          { title: '스펙타클의 사회', year: '1967', image: 'images/spectacle.png' },
-          { title: '상황의 구성에 관한 보고서', year: '1957', image: 'images/situations.png' },
-          { title: '스펙타클의 사회 (영화)', year: '1973', image: 'images/spectaclefilm.png' }
-        ]
-      },
-      {
-        name: '자크 라캉',
-        image: 'images/lacan.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '프랑스', 분야: '정신분석, 철학', 대표작: '에크리, 세미나', 스타일: '구조주의적 정신분석' },
-        desc: '자크 라캉은 프로이트를 구조언어학으로 재해석한 정신분석가다. 거울 단계, 타자의 욕망, 실재계. 어렵기로 악명 높지만 한번 이해하면 인간의 욕망과 언어, 무의식이 어떻게 연결되는지가 보인다.',
-        phrases: [
-          '"거울 단계가 뭔지 알아? 아기가 처음 거울에서 자기를 볼 때 그 이미지와 자신을 동일시해. 그게 자아의 시작인데, 자아는 이미지에서 출발한다는 거야. 자아가 허구라는 거지"',
-          '"라캉이 무의식은 언어처럼 구조화되어 있다고 했어. 우리가 말하는 방식, 실수하는 방식, 꿈꾸는 방식 모두 언어 구조를 따른다는 거야"',
-          '"타자의 욕망이 뭔지 알아? 우리는 우리가 원하는 것을 원하는 게 아니라 타자가 원한다고 생각하는 것을 원한다는 거야. 왜 명품을 사고 싶어지는지가 설명돼"',
-          '"라캉의 실재계가 뭔지 알아? 언어로 포착할 수 없는 것. 트라우마, 죽음, 순수한 감각. 상징계 밖에 있는 것. 그게 주체를 항상 불완전하게 만드는 이유야"'
-        ],
-        films: [
-          { title: '에크리', year: '1966', image: 'images/ecrits.png' },
-          { title: '세미나 XI', year: '1973', image: 'images/seminar11.png' },
-          { title: '정신분석의 네 가지 근본 개념', year: '1964', image: 'images/fourconcepts.png' }
-        ]
-      },
-      {
-        name: '발터 벤야민',
-        image: 'images/benjamin.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '독일', 분야: '철학, 문화비평', 대표작: '기술 복제 시대의 예술 작품', 스타일: '비판 이론' },
-        desc: '발터 벤야민은 현대 문화이론의 핵심 텍스트를 쓴 철학자다. 아우라, 복제, 플라뇌르. 사진과 영화가 예술을 어떻게 바꿨는지를 가장 먼저 분석했다. 나치를 피해 도망치다 스스로 목숨을 끊은 비극적 생애가 그의 사유에 깊이를 더한다.',
-        phrases: [
-          '"아우라가 뭔지 알아? 예술 작품의 지금 여기 있음. 복제품이 아무리 정밀해도 원본 앞에 서는 경험은 달라. 그 차이가 아우라야. 근데 복제 기술이 그 아우라를 파괴한다는 거야"',
-          '"기술 복제 시대의 예술 작품을 지금 읽으면 인스타그램 얘기야. 이미지가 무한 복제되는 세계에서 원본의 가치가 사라진 건지, 새로운 가치가 생긴 건지를 물어"',
-          '"벤야민의 플라뇌르가 뭔지 알아? 도시를 목적 없이 배회하는 사람. 19세기 파리 아케이드를 걷는 관찰자. 현대 도시 경험을 분석하는 개념이야"',
-          '"벤야민이 역사를 보는 방식이 독특해. 진보가 아니라 파국의 연속이야. 역사의 천사가 앞으로 가려 하는데 폭풍이 뒤에서 밀어서 미래로 날려지는 거야. 그 폭풍이 진보야"'
-        ],
-        films: [
-          { title: '기술 복제 시대의 예술 작품', year: '1935', image: 'images/artwork.png' },
-          { title: '아케이드 프로젝트', year: '1982', image: 'images/arcades.png' },
-          { title: '역사철학 테제', year: '1940', image: 'images/theses.png' },
-          { title: '번역자의 과제', year: '1923', image: 'images/translator.png' }
-        ]
-      },
-      {
-        name: '힐러리 퍼트넘',
-        image: 'images/putnam.jpg',
-        videoLink: '',
-        videoThumb: '',
-        info: { 국적: '미국', 분야: '철학, 언어철학', 대표작: '이성, 진리, 역사', 스타일: '실용주의적 분석철학' },
-        desc: '힐러리 퍼트넘은 통속에 든 뇌 사고실험으로 유명한 철학자다. 우리가 현실이라고 믿는 것이 실제로 현실인지를 묻는다. 언어의 의미가 머릿속이 아니라 세계와의 관계에서 만들어진다는 의미론적 외재주의의 창시자다.',
-        phrases: [
-          '"통속의 뇌 사고실험 알아? 우리 뇌가 통 속에 담겨 전기 신호만 받고 있다면 어떻게 알 수 있을까? 매트릭스의 그 질문이 퍼트넘에서 왔어"',
-          '"퍼트넘의 의미론적 외재주의가 뭔지 알아? 물이라는 단어의 의미는 내 머릿속에 있는 게 아니라 실제 물이라는 물질에 있다는 거야. 의미가 세계에 있다는 거야"',
-          '"쌍둥이 지구 사고실험 알아? 모든 게 똑같은 지구가 있는데 물이 H2O가 아니야. 그 세계에서 물이라는 단어는 같은 의미인가? 의미가 어디에 있는지를 묻는 거야"',
-          '"퍼트넘은 자기 입장을 여러 번 바꿨어. 과학적 실재론에서 내부적 실재론으로, 다시 자연적 실재론으로. 그 변화 자체가 철학이 어떻게 작동해야 하는지를 보여줘"'
-        ],
-        films: [
-          { title: '이성, 진리, 역사', year: '1981', image: 'images/reason.png' },
-          { title: '정신, 언어, 현실', year: '1975', image: 'images/mind.png' },
-          { title: '실용주의', year: '1995', image: 'images/pragmatism.png' },
-          { title: '사실과 가치의 붕괴', year: '2002', image: 'images/collapse.png' }
-        ]
+        name: '절대적 기준이란',
+                desc: '상대적인 가치의 세계에서 어떻게 절대적인 기준을 세울 수 있는가. 기준은 언제나 이미 만들어져 있고, 우리는 그 안으로 들어가는 것이다. 그렇다면 사랑에서 나온 기준은 절대적이다. 남보다 더 아는 것이 아니라, 내가 진짜로 좋아하는 것. 그것이 당신만의 절대적 기준이 된다.',
       }
     ]
   }
 };
-  
-
-
 let currentSection = 'movie';
 let currentIndex = 0;
-
+ 
+function showLockedToast() {
+  const toast = document.getElementById('locked-toast');
+  toast.classList.add('show');
+  clearTimeout(showLockedToast._t);
+  showLockedToast._t = setTimeout(() => toast.classList.remove('show'), 1600);
+}
+ 
 function goToSection(section) {
   document.querySelectorAll('.tab-item').forEach(el => el.classList.remove('active'));
-  document.querySelector(`.tab-item[data-section="${section}"]`).classList.add('active');
+  document.querySelector('.tab-item[data-section="' + section + '"]').classList.add('active');
   currentSection = section;
   currentIndex = 0;
   document.getElementById('home-page').style.display = 'none';
@@ -1936,12 +298,12 @@ function goToSection(section) {
   renderSidebar();
   renderDetail(0);
 }
-
+ 
 function goHome() {
   document.getElementById('detail-page').style.display = 'none';
   document.getElementById('home-page').style.display = 'flex';
 }
-
+ 
 function renderSidebar() {
   const sec = sections[currentSection];
   document.getElementById('sidebar-title').textContent = sec.label;
@@ -1950,44 +312,47 @@ function renderSidebar() {
   sec.items.forEach((item, i) => {
     const li = document.createElement('li');
     li.textContent = item.name;
-    li.className = i === currentIndex ? 'active' : '';
-    li.onclick = () => renderDetail(i);
+    const locked = i >= UNLOCK_LIMIT;
+    li.className = (i === currentIndex ? 'active' : '') + (locked ? ' locked' : '');
+    li.onclick = () => {
+      if (locked) { showLockedToast(); return; }
+      renderDetail(i);
+    };
     list.appendChild(li);
   });
 }
-
+ 
 function renderDetail(index) {
   currentIndex = index;
   const item = sections[currentSection].items[index];
-
   document.querySelectorAll('#sidebar-list li').forEach((li, i) => {
-    li.className = i === index ? 'active' : '';
+    const locked = i >= UNLOCK_LIMIT;
+    li.className = (i === index ? 'active' : '') + (locked ? ' locked' : '');
   });
-
-  // 사진
- const photo = document.getElementById('detail-photo');
-if (item.image) {
-  photo.innerHTML = `
-    <div class="detail-photo-accent"></div>
-    <img src="${item.image}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;">
-  `;
-} else {
-  photo.innerHTML = `
-    <div class="detail-photo-accent"></div>
-    <span class="detail-photo-placeholder">${item.name} 사진</span>
-  `;
-}
-
-  // 기본정보
+ 
+  const photo = document.getElementById('detail-photo');
+    if (currentSection === 'etc') {
+    photo.style.display = 'none';
+  } else {
+    photo.style.display = '';
+  }
+  if (item.image) {
+    photo.innerHTML = '<div class="detail-photo-accent"></div><img src="' + item.image + '" alt="' + item.name + '" style="width:100%;height:100%;object-fit:cover;">';
+  } else {
+    photo.innerHTML = '<div class="detail-photo-accent"></div><span class="detail-photo-placeholder">' + item.name + ' 사진</span>';
+  }
+ 
   const infoBox = document.getElementById('detail-info-box');
+    if (currentSection === 'etc') {
+    infoBox.style.display = 'none';
+  } else {
+    infoBox.style.display = '';
+  }
   if (item.info) {
     infoBox.className = 'detail-info-box populated';
     let html = '<div class="info-grid">';
     for (const [k, v] of Object.entries(item.info)) {
-      html += `<div class="info-item">
-        <span class="info-label">${k}</span>
-        <span class="info-value">${v}</span>
-      </div>`;
+      html += '<div class="info-item"><span class="info-label">' + k + '</span><span class="info-value">' + v + '</span></div>';
     }
     html += '</div>';
     infoBox.innerHTML = html;
@@ -1995,114 +360,108 @@ if (item.image) {
     infoBox.className = 'detail-info-box';
     infoBox.textContent = '기본정보';
   }
+ 
+  const descBox = document.getElementById('detail-desc-box');
+  descBox.className = 'detail-desc-box populated';
+  descBox.innerHTML = '<p style="font-size:25px; line-height:1.85;">' + (item.desc || '') + '</p>';
+ 
+  const linkBox = document.getElementById('detail-link-box');
+  if (item.videoLink) {
+    const thumb = item.videoThumb || item.image || '';
+    linkBox.innerHTML = '<a href="' + item.videoLink + '" target="_blank"><img src="' + thumb + '" alt="' + item.name + ' 영상 보기"><div class="play-icon"></div></a>';
+  } else {
+    linkBox.innerHTML = '';
+  }
+ 
+  const phraseBox = document.getElementById('detail-phrase-box');
+   if (item.phrases && item.phrases.length > 0) {
+    let html = '<span class="phrase-label">Applied dialogue</span>';
+    item.phrases.forEach(p => { html += '<p class="phrase-item">' + p + '</p>'; });
+    phraseBox.innerHTML = html;
+  } else {
+    phraseBox.innerHTML = '';
+  }
 
-  // 설명
-const descBox = document.getElementById('detail-desc-box');
-descBox.className = 'detail-desc-box populated';
-descBox.innerHTML = `<p style="font-size:25px; line-height:1.85;">${item.desc}</p>`;
-
-// 영상 링크
-const linkBox = document.getElementById('detail-link-box');
-if (item.videoLink) {
-  const thumb = item.videoThumb || item.image || '';
-  linkBox.innerHTML = `
-  <a href="${item.videoLink}" target="_blank">
-    <img src="${thumb}" alt="${item.name} 영상 보기">
-    <div class="play-icon"></div>
-  </a>`;
-} else {
-  linkBox.innerHTML = '';
-}
-
-
-// 꺼드럭 응용문장
-const phraseBox = document.getElementById('detail-phrase-box');
-if (item.phrases && item.phrases.length > 0) {
-  let html = '<span class="phrase-label">Applied dialogue</span>';
-  item.phrases.forEach(p => {
-    html += `<p class="phrase-item">${p}</p>`;
-  });
-  phraseBox.innerHTML = html;
-} else {
-  phraseBox.innerHTML = '';
-}
-
-  // 작품 그리드
-  const filmGrid = document.getElementById('detail-film-grid');
-  const films = item.films || [];
-  let gridHTML = '';
-  const total = Math.max(films.length, 8);
-  for (let i = 0; i < total; i++) {
-    const film = films[i];
-    if (film) {
-      gridHTML += `
-      <div class="film-card">
-      ${film.image ? `<img src="${film.image}" alt="${film.title}">` : ''}
-      <div class="film-card-overlay">
-      <span class="film-title">${film.title}</span>
-      <span class="film-year">${film.year}</span>
-    </div>
-  </div>`;
+   // etc 섹션: 파란 텍스트박스
+  const etcBox = document.getElementById('detail-etc-box');
+  if (etcBox) {
+    if (currentSection === 'etc' && item.etcText) {
+      etcBox.style.display = 'block';
+      etcBox.innerHTML = item.etcText.split('\n\n').map(p =>
+        '<p style="margin-bottom:1.6em; last-child:margin-bottom:0">' + p + '</p>'
+      ).join('');
     } else {
-      gridHTML += `<div class="film-card"></div>`;
+      etcBox.style.display = 'none';
     }
   }
-  filmGrid.innerHTML = gridHTML;
-}
 
+  const filmGrid = document.getElementById('detail-film-grid');
+    if (currentSection === 'talk' || currentSection === 'etc') {
+    filmGrid.innerHTML = ''; filmGrid.style.display = 'none';
+  } else {
+    filmGrid.style.display = 'grid';
+    filmGrid.className = currentSection === 'book' ? 'detail-film-grid cols-4' : 'detail-film-grid';
+    const films = item.films || [];
+    let gridHTML = '';
+    const total = Math.max(films.length, 8);
+    const cardClass = currentSection === 'book' ? 'film-card book-card' : 'film-card';
+    for (let i = 0; i < total; i++) {
+      const film = films[i];
+      if (film) {
+        gridHTML += '<div class="' + cardClass + '">' + (film.image ? '<img src="' + film.image + '" alt="' + film.title + '">' : '') + '<div class="film-card-overlay"><span class="film-title">' + film.title + '</span><span class="film-year">' + film.year + '</span></div></div>';
+      } else {
+        gridHTML += '<div class="' + cardClass + '"></div>';
+      }
+    }
+    filmGrid.innerHTML = gridHTML;
+  }
+}
+ 
 function handleSearch(val) {
   const list = document.getElementById('search-result-list');
   const q = val.trim();
   if (!q) { list.style.display = 'none'; return; }
-
   const results = [];
   for (const [sectionKey, section] of Object.entries(sections)) {
     section.items.forEach((item, i) => {
-      if (item.name.toLowerCase().includes(q.toLowerCase())) {
+      if (item.name && item.name.toLowerCase().includes(q.toLowerCase())) {
         results.push({ name: item.name, section: sectionKey, index: i });
       }
     });
   }
-
   if (results.length === 0) {
-    list.innerHTML = `<div class="search-no-result">결과 없음</div>`;
+    list.innerHTML = '<div class="search-no-result">결과 없음</div>';
   } else {
-    list.innerHTML = results.map(r =>
-      `<div class="search-result-item" onclick="goToItem('${r.section}', ${r.index})">${r.name}</div>`
-    ).join('');
+    list.innerHTML = results.map(r => '<div class="search-result-item" onclick="goToItem(\'' + r.section + '\', ' + r.index + ')">' + r.name + '</div>').join('');
   }
   list.style.display = 'block';
 }
-
+ 
 function submitSearch() {
   const val = document.getElementById('search-input').value.trim();
   if (!val) return;
-  const results = [];
   for (const [sectionKey, section] of Object.entries(sections)) {
-    section.items.forEach((item, i) => {
-      if (item.name.toLowerCase().includes(val.toLowerCase())) {
-        results.push({ section: sectionKey, index: i });
+    for (let i = 0; i < section.items.length; i++) {
+      if (section.items[i].name && section.items[i].name.toLowerCase().includes(val.toLowerCase())) {
+        goToItem(sectionKey, i); return;
       }
-    });
+    }
   }
-  if (results.length > 0) goToItem(results[0].section, results[0].index);
 }
-
+ 
 function goToItem(section, index) {
+  if (index >= UNLOCK_LIMIT) { showLockedToast(); return; }
   document.getElementById('search-input').value = '';
   document.getElementById('search-result-list').style.display = 'none';
   currentSection = section;
   currentIndex = index;
   document.querySelectorAll('.tab-item').forEach(el => el.classList.remove('active'));
-  document.querySelector(`.tab-item[data-section="${section}"]`).classList.add('active');
+  document.querySelector('.tab-item[data-section="' + section + '"]').classList.add('active');
   document.getElementById('home-page').style.display = 'none';
   document.getElementById('detail-page').style.display = 'block';
   renderSidebar();
   renderDetail(index);
 }
-
-
-
 </script>
 </body>
 </html>
